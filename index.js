@@ -18,6 +18,9 @@ main().then(()=>{
 async function main(){
     await mongoose.connect("mongodb://127.0.0.1:27017/SIH");
 }
+// app.get("/",(req,res)=>{
+//     res.render("Frontend/index.html");
+// });
 //render to startup register form
 app.get("/startupRegister",(req,res)=>{
     res.render("Backend/startupReg.ejs");
@@ -118,7 +121,7 @@ app.post("/investorAuthenticate",async(req,res)=>{
  });
 
 
- app.listen(5050, ()=>{
+ app.listen(5173, ()=>{
     console.log("server is listening on port 8080");
 
 }
