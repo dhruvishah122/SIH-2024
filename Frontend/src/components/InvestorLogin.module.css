@@ -369,12 +369,12 @@ input:focus {
   -ms-border-radius: 5px;
 }
 
-#submit {
+.submit {
   background: #207542;
   color: #fff;
   margin-right: -25px;
 }
-#submit:hover {
+.submit:hover {
   background-color: #267747;
 }
 
@@ -450,7 +450,7 @@ label.error:after {
     width: 100%;
   }
 
-  #submit {
+  .submit {
     margin-bottom: 20px;
     margin-right: 0px;
   }
