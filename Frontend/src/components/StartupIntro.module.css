@@ -1,17 +1,23 @@
-.image-container {
-  height: 100vh;
+.flex-container {
   width: 100%;
-  padding-top: 70px;
-  display: grid;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
-  /* background-image: url("sih-bg.jpg");
+  /* background-image: linear-gradient(
+      rgba(36, 42, 46, 0.493),
+      rgba(36, 42, 46, 0.372)
+    ),
+    url("sih-bg.jpg"); */
   background-repeat: no-repeat;
-  background-size: 100% 100%; */
+  background-size: 100% 100%;
 }
 
 .startup-title {
   font-size: 40px;
+
   font-weight: 600;
-  color: #febf01;
+  color: #ffc107;
 }

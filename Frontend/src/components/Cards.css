@@ -1,0 +1,21 @@
+.borderr {
+  border: 2px solid #ffc107;
+  border-radius: 2rem;
+  width: 18rem;
+  height: 22rem;
+}
+
+.btn1 {
+  left: 3.8rem;
+}
+.btn2 {
+  left: 4.5rem;
+}
+
+.btn3 {
+  left: 4.8rem;
+}
+
+.btn4 {
+  left: 3.2rem;
+}
