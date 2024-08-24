@@ -1,12 +1,19 @@
-import NavBar from "./components/NavBar";
-import StartupIntro from "./components/StartupIntro";
+import HomePage from "./components/HomePage";
+import InvestorLogin from "./components/investorLogin";
+
 import "./index.css";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <StartupIntro />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />}></Route>
+          <Route path="/investorlogin" element={<InvestorLogin />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
