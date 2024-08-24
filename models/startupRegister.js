@@ -20,7 +20,10 @@ const startupSchema = mongoose.Schema({
     },
     Startup_Revenue_Preference:{
     type:Number
-    }
+    },
+    location:{
+        type:String
+    },
 });
 const Startup = mongoose.model("Startup",startupSchema);
 module.exports=Startup;
