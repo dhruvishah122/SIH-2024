@@ -19,13 +19,21 @@ function InvestorLogin() {
                       <label htmlFor="email" className={styles["required"]}>
                         Email
                       </label>
-                      <input type="text" name="email" id="email" />
+                      <input
+                        type="text"
+                        name="email"
+                        className={styles["email"]}
+                      />
                     </div>
                     <div className={styles["form-input"]}>
                       <label htmlFor="password" className={styles["required"]}>
                         Password
                       </label>
-                      <input type="password" name="password" id="password" />
+                      <input
+                        type="password"
+                        name="password"
+                        className={styles["password"]}
+                      />
                     </div>
                     <div className={styles["form-submit"]}>
                       <input
