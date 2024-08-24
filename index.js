@@ -24,7 +24,7 @@ app.get("/startupRegister",(req,res)=>{
 });
 //render to startup login form
 app.get("/startupLogin",(req,res)=>{
-    res.render("startup.ejs");
+    res.render("Backend/startupLogin.ejs");
 });
 // saving startup register data and rendering to startup login
 app.post("/startupDataSave",(req,res)=>{
@@ -39,12 +39,6 @@ let newStartup = new startupRegister({
     Startup_Revenue_Preference:Startup_Revenue_Preference,
     location:location
 });
-//login-authentication
-app.post("/startupAuthenticate",async(req,res)=>{
-   let{email,password}=req.body;
-   let verify = await startupRegister.find({email:{email}},{password:{password}});
-   console.log( verify);
-});
 newStartup.save().then(res=>{
     console.log(res);
 }).catch((err)=>{
@@ -52,7 +46,26 @@ console.log(err);
 });
 res.redirect("/startupLogin");
 });
-
+//login-authentication
+app.post("/startupAuthenticate",  async function(req, res){
+    try {
+        // check if the user exists
+        const user = await startupRegister.findOne({ email: req.body.email });
+        if (user) {
+          //check if password matches
+          const result = req.body.password === user.password;
+          if (result) {
+            res.send(user);
+          } else {
+            res.render("/startupRegister");
+          }
+        } else {
+            res.render("/startupRegister");
+        }
+      } catch (error) {
+        res.status(400).json({ error });
+      }
+});
 
 //Investor
 //render to investor register form
@@ -61,7 +74,7 @@ app.get("/investorRegister",(req,res)=>{
 });
 //render to investor login form
 app.get("/investorLogin",(req,res)=>{
-    res.render("investor.ejs");
+    res.render("Backend/investorLogin.ejs");
 });
 // saving investor register data and rendering to investor login
 app.post("/investorDataSave",(req,res)=>{
@@ -85,9 +98,23 @@ console.log(err);
 res.redirect("/investorLogin");
 });
 app.post("/investorAuthenticate",async(req,res)=>{
-    let{email,password}=req.body;
-    let verify = await investorRegister.find({email:{email}},{password:{password}});
-    console.log( verify);
+    try {
+        // check if the user exists
+        const user = await investorRegister.findOne({ email: req.body.email });
+        if (user) {
+          //check if password matches
+          const result = req.body.password === user.password;
+          if (result) {
+            res.send(user);
+          } else {
+            res.render("/investorRegister");
+          }
+        } else {
+            res.render("/investorRegister");
+        }
+      } catch (error) {
+        res.status(400).json({ error });
+      }
  });
 
 
