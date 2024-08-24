@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -34,15 +35,17 @@ function NavBar() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Login
+              Login As
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button className="dropdown-item" type="button">
                 Startup
               </button>
-              <button className="dropdown-item" type="button">
-                Investor
-              </button>
+              <Link to="/investorlogin">
+                <button className="dropdown-item" type="button">
+                  Investor
+                </button>
+              </Link>
               <button className="dropdown-item" type="button">
                 Researcher
               </button>
@@ -193,27 +196,22 @@ function List() {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Innovation
+          Investment
         </a>
         <ul className="dropdown-menu">
           <li>
             <a className="dropdown-item text-warning" href="#">
-              Innovation Programs
+              Start Investing
             </a>
           </li>
           <li>
             <a className="dropdown-item text-warning" href="#">
-              Funding Opportunities
+              Browse Investors
             </a>
           </li>
           <li>
             <a className="dropdown-item text-warning" href="#">
-              Incubation Centers
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item text-warning" href="#">
-              Innovation Awards
+              Register as Invester
             </a>
           </li>
         </ul>
