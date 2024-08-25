@@ -1,6 +1,15 @@
 import "./NavBar.css";
 
 function NavBar() {
+  const navColor = {
+    color: "white",
+  };
+
+  const buttonStyles = {
+    color: "white",
+    border: "2px solid white",
+    fontWeight: "500",
+  };
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid text-warning logo ">
@@ -23,16 +32,17 @@ function NavBar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-            <List />
+            <List navColor={navColor} />
           </ul>
           <div className="dropdown">
             <button
-              className="btn btn-warning dropdown-toggle"
+              className="btn dropdown-toggle button"
               type="button"
               id="dropdownMenu2"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
+              style={{ ...navColor, ...buttonStyles }}
             >
               Login As
             </button>
@@ -57,8 +67,9 @@ function NavBar() {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              style={buttonStyles}
             />
-            <button className="btn btn-outline-warning  " type="submit">
+            <button className="btn button" type="submit" style={buttonStyles}>
               Search
             </button>
           </form>
@@ -68,43 +79,44 @@ function NavBar() {
   );
 }
 
-function List() {
+function List({ navColor }) {
   return (
     <>
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle text-warning"
+          className="nav-link dropdown-toggle "
           href="#"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
+          style={navColor}
         >
           Startups
         </a>
 
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item " href="#" style={navColor}>
               Startup Registration
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Mentorship Programs
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Startup Funding
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Collaboration Opportunities
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Success Stories
             </a>
           </li>
@@ -113,7 +125,8 @@ function List() {
 
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle text-warning"
+          className="nav-link dropdown-toggle"
+          style={navColor}
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -123,18 +136,18 @@ function List() {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Ongoing Projects
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Research Funding
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Collaboration Opportunities
             </a>
           </li>
@@ -142,7 +155,8 @@ function List() {
       </li>
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle text-warning"
+          className="nav-link dropdown-toggle"
+          style={navColor}
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -152,23 +166,23 @@ function List() {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Patent Filing
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Trademark Registration
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Copyright Services
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Legal Consultation
             </a>
           </li>
@@ -176,7 +190,8 @@ function List() {
       </li>
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle text-warning"
+          className="nav-link dropdown-toggle"
+          style={navColor}
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -186,17 +201,17 @@ function List() {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Start Investing
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Browse Investors
             </a>
           </li>
           <li>
-            <a className="dropdown-item text-warning" href="#">
+            <a className="dropdown-item" href="#" style={navColor}>
               Register as Invester
             </a>
           </li>
