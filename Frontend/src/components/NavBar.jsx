@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar() {
   return (
@@ -23,7 +22,7 @@ function NavBar() {
           className="collapse navbar-collapse nav-container"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <List />
           </ul>
           <div className="dropdown">
@@ -38,14 +37,14 @@ function NavBar() {
               Login As
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button className="dropdown-item" type="button">
+              <button className="dropdown-item" type="button" onClick={() => window.location.href = 'http://localhost:8080/startupLogin'}>
                 Startup
               </button>
-              <Link to="/investorlogin">
-                <button className="dropdown-item" type="button">
-                  Investor
-                </button>
-              </Link>
+
+              <button className="dropdown-item" type="button" onClick={() => window.location.href = 'http://localhost:8080/investorLogin'}>
+                Investor
+              </button>
+
               <button className="dropdown-item" type="button">
                 Researcher
               </button>
@@ -70,16 +69,6 @@ function NavBar() {
 }
 
 function List() {
-  const [hover, SetHover] = useState(false);
-
-  function openDropDown() {
-    if (hover) closeDropDown();
-    SetHover(true);
-  }
-
-  function closeDropDown() {
-    SetHover(false);
-  }
   return (
     <>
       <li className="nav-item dropdown">
@@ -89,12 +78,10 @@ function List() {
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          onMouseEnter={openDropDown}
-          onMouseLeave={closeDropDown}
-          onClick={openDropDown}
         >
           Startups
         </a>
+
         <ul className="dropdown-menu">
           <li>
             <a className="dropdown-item text-warning" href="#">
@@ -106,7 +93,6 @@ function List() {
               Mentorship Programs
             </a>
           </li>
-
           <li>
             <a className="dropdown-item text-warning" href="#">
               Startup Funding
