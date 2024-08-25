@@ -13,8 +13,12 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid text-warning logo ">
-        <a className="navbar-brand  text-success logo" href="#">
-          InnoHub Gujarat
+        <a className="navbar-brand  text-success " href="#">
+          <img
+            src="logo.jpg"
+            alt="innohub logo"
+            style={{ height: "60px", marginLeft: "30px" }}
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -24,6 +28,7 @@ function NavBar() {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style={{ backgroundColor: "white" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>

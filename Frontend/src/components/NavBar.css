@@ -9,11 +9,6 @@
   font-size: 1.4rem;
 }
 
-.logo {
-  font-weight: "500";
-  font-size: 2rem;
-}
-
 .button:hover {
   color: #f4ac32 !important;
   background-color: white;
