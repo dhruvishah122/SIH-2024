@@ -4,13 +4,9 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
   justify-content: center;
   align-items: center;
-  /* background-image: linear-gradient(
-      rgba(36, 42, 46, 0.493),
-      rgba(36, 42, 46, 0.372)
-    ),
-    url("sih-bg.jpg"); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -19,5 +15,5 @@
   font-size: 40px;
 
   font-weight: 600;
-  color: #ffc107;
+  color: #008080;
 }

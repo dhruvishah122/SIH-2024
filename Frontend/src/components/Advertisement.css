@@ -1,0 +1,12 @@
+.advertisement-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.adv-images {
+  padding: 4rem;
+  height: 350px;
+}

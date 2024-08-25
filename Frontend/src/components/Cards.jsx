@@ -47,6 +47,15 @@ function Cards() {
 }
 
 function Card({ title, para, button, image, id }) {
+  const cardsColor = {
+    color: "#008080",
+  };
+
+  const buttonStyling = {
+    backgroundColor: "#008080",
+    color: "white",
+  };
+
   return (
     <div className="borderr position-relative custom-card">
       <div>
@@ -58,19 +67,26 @@ function Card({ title, para, button, image, id }) {
           ></img>
         </div>
 
-        <h5 className="text-center m-3 text-warning justify-content-sm-center">
+        <h5
+          className="text-center m-3 justify-content-sm-center "
+          style={cardsColor}
+        >
           {title}
         </h5>
       </div>
       <div>
-        <p className="text-warning m-3 justify-content-sm-center text-center">
+        <p
+          className=" m-3 justify-content-sm-center text-center"
+          style={cardsColor}
+        >
           {para}
         </p>
       </div>
       <div>
         <button
           type="button"
-          className={`btn btn${id} btn-outline-warning position-absolute  bottom-0 m-3 bg-warning text-white text-center`}
+          className={`btn btn${id} btn--cards position-absolute  bottom-0 m-3 text-center`}
+          style={buttonStyling}
         >
           {button}
         </button>

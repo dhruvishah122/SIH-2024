@@ -10,6 +10,7 @@ const methodOverride = require("method-override");
 const port = 8080;
 const multer = require('multer');
 const upload = multer({dest: './uploads'});
+const filePath = path.join(__dirname, 'data.json');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/"));
@@ -33,6 +34,43 @@ app.get("/startupLogin",(req,res)=>{
     res.render("Backend/startupLogin.ejs");
 });
 // saving startup register data and rendering to startup login
+
+function addDataToJson(newData) {
+  fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+          console.error('Error reading the file:', err);
+          return;
+      }
+
+      let jsonData = { items: [] }; // Initialize with an items array
+      try {
+          // Parse existing data or start with a new object if the file is empty
+          jsonData = data ? JSON.parse(data) : jsonData;
+
+          // Check if the parsed data is an object and has items as an array
+          if (typeof jsonData !== 'object' || !Array.isArray(jsonData.items)) {
+              console.error('Error: JSON data is not a valid object with items array.');
+              return;
+          }
+
+      } catch (err) {
+          console.error('Error parsing JSON data:', err);
+          return;
+      }
+
+      // Add new data as a new object in the items array
+      jsonData.items.push(newData); // Push newData to the items array
+
+      // Write the updated data back to the JSON file
+      fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+          if (err) {
+              console.error('Error writing to the file:', err);
+              return;
+          }
+          console.log('Data added successfully!');
+      });
+  });
+}
 app.post("/startupDataSave",upload.single("img"),(req,res)=>{
  
 let {name,email,password,technology, Industry_Focus,Startup_eligibility_criteria,Startup_Revenue_Preference,location} = req.body;
@@ -52,6 +90,7 @@ newStartup.save().then(res=>{
 }).catch((err)=>{
 console.log(err);
 });
+addDataToJson(newStartup);
 res.redirect("/startupLogin");
 });
 //login-authentication
