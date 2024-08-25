@@ -1,4 +1,5 @@
 import HomePage from "./components/HomePage";
+import StartupPage from "./components/StartupPage";
 import "./index.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -8,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<HomePage />}></Route>
-        {/* <Route path="http://localhost:8080/investorlogin"></Route> */}
+        <Route path="/registeredstartups" element={<StartupPage />}></Route>
       </Routes>
     </BrowserRouter>
   );

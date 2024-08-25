@@ -1,0 +1,27 @@
+.button {
+  position: relative;
+}
+
+.button:link,
+.button:visited {
+  color: #008080;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.button:hover,
+.button:active {
+  text-decoration: none;
+}
+
+.button::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.button:hover::after {
+  background: #008080;
+}
