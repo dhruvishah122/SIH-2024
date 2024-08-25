@@ -1,30 +1,38 @@
 .navbar {
-    background-color: white;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.258);
-  }
-  .nav-container {
-    display: flex;
-    font-weight: 400;
-    gap: 2rem;
-    font-size: 1.4rem;
-  }
-  
-  .logo {
-    font-weight: 400;
-    font-size: 2rem;
-  }
-.navbar {
-  background-color: white;
+  background-color: #f4ac32;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.258);
 }
 .nav-container {
   display: flex;
-  font-weight: 400;
+  font-weight: "500";
   gap: 2rem;
   font-size: 1.4rem;
 }
 
 .logo {
-  font-weight: 400;
+  font-weight: "500";
   font-size: 2rem;
+}
+
+.button:hover {
+  color: #f4ac32 !important;
+  background-color: white;
+}
+
+@media (max-width: 169.125em) {
+  .nav-container {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 61.9375em) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
