@@ -37,11 +37,11 @@ function NavBar() {
               Login As
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button className="dropdown-item" type="button">
+              <button className="dropdown-item" type="button" onClick={() => window.location.href = 'http://localhost:8080/startupLogin'}>
                 Startup
               </button>
 
-              <button className="dropdown-item" type="button">
+              <button className="dropdown-item" type="button" onClick={() => window.location.href = 'http://localhost:8080/investorLogin'}>
                 Investor
               </button>
 
