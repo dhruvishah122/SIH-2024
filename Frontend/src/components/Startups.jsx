@@ -14,6 +14,17 @@ function Startups({ startups }) {
 }
 
 function Startup({ startup }) {
+  const card = {
+    width: "20rem",
+    boxShadow: "0px 0px 2px #e9601b",
+    border: "2px solid #e9601b",
+    backgroundColor: "rgb(233, 96, 27, 0.2)",
+  };
+  const name = {
+    fontWeight: "500",
+    color: "#e9601b",
+  };
+  const text = { color: "#e9601b" };
   let techString;
   if (startup.technology.length > 100) {
     techString = startup["technology"].slice(0, 100);
@@ -26,15 +37,7 @@ function Startup({ startup }) {
   }
 
   return (
-    <div
-      className="card"
-      style={{
-        width: "20rem",
-        boxShadow: "0px 0px 2px #e9601b",
-        border: "2px solid #e9601b",
-        backgroundColor: "rgb(233, 96, 27, 0.2)",
-      }}
-    >
+    <div className="card" style={card}>
       <div className="card-body" style={{ position: "relative" }}>
         <h5
           className="card-title text-center"
@@ -43,28 +46,18 @@ function Startup({ startup }) {
           {startup.name}
         </h5>
         <p className="card-text">
-          <span style={{ fontWeight: "500", color: "#e9601b" }}>
-            Technology:{" "}
-          </span>
-          <span style={{ color: "#e9601b" }}>
-            {techString || startup.technology}
-          </span>
+          <span style={name}>Technology: </span>
+          <span style={text}>{techString || startup.technology}</span>
         </p>
         <p className="card-text">
-          <span style={{ fontWeight: "500", color: "#e9601b" }}>
-            Industry Focus:{" "}
-          </span>
-          <span style={{ color: "#e9601b" }}>
+          <span style={name}>Industry Focus: </span>
+          <span style={text}>
             {industryFocusString || startup["Industry_Focus"]}
           </span>
         </p>
         <p className="card-text">
-          <span style={{ fontWeight: "500", color: "#e9601b" }}>
-            Eligibility Startups:{" "}
-          </span>
-          <span style={{ color: "#e9601b" }}>
-            {startup["Startup_eligibility_criteria"]}
-          </span>
+          <span style={name}>Eligibility Startups: </span>
+          <span style={text}>{startup["Startup_eligibility_criteria"]}</span>
         </p>
       </div>
       <button className={styles.button}>View Profile</button>

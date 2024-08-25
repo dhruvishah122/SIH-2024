@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "react-router-dom": "^6.26.1"
+  },
+  "scripts": {
+    "server": "json-server --watch ./data.json --port 900"
   }
 }
