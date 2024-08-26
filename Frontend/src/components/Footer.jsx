@@ -2,7 +2,7 @@ import './Footer.css';
 export default function Footer() {
     return (
         <>
-            <div className="bac text-center text-lg-start mt-5">
+            <div className="bac text-center text-lg-start ">
                 <div className="container p-4">
                     <div className="row d-flex justify-content-evenly gap-3">
                         <div className="col-lg-3 col-md-6 mb-md-0 text-center "  style={{ marginRight: '3rem'}}>
