@@ -1,27 +1,29 @@
 .borderr {
-  border: 2px solid #008080;
+  /* border: 2px solid #008080; */
   border-radius: 2rem;
   width: 18rem;
   height: 22rem;
-  box-shadow: 0px 0px 2px #008080;
+  box-shadow: 0px 0px 6px black;
+  background-color: rgba(211, 211, 211, 0.074);
 }
 
 .btn1 {
-  left: 3.8rem;
+  left: 2.4rem;
 }
 .btn2 {
-  left: 4.5rem;
+  left: 2.5rem;
 }
 
 .btn3 {
-  left: 4.8rem;
+  left: 3rem;
 }
 
 .btn4 {
-  left: 3.2rem;
+  left: 3rem;
 }
 
 .btn--cards:hover {
+  border: 2px solid #008080;
   box-shadow: 0px 0px 3px #008080;
   color: #008080 !important;
   background-color: white !important;

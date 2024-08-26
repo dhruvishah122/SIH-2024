@@ -1,0 +1,28 @@
+.bgcolor {
+    background-color: #66f3f321;
+    color: rgb(15, 14, 13);
+}
+
+.imgg {
+    box-shadow: 4px 4px 3px black;
+    height: 15rem;
+}
+
+.researchInfo{
+    color: #008080;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 00;
+}
+
+.researchInfoTitle{
+    color: black;
+}
+
+.title{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 43px;
+        font-weight: 600;
+        color: #008080;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+}

@@ -1,43 +1,43 @@
-import styles from "./Fundings.module.css";
+import styles from "./IPRs.module.css";
 
-function Fundings() {
+function IPRs() {
   return (
     <div>
       <div className="d-flex flex-wrap align-items-center justify-content-center  gap-4 ">
-        <Funding
-          title={"Seed Fund Scheme"}
+        <IPR
+          title={"Patent Filing"}
           para={
-            "Financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialisation."
+            "  Obtain protection for your inventions with expert guidance throughout the patent application process, ensuring your intellectual property is legally secured and recognized."
           }
           button={"Know more"}
           image={"./seed-funds-icon.png"}
           id={1}
         />
 
-        <Funding
-          title={"Funding Guide for Startups"}
+        <IPR
+          title={"Copyright Services"}
           para={
-            "Your virtual guide to startup funding. A startup might require funding for one, a few, or all of the following purposes. Click to know more."
+            " Safeguard your creative works with comprehensive copyright registration and enforcement services, helping you protect against unauthorized use and infringement."
           }
           button={"Know More"}
           image={"./seed-funds-icon.png"}
           id={2}
         />
 
-        <Funding
-          title={"Startup India Investor Connect"}
+        <IPR
+          title={"Legal Consultation"}
           para={
-            "Startup India Investor Connect is a platform that connects startups with investors to facilitate investment opportunities."
+            "Receive specialized legal advice tailored to your intellectual property needs, covering patents, copyrights, trademarks, and more, to ensure full compliance and protection."
           }
           button={"Know more"}
           image={"./seed-funds-icon.png"}
           id={3}
         />
 
-        <Funding
-          title={"Fund of Funds"}
+        <IPR
+          title={"Trademark Registration"}
           para={
-            "A corpus for contribution to various AIFs registered with SEBI for funding of startups. Click to know more."
+            "4. Protect your brand’s identity by registering trademarks for names, logos, and symbols, with professional assistance to ensure your brand is legally secure and distinct."
           }
           button={"Know more"}
           image={"./seed-funds-icon.png"}
@@ -48,14 +48,15 @@ function Fundings() {
   );
 }
 
-function Funding({ title, para, button, image, id }) {
+function IPR({ title, para, button, image, id }) {
   const cardsColor = {
-    color: "#e9601b",
+    color: "#008080",
   };
 
   const buttonStyling = {
-    backgroundColor: "#e9601b",
+    backgroundColor: "#008080",
     color: "white",
+    border: "2px solid #008080",
   };
 
   return (
@@ -77,12 +78,7 @@ function Funding({ title, para, button, image, id }) {
         </h5>
       </div>
       <div>
-        <p
-          className=" m-3  justify-content-sm-center text-center"
-          style={cardsColor}
-        >
-          {para}
-        </p>
+        <p className=" m-3  justify-content-sm-center text-center">{para}</p>
       </div>
       <div>
         <button
@@ -99,4 +95,4 @@ function Funding({ title, para, button, image, id }) {
   );
 }
 
-export default Fundings;
+export default IPRs;
