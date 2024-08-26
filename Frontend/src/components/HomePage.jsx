@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 import StartupIntro from "./StartupIntro";
 import Advertisement from "./Advertisement";
 import FundingsIntro from "./FundingsIntro";
+import Footer from "./Footer";
 
 function HomePage() {
   return (
@@ -10,6 +11,7 @@ function HomePage() {
       <Advertisement />
       <StartupIntro />
       <FundingsIntro />
+      <Footer/>
     </>
   );
 }
