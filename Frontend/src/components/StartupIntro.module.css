@@ -1,6 +1,5 @@
 .flex-container {
   width: 100%;
-  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -13,7 +12,6 @@
 
 .startup-title {
   font-size: 40px;
-
   font-weight: 600;
   color: #008080;
 }
