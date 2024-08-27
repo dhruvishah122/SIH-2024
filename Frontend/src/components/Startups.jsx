@@ -1,3 +1,5 @@
+
+
 import styles from "./Startups.module.css";
 
 function Startups({ startups }) {
@@ -14,17 +16,11 @@ function Startups({ startups }) {
 }
 
 function Startup({ startup }) {
-  const card = {
-    width: "20rem",
-    boxShadow: "0px 0px 2px #e9601b",
-    border: "2px solid #e9601b",
-    backgroundColor: "rgb(233, 96, 27, 0.2)",
-  };
   const name = {
     fontWeight: "500",
-    color: "#e9601b",
+    color: "#008080",
   };
-  const text = { color: "#e9601b" };
+  const text = { color: "#008080" };
   let techString;
   if (startup.technology.length > 100) {
     techString = startup["technology"].slice(0, 100);
@@ -35,13 +31,43 @@ function Startup({ startup }) {
     industryFocusString = startup["Industry_Focus"].slice(0, 100);
     industryFocusString = techString.concat("...");
   }
+  const id = {
+    id: startup._id,
+  };
+
+  async function handleClick(){
+    // Send a POST request to add a new user
+    try {
+      const res = await fetch("http://localhost:9000/ids", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      });
+   
+      const re =  await fetch("http://localhost:8080/profile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      });
+    
+      const redirectUrl = `http://localhost:8080/startupProfile?name=${encodeURIComponent(startup.name)}&email=${encodeURIComponent(startup.email)}`;
+      window.location.href = redirectUrl;     
+    } catch {
+      alert("error");
+    }
+
+}
 
   return (
-    <div className="card" style={card}>
+    <div className={`card ${styles.cards}`}>
       <div className="card-body" style={{ position: "relative" }}>
         <h5
           className="card-title text-center"
-          style={{ color: "#e9601b", fontWeight: "600", fontSize: "24px" }}
+          style={{ color: "#008080", fontWeight: "600", fontSize: "24px" }}
         >
           {startup.name}
         </h5>
@@ -60,7 +86,10 @@ function Startup({ startup }) {
           <span style={text}>{startup["Startup_eligibility_criteria"]}</span>
         </p>
       </div>
-      <button className={styles.button}>View Profile</button>
+
+      {/* onClick={handleClick} */}
+
+      <button  onClick={ handleClick } className={styles.button}>View Profile</button>
     </div>
   );
 }

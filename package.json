@@ -6,5 +6,6 @@
   },
   "scripts": {
     "server": "json-server --watch ./data.json --port 900"
+
   }
 }

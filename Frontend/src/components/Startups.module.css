@@ -8,19 +8,29 @@
   justify-content: center;
   font-size: 36px;
   font-weight: 500;
-  color: #e9601b;
+  color: #008080;
   margin: 30px;
 }
 
 .button {
-  background-color: #e9601b;
+  background-color: #008080;
   border: none;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   font-size: 20px;
   font-weight: 500;
 }
 
 .button:hover {
-  background-color: #8c3a10;
+  box-shadow: 0px 0px 3px #008080;
+  color: #008080 !important;
+  background-color: white !important;
+}
+
+.cards {
+  border-radius: 2rem;
+  width: 18rem;
+  height: 22rem;
+  box-shadow: 0px 0px 6px black;
+  background-color: rgba(211, 211, 211, 0.074);
 }
