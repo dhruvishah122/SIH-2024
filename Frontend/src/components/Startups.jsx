@@ -1,3 +1,5 @@
+
+
 import styles from "./Startups.module.css";
 
 function Startups({ startups }) {
@@ -33,23 +35,32 @@ function Startup({ startup }) {
     id: startup._id,
   };
 
-  // async function handleClick() {
-  //   // Send a POST request to add a new user
+  async function handleClick(){
+    // Send a POST request to add a new user
+    try {
+      const res = await fetch("http://localhost:9000/ids", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      });
+   
+      const re =  await fetch("http://localhost:8080/profile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      });
+    
+      const redirectUrl = `http://localhost:8080/startupProfile?name=${encodeURIComponent(startup.name)}&email=${encodeURIComponent(startup.email)}`;
+      window.location.href = redirectUrl;     
+    } catch {
+      alert("error");
+    }
 
-  //   try {
-  //     const res = await fetch("http://localhost:9000/ids", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(id),
-  //     });
-  //     const data = await res.json();
-  //     console.log(data);
-  //   } catch {
-  //     alert("error");
-  //   }
-  // }
+}
 
   return (
     <div className={`card ${styles.cards}`}>
@@ -78,7 +89,7 @@ function Startup({ startup }) {
 
       {/* onClick={handleClick} */}
 
-      <button className={styles.button}>View Profile</button>
+      <button  onClick={ handleClick } className={styles.button}>View Profile</button>
     </div>
   );
 }

@@ -23,8 +23,8 @@
               <a href="#">
                   <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
               </a>
-              <h1><%=user.name%></h1>
-              <h4><%=user.email%></h4>
+              <h1><%=user?.name%></h1>
+              <h4><%=user?.email%></h4>
           </div>
          
           <ul class="nav nav-pills nav-stacked">
@@ -69,15 +69,14 @@
               <!-- <h1>Startup Details</h1> -->
               <div class="row">
                    
-                    <p><span><b><b>Technology</b></b></span> :  <%=user.technology%></p>
+                    <p><span><b><b>Technology</b></b></span> :  <%=user?.technology%></p>
                 
                  
-                      <p><span><b><b>Location </b></b></span> :   <%=user.location%></p>
+                      <p><span><b><b>Location </b></b></span> :   <%=user?.location%></p>
                  
                   
-                      <p><span><b><b>Industry Focus</b> </b></span> :  <%=user.Industry_Focus%></p>
-                      <p><span><b> <b>Startup eligibility criteria</b></b> </span> :  <%=user. Startup_eligibility_criteria%></p>
-                      <!-- <p><span><b><b>Startup Revenue Preference </b></b> </span> :  <%=user.Startup_Revenue_Preference%></p> -->
+                      <p><span><b><b>Industry Focus</b> </b></span> :  <%=user?.Industry_Focus%></p>
+                      <p><span><b> <b>Startup eligibility criteria</b></b> </span> :  <%=user?. Startup_eligibility_criteria%></p>
                       
                   
                 
@@ -108,7 +107,7 @@
                           </div>
                           <div class="bio-desk">
                               <h4 class="terques"><b>Average ticket size : 500000</b> </h4><br>
-                              <h4 class="terques"><b>Revenue preference :  <%=user.Startup_Revenue_Preference%></b> </h4>
+                              <h4 class="terques"><b>Revenue preference :  <%=user?.Startup_Revenue_Preference%></b> </h4>
                           </div>
                       </div>
                   </div>
