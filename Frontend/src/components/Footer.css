@@ -5,7 +5,13 @@
     width: 4rem;
    
 }
+
+.footerLogo{
+    height: 4rem;
+    width: 4rem;
+}
+
 .bac{
-    background-color: rgb(52, 49, 70);
+    background-color: #035353;
     color: white;
 }

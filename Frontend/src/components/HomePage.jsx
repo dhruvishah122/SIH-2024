@@ -1,8 +1,10 @@
 import NavBar from "./NavBar";
 import StartupIntro from "./StartupIntro";
 import Advertisement from "./Advertisement";
-import FundingsIntro from "./FundingsIntro";
+import IPRsIntro from "./IPRsIntro";
 import Footer from "./Footer";
+import HomePageInformation from "./Investement";
+import Research from "./Research";
 
 function HomePage() {
   return (
@@ -10,8 +12,10 @@ function HomePage() {
       <NavBar />
       <Advertisement />
       <StartupIntro />
-      <FundingsIntro />
-      <Footer/>
+      <Research />
+      <IPRsIntro />
+      <HomePageInformation />
+      <Footer />
     </>
   );
 }

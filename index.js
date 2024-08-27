@@ -142,7 +142,7 @@ app.post("/startupAuthenticate",  async function(req, res){
 //Investor
 //render to investor register form
 app.get("/investorRegister",(req,res)=>{
-    res.render("Backend/investor.ejs");
+    res.render("Backend/investorReg.ejs");
 });
 //render to investor login form
 app.get("/investorLogin",(req,res)=>{

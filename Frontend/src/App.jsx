@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<HomePage />}></Route>
-        <Route path="/registeredstartups" element={<StartupPage />}></Route>
+        <Route path="/startups" element={<StartupPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
