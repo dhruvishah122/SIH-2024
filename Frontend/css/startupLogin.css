@@ -229,7 +229,10 @@ input {
 
     .form-submit {
       text-align: right;
-      margin: -22px -70px 0px 0px;
+      margin: -48px -35px 13px 350px;
+      height: 50px;
+     width:150px;
+     
     } 
     
     .submit {
@@ -237,6 +240,7 @@ input {
       height: 50px;
       display: inline-block;
       font-family: 'Poppins';
+      color: white;
       font-weight: bold;
       font-size: 14px;
       padding: 10px;
@@ -248,12 +252,36 @@ input {
       -webkit-border-radius: 5px;
       -o-border-radius: 5px;
       -ms-border-radius: 5px; }
+      #demo{
+        color: white;
+      }
+      .register {
+        width: 150px;
+        height: 50px;
+        display: inline-block;
+        font-family: 'Poppins';
+        font-weight: bold;
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px; }
 
       #submit {
           background: #207542;;
           color: #fff;
           margin-right: -25px; 
       }
+      #register {
+        background: #207542;;
+        color: #fff;
+        margin-right: -25px; 
+    }
       #submit:hover {
           background-color: #267747; }
       
@@ -274,12 +302,27 @@ input {
           font-size: 23px;
           color: #c70000; }
           .form{
-            font-size: 20px;
+            font-size: 14px;
             font-family: 'Poppins';
-            padding : 10px;
-            text-align: left;
-            margin: -22px -70px 0px 0px;
-
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            
+          }
+          button{
+            width: 150px;
+            height: 50px;
+            background-color: #207542;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+            
           }
 
           @media screen and (max-width: 1024px) {
@@ -319,7 +362,8 @@ input {
                 padding: 0 0px; } }
             @media screen and (max-width: 480px) {
               .submit {
-                width: 50%; }
+                width: 100%;
+              margin-right:10px ; }
             
               #submit {
                 margin-bottom: 20px;
@@ -331,6 +375,3 @@ input {
                 -webkit-flex-direction: column;
                 -o-flex-direction: column;
                 -ms-flex-direction: column; } }
-            
-           
-            

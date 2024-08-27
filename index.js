@@ -94,6 +94,44 @@ function addDataToJson(newData) {
       });
   });
 }
+//investor push data
+function addInvestorDataToJson(newData) {
+  const filepath = path.join(__dirname, 'investorData.json');
+  fs.readFile(filepath, 'utf8', (err, data) => {
+      if (err) {
+          console.error('Error reading the file:', err);
+          return;
+      }
+
+      let jsonData = { items1: [] }; // Initialize with an items array
+      try {
+          // Parse existing data or start with a new object if the file is empty
+          jsonData = data ? JSON.parse(data) : jsonData;
+
+          // Check if the parsed data is an object and has items as an array
+          if (typeof jsonData !== 'object' || !Array.isArray(jsonData.items1)) {
+              console.error('Error: JSON data is not a valid object with items array.');
+              return;
+          }
+
+      } catch (err) {
+          console.error('Error parsing JSON data:', err);
+          return;
+      }
+
+      // Add new data as a new object in the items array
+      jsonData.items1.push(newData); // Push newData to the items array
+
+      // Write the updated data back to the JSON file
+      fs.writeFile(filepath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+          if (err) {
+              console.error('Error writing to the file:', err);
+              return;
+          }
+          console.log('Data added successfully!');
+      });
+  });
+}
 app.post("/startupDataSave",upload.single("img"),(req,res)=>{
  
 let {name,email,password,technology, Industry_Focus,Startup_eligibility_criteria,Startup_Revenue_Preference,location} = req.body;
@@ -167,6 +205,7 @@ newInvestor.save().then(res=>{
 }).catch((err)=>{
 console.log(err);
 });
+addInvestorDataToJson(newInvestor);
 res.redirect("/investorLogin");
 });
 app.post("/investorAuthenticate",async(req,res)=>{
@@ -177,7 +216,9 @@ app.post("/investorAuthenticate",async(req,res)=>{
           //check if password matches
           const result = req.body.password === user.password;
           if (result) {
-          res.redirect("/startupProfile");
+           
+              console.log(user);
+              res.render("Backend/investorProfile.ejs",{user});
           } else {
             res.render("/investorRegister");
           }

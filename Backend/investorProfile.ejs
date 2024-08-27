@@ -21,7 +21,7 @@
       <div class="panel">
           <div class="user-heading round">
               <a href="#">
-                  <img src="../uploads/startup.png" alt="">
+                  <img src="../uploads/investor.png" alt="">
               </a>
               <h1><%=user?.name%></h1>
               <h4><%=user?.email%></h4>
@@ -31,12 +31,9 @@
               <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
               <li><a href="#"> <i class="fa fa-calendar"></i> Chat with me </a></li>
               <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
-          </ul>
-          <img class=".high-quality-gif" src="../uploads/sales_vs_year.gif" alt="Loading..." style=" width:350px; /* Ensure it scales within its container */
-          image-rendering: crisp-edges; /* For sharp edges in pixel art */
-          image-rendering: pixelated; /* Another option for pixel art */
-          object-fit: cover;height: 250px;float: left;display: flex;">
-        </div>
+          </ul></div>
+          <img  src="../uploads/pie1.gif" alt="Loading..." style="height: 350px; margin-top: -10px;">
+        
   </div>
   <div class="profile-info col-md-9">
       <div class="panel">
@@ -62,8 +59,7 @@
           </footer>
       </div>
       <div class="panel">
-          <div class="bio-graph-heading">
-             <b> AI Technologies: </b><a href="https://www.google.com" style="color:white">See our website</a>
+          <div class="bio-graph-heading" style="color:white">Amazon.com <a href=<%=user.website%> style="color: white;">See our website</a>
           </div>
           <div class="panel-body bio-graph-info">
               <!-- <h1>Startup Details</h1> -->
@@ -72,12 +68,12 @@
                     <p><span><b><b>Technology</b></b></span> :  <%=user?.technology%></p>
                 
                  
-                      <p><span><b><b>Location </b></b></span> :   <%=user?.location%></p>
+                      <p><span><b><b>Investor type </b></b></span> :   <%=user?. Investor_Type%></p>
                  
                   
-                      <p><span><b><b>Industry Focus</b> </b></span> :  <%=user?.Industry_Focus%></p>
-                      <p><span><b> <b>Startup eligibility criteria</b></b> </span> :  <%=user?. Startup_eligibility_criteria%></p>
-                      
+                      <p><span><b><b>Year of establishment</b> </b></span> :  <%=user?.Year_of_establishment%></p>
+                      <p><span><b> <b>No of Employees</b></b> </span> :  <%=user?.Employee_count%></p>
+                      <p><span><b> <b>Headquaters</b></b> </span> :  <%=user?.headquaters%></p>
                   
                 
               </div>
@@ -92,8 +88,8 @@
                               <div style="display:inline;width:70px;height:70px;"><canvas width="100" height="70px"></canvas><input class="knob" data-width="100" data-height="70" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#e06b7d" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -77px; border: 2px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(224, 107, 125); padding: 0px; -webkit-appearance: none; background: none;"></div>
                           </div>
                           <div class="bio-desk">
-                           <h4 class="red"> <b>20+ Investors invested</b> </h4><br>
-                             <h4 class="red"> <b>30+ Startups Collaborated</b> </h4>
+                           <h4 class="red"> <b>50+ startups funded</b> </h4><br>
+                             <h4 class="red"> <b>30+ investors Collaborated</b> </h4>
                              
                           </div>
                       </div>
@@ -105,10 +101,12 @@
                           <div class="bio-chart">
                               <div style="display:inline;width:100px;height:70px;"><canvas width="100" height="100px"></canvas><input class="knob" data-width="100" data-height="100" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#4CC5CD" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 2px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(76, 197, 205); padding: 0px; -webkit-appearance: none; background: none;"></div>
                           </div>
+                          
                           <div class="bio-desk">
-                              <h4 class="terques"><b>Average ticket size : 500000</b> </h4><br>
-                              <h4 class="terques"><b>Revenue preference :  <%=user?.Startup_Revenue_Preference%></b> </h4>
-                          </div>
+                            <h4 class="green"><b>100+ invested companies with 16 crores valuation</b></h4>
+                            <h4 class="green"><b>50+ invested companies 5 crores turnover FY2023</b></h4>
+                            <h4 class="green"><b>70+ invested companies having 60% plus profit margin</b></h4>
+                        </div>
                       </div>
                   </div>
               </div>
@@ -119,10 +117,9 @@
                               <div style="display:inline;width:100px;height:80px;"><canvas width="100" height="80px"></canvas><input class="knob" data-width="100" data-height="100" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#96be4b" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 2px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(150, 190, 75); padding: 0px; -webkit-appearance: none; background: none;"></div>
                           </div>
                           <div class="bio-desk">
-                              <h4 class="green"><b>16 crores valuation</b></h4>
-                              <h4 class="green"><b>4 crores turnover FY2023</b></h4>
-                              <h4 class="green"><b>60% profit margin</b></h4>
-                          </div>
+                            <h4 class="terques"><b>Yearly Average investment : 7+ crores </b> </h4><br>
+                            <h4 class="terques"><b>Funding type : Both Royalty and Equity</b> </h4>
+                        </div>
                       </div>
                   </div>
               </div>
@@ -133,7 +130,7 @@
                               <div style="display:inline;width:100px;height:100px;"><canvas width="100" height="100px"></canvas><input class="knob" data-width="100" data-height="100" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#cba4db" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 2px ; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(203, 164, 219); padding: 0px; -webkit-appearance: none; background: none;"></div>
                           </div>
                           <div class="bio-desk">
-                              <h4 class="purple"><b>See Our Achievements..</b></h4>
+                              <h4 class="purple"><b>See Our Investments..</b></h4>
                               <h4 class="purple" style="text-decoration: none;"><b><a href="#">Click here..</a></b></h4>
                           </div>
                       </div>

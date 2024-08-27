@@ -17,7 +17,7 @@ const investorSchema = mongoose.Schema({
         type:String
     },
    Year_of_establishment:{
-        type:Number
+        type:String
     },
     Employee_count:{
     type:Number

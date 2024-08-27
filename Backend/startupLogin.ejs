@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
-    <!-- <link rel="stylesheet" href="SIH-2024\Frontend\css\startupLogin.css"> -->
-
     <link rel="stylesheet" href="../Frontend/css/startupLogin.css">
-
 </head>
 <body>
     
     <div class="main">
         <div class="container">
             <div class="signup-content">
-    <div class="signup-form">
-        <form action="/startupAuthenticate"method="POST" class="register-form" id="register-form">
-            <div class="form-row">
-                <div class="form-group">
-                    
-                    <div class="form-input">
-                        <label for="email" class="required">Email</label>
-                        <input type="text" name="email" id="email" />
-                    </div>
-                    <div class="form-input">
-                        <label for="password" class="required">Password</label>
-                        <input type="password" name="password" id="password" />
-                    </div>
-                    
-                    <a class="form" href="startupReg.ejs">Register</a>
-                    <div class="form-submit">
-                        <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
-                    </div>
-                   </div>
-                   </div>
-                   </form>
-                   </div>
-                    </div>
+                <div class="signup-form">
+                    <form action="/startupAuthenticate" method="POST" class="register-form" id="register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="password" class="required">Password</label>
+                                    <input type="password" name="password" id="password" />
+                                </div>
+                                <div>
+                                    <button type="button" id="demo" onmouseover="myFunction()" onclick="window.location.href='http://localhost:8080/startupRegister';">Register</button>
+                                </div>
+                                <div class="form-submit">
+                                    <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-               </div>
-    
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+          document.getElementById("demo").textContent = "Want to register?";
+          
+        }
+        
+        </script>
 </body>
 </html>
