@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "name": "tech titans",
+      "email": "titans@gmail.com",
+      "password": "123",
+      "technology": "ml-ai",
+      "Industry_Focus": "colleges",
+      "Startup_eligibility_criteria": " startups",
+      "Startup_Revenue_Preference": 1000000,
+      "location": "IND",
+      "_id": "66cb6ddb43a2f8cc103e6d89",
+      "__v": 0,
+      "id": "76ef"
+    },
+    {
+      "name": "techies",
+      "email": "techies@gmail.com",
+      "password": "123",
+      "technology": "ml",
+      "Industry_Focus": "college",
+      "Startup_eligibility_criteria": " startup",
+      "Startup_Revenue_Preference": 7000000,
+      "location": "IND",
+      "_id": "66cb6e5fdf82c6794ce543b7",
+      "__v": 0,
+      "id": "a024"
+    },
+    {
+      "name": "web",
+      "email": "web-dev@gmail.com",
+      "password": "123",
+      "technology": "backend",
+      "Industry_Focus": "full-stack",
+      "Startup_eligibility_criteria": "gov. certified",
+      "Startup_Revenue_Preference": 7000000,
+      "location": "IND",
+      "_id": "66cb71746cad902b366c4d6b",
+      "__v": 0,
+      "id": "f794"
+    },
+    {
+      "name": "Fin-tech",
+      "email": "shreya@gmail.com",
+      "password": "123",
+      "technology": "Artificial Intelligence (AI), Consumer Apps, Enterprise Apps, AdTech, AgriTech, EdTech, FinTech, HealthTech, RetailTech, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
+      "Industry_Focus": "Advertising,Media & Entertainment,Automotive,Financial Services,Aviation & Aerospace,Agriculture,Consumer Packaged Goods,Education & Training,Energy & Utilities,Healthcare & Pharmaceuticals,IT & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
+      "Startup_eligibility_criteria": "gov. certified",
+      "Startup_Revenue_Preference": 7000000,
+      "location": "IND",
+      "_id": "66cb720f7ecb54eac3776e83",
+      "__v": 0,
+      "id": "2bbd"
+    }
+  ]
+}

@@ -24,6 +24,10 @@ const startupSchema = mongoose.Schema({
     location:{
         type:String
     },
+    img: {
+        data: Buffer,
+        contentType: String
+    }
 });
 const Startup = mongoose.model("Startup",startupSchema);
 module.exports=Startup;
