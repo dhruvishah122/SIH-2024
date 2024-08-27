@@ -5,40 +5,42 @@ function Cards() {
     <div>
       <div className="d-flex flex-wrap align-items-center justify-content-center  gap-5 ">
         <Card
-          title={"Check Your Eligibility"}
+          title={"Startup Registration"}
           para={
-            "A startup must meet certain criteria to be considered eligible for DPIIT Recognition."
+            "Register your startup easily to access resources, support, and growth opportunities."
           }
-          button={"Check Eligibility"}
+          button={"Register Your Startup"}
           image={"./eligibility.svg"}
           id={1}
         />
 
         <Card
-          title={"Get Recognised"}
+          title={"Mentorship Program"}
           para={
-            "Click here to know more about the recognition process & apply as a Startup."
+            "Get expert guidance to navigate and grow your startup with seasoned mentors."
           }
-          button={"Know More"}
-          image={"./recognised.svg"}
+          button={"Connect with Experts"}
+          image={"./certificate.svg "}
           id={2}
         />
 
         <Card
-          title={"Notifications"}
-          para={"Stay on top of Recognition & Tax Exemption updates."}
-          button={"Know more"}
+          title={"Startup Funding"}
+          para={
+            "Secure essential funding to boost your startup’s development and expansion."
+          }
+          button={"Apply for Funding"}
           image={"./notification.svg"}
           id={3}
         />
 
         <Card
-          title={"Validate Certificate"}
+          title={"Collaboration Opportunities"}
           para={
-            "Click here to verify your Recognition/Tax Exemption  DPIIT certificates."
+            "Collaborate with other innovators to enhance your startup’s potential and reach."
           }
-          button={"Verify Certification"}
-          image={"./certificate.svg"}
+          button={"Start Collaborating"}
+          image={"./recognised.svg"}
           id={4}
         />
       </div>
@@ -75,12 +77,7 @@ function Card({ title, para, button, image, id }) {
         </h5>
       </div>
       <div>
-        <p
-          className=" m-3 justify-content-sm-center text-center"
-          style={cardsColor}
-        >
-          {para}
-        </p>
+        <p className=" m-3 justify-content-sm-center text-center">{para}</p>
       </div>
       <div>
         <button

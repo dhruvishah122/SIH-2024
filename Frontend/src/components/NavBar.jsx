@@ -11,12 +11,12 @@ function NavBar() {
     fontWeight: "500",
   };
   return (
-    <nav className="navbar navbar-expand-lg fixed-top">
+    <nav className="navbar navbar-expand-lg fixed-top p-2">
       <div className="container-fluid text-warning logo ">
         <a className="navbar-brand  text-success " href="#">
           <img
             src="logo.jpg"
-            alt="innohub logo"
+            alt="InnoHub Logo"
             style={{ height: "60px", marginLeft: "30px" }}
           />
         </a>
@@ -53,6 +53,7 @@ function NavBar() {
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button
+                style={{ color: "#008080" }}
                 className="dropdown-item"
                 type="button"
                 onClick={() =>
@@ -63,6 +64,7 @@ function NavBar() {
               </button>
 
               <button
+                style={{ color: "#008080" }}
                 className="dropdown-item"
                 type="button"
                 onClick={() =>
@@ -72,13 +74,17 @@ function NavBar() {
                 Investor
               </button>
 
-              <button className="dropdown-item" type="button">
+              <button
+                className="dropdown-item"
+                type="button"
+                style={{ color: "#008080" }}
+              >
                 Researcher
               </button>
             </div>
           </div>
 
-          <form className="d-flex" role="search">
+          <form className="d-flex gap-2" role="search">
             <input
               className="form-control me-2 "
               type="search"
@@ -99,9 +105,9 @@ function NavBar() {
 function List({ navColor }) {
   return (
     <>
-      <li className="nav-item dropdown">
+      <li className="dropdown">
         <a
-          className="nav-link dropdown-toggle "
+          className="navItem nav-link dropdown-toggle "
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -113,27 +119,27 @@ function List({ navColor }) {
 
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item " href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item " href="#" style={{ color: "#008080" }}>
               Startup Registration
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Mentorship Programs
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Startup Funding
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Collaboration Opportunities
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Success Stories
             </a>
           </li>
@@ -142,7 +148,7 @@ function List({ navColor }) {
 
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle"
+          className="navItem nav-link dropdown-toggle"
           style={navColor}
           href="#"
           role="button"
@@ -153,18 +159,18 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Ongoing Projects
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Research Funding
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Collaboration Opportunities
             </a>
           </li>
@@ -172,7 +178,7 @@ function List({ navColor }) {
       </li>
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle"
+          className="navItem nav-link dropdown-toggle"
           style={navColor}
           href="#"
           role="button"
@@ -183,18 +189,18 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Patent Filing
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Copyright Services
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Legal Consultation
             </a>
           </li>
@@ -202,7 +208,7 @@ function List({ navColor }) {
       </li>
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle"
+          className="navItem nav-link dropdown-toggle"
           style={navColor}
           href="#"
           role="button"
@@ -213,17 +219,17 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Start Investing
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Browse Investors
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#f4ac32" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
               Register as Invester
             </a>
           </li>
