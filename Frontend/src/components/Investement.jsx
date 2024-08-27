@@ -1,4 +1,5 @@
 import "./Investement.css";
+import { Link } from "react-router-dom";
 export default function Investement() {
   return (
     <>
@@ -76,6 +77,17 @@ export default function Investement() {
           </div>
         </div>
         <hr></hr>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Link to="/investors" className="btn--investors">
+          <div>Connect with Investors</div>
+        </Link>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const navColor = {
@@ -18,13 +19,15 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top p-2">
       <div className="container-fluid text-warning logo ">
-        <a className="navbar-brand  text-success " href="#">
-          <img
-            src="logo.jpg"
-            alt="InnoHub Logo"
-            style={{ height: "60px", marginLeft: "30px" }}
-          />
-        </a>
+        <Link to="/">
+          <a className="navbar-brand  text-success " href="#">
+            <img
+              src="logo.jpg"
+              alt="InnoHub Logo"
+              style={{ height: "60px", marginLeft: "30px" }}
+            />
+          </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
