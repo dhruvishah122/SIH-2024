@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
-    <link rel="stylesheet" href="SIH-2024\Frontend\css\startupLogin.css">
-
-    <!-- <link rel="stylesheet" href="../Frontend/css/startupLogin.css"> -->
-
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="main">
         <div class="container">
             <div class="signup-content">
     <div class="signup-form">
-        <form action="/startupAuthenticate"method="POST" class="register-form" id="register-form">
+        <form method="POST" class="register-form" id="register-form">
             <div class="form-row">
                 <div class="form-group">
                     
@@ -27,10 +23,12 @@
                         <label for="password" class="required">Password</label>
                         <input type="password" name="password" id="password" />
                     </div>
-                    
-                    <a class="form" href="startupReg.ejs">Register</a>
-                    <div class="form-submit">
-                        <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                    <div >
+                        <button id="demo" onmouseover="myFunction()"><a class="form" href="index.html">Register</a></button>
+                    </div>
+                    <!-- <a class="form" href="index.html">Register</a> -->
+                    <div class="form-submit" >
+                        <button class="submit" >Submit</button>
                     </div>
                    </div>
                    </div>
@@ -40,5 +38,12 @@
                 </div>
                </div>
     
+<script>
+    function myFunction() {
+      document.getElementById("demo").textContent = "Want to register?";
+      
+    }
+    
+    </script>
 </body>
 </html>
