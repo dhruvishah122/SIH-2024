@@ -10,7 +10,8 @@
       "Startup_Revenue_Preference": 1000000,
       "location": "IND",
       "_id": "66cb6ddb43a2f8cc103e6d89",
-      "__v": 0
+      "__v": 0,
+      "id": "76ef"
     },
     {
       "name": "techies",
@@ -22,7 +23,8 @@
       "Startup_Revenue_Preference": 7000000,
       "location": "IND",
       "_id": "66cb6e5fdf82c6794ce543b7",
-      "__v": 0
+      "__v": 0,
+      "id": "a024"
     },
     {
       "name": "web",
@@ -34,7 +36,8 @@
       "Startup_Revenue_Preference": 7000000,
       "location": "IND",
       "_id": "66cb71746cad902b366c4d6b",
-      "__v": 0
+      "__v": 0,
+      "id": "f794"
     },
     {
       "name": "Fin-tech",
@@ -46,31 +49,8 @@
       "Startup_Revenue_Preference": 7000000,
       "location": "IND",
       "_id": "66cb720f7ecb54eac3776e83",
-      "__v": 0
-    },
-    {
-      "name": "web",
-      "email": "web-dev@gmail.com",
-      "password": "123",
-      "technology": "backend",
-      "Industry_Focus": "full-stack",
-      "Startup_eligibility_criteria": "gov. certified",
-      "Startup_Revenue_Preference": 7000000,
-      "location": "IND",
-      "_id": "66cb71746cad902b366c4d6b",
-      "__v": 0
-    },
-    {
-      "name": "web",
-      "email": "web-dev@gmail.com",
-      "password": "123",
-      "technology": "backend",
-      "Industry_Focus": "full-stack",
-      "Startup_eligibility_criteria": "gov. certified",
-      "Startup_Revenue_Preference": 7000000,
-      "location": "IND",
-      "_id": "66cb71746cad902b366c4d6b",
-      "__v": 0
+      "__v": 0,
+      "id": "2bbd"
     }
   ]
 }
