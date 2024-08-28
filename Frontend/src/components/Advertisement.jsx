@@ -28,37 +28,84 @@ const Advertisement = () => {
   };
 
   return (
-    <Container className="container-fluid sliderImage mb-5 bg-container">
-      <Row className="justify-content-center advertisement-container">
-        <Col md={8}>
-          <div className="slider position-relative">
-            <FaArrowAltCircleLeft className="left-arrow " onClick={prevSlide} />
-            <FaArrowAltCircleRight
-              className="right-arrow"
-              onClick={nextSlide}
-            />
+    <>
+      <Container className="container-fluid sliderImage mb-5 bg-container">
+        <Row className="justify-content-center advertisement-container">
+          <Col md={8}>
+            <div className="slider position-relative">
+              <FaArrowAltCircleLeft
+                className="left-arrow "
+                onClick={prevSlide}
+              />
+              <FaArrowAltCircleRight
+                className="right-arrow"
+                onClick={nextSlide}
+              />
 
-            <Carousel
-              activeIndex={current}
-              onSelect={setCurrent}
-              interval={null}
-              controls={false}
-              indicators={false}
-            >
-              {images.map((image, index) => (
-                <Carousel.Item key={index}>
-                  <img
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className="d-block w-100 image-container img-fluid adv-images boxShadow"
-                  />
-                </Carousel.Item>
-              ))}
-            </Carousel>
+              <Carousel
+                activeIndex={current}
+                onSelect={setCurrent}
+                interval={null}
+                controls={false}
+                indicators={false}
+              >
+                {images.map((image, index) => (
+                  <Carousel.Item key={index}>
+                    <img
+                      src={image}
+                      alt={`Slide ${index + 1}`}
+                      className="d-block w-100 image-container img-fluid adv-images boxShadow"
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+      <div className="container container-fluid">
+        <div className="d-flex justify-content-evenly mb-5">
+          {/* first box */}
+          <div className="box">
+            <div className="h3">5000+</div>
+            <div className="h4">Startups Registered</div>
           </div>
-        </Col>
-      </Row>
-    </Container>
+
+          {/* second box */}
+          <div className="box">
+            <div className="h3">2000+</div>
+            <div className="h4">Investors Registered</div>
+          </div>
+
+          {/* third box */}
+          <div className="box post">
+            <div className="h3">Discover Latest Posts</div>
+            <div className="h4">
+              Stay updated with the latest posts and trends.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Links */}
+
+      <div className="container container-fluid">
+        <div className="d-flex mb-5 gap-5">
+          <div className="view-button startup">View Startups</div>
+          <div className="view-button invester ">View Investors</div>
+
+          {/* <Link to="/startups" className={styles.button}> */}
+          {/* </Link> */}
+
+          {/* <Link to="/investors" className={styles.button}> */}
+          {/* </Link> */}
+
+          {/* <Link to="/posts" className={styles.button}> */}
+          {/* </Link> */}
+        </div>
+      </div>
+    </>
   );
 };
 

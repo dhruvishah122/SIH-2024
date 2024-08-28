@@ -11,10 +11,11 @@
 }
 
 .fundings-title {
+  margin-top: 5rem;
   font-size: 40px;
   font-weight: 600;
   color: #008080;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .iprInfo{

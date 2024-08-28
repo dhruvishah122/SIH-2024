@@ -1,4 +1,5 @@
 import "./Research.css";
+import ResearchButton from "./ResearchButton";
 
 export default function Research() {
   return (
@@ -58,6 +59,9 @@ export default function Research() {
           </div>
         </div>
         <hr></hr>
+      </div>
+      <div>
+        <ResearchButton />
       </div>
     </>
   );

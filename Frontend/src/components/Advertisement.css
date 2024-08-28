@@ -43,26 +43,56 @@
 .boxShadow{
   /* background-color: rgba(0, 0, 0, 0.8); */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
+.box{
+  background-color: #008080;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
 
-/* .advertisement-container {
-  display: flex;
-  height: 100vh;
+.startup{
+  margin-left: 7rem;
+}
+
+.invester {
+  margin-left: 7.5rem;
+}
+
+.view-button{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: #008080;
+}
+
+.view-button:hover{
+  cursor: pointer;
+}
+
+.view-button::after {
+  content: "";
+  display: block;
   width: 100%;
-  align-items: center;
-  justify-content: center;
+  height: 3px;
+  position: relative;
+  transition: all 0.5s;
 }
 
-.image-container{
-  border: 2px solid black;
-  padding: 10rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+.view-button:hover::after {
+  background: #008080;
 }
 
-.adv-images {
-  padding: 4rem;
-  height: 350px;
-} */
+.post{
+  transition: all 0.5s;
+}
+
+.post:hover{
+  /* scale: 1.05; */
+  cursor: pointer;
+  color: #008080;
+  background-color: white;
+  border: #008080;
+  box-shadow: 0 0 12px #008080;
+}
