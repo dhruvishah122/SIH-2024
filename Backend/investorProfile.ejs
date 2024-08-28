@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%=user?.name%></title>
+    <link rel="icon" type="image/x-icon" href="../Frontend/public/logo.jpg">
+
     <link href="../Frontend/css/startupProfile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -37,11 +39,16 @@
   </div>
   <div class="profile-info col-md-9">
       <div class="panel">
-          <form>
-              <textarea placeholder="Whats new idea? share here.." rows="2" class="form-control input-lg p-text-area"></textarea>
+        <form action="/postData" method="post">
+            <textarea placeholder="Want to invest? share here.." rows="2" class="form-control input-lg p-text-area" name="content"></textarea>
+            <input type="hidden" name="name" value= <%=user?.name%> >
+            <input type="hidden" name="id" value=<%=user?._id %>>
+            <input type="hidden" name="email" value=<%=user?.email %>>
+        <footer class="panel-footer">
+          
+            <button class="btn btn-warning pull-right" style="background-color: #097d7d;">Post</button>
           </form>
           <footer class="panel-footer">
-              <button class="btn btn-warning pull-right" style="background-color: #097d7d;">Post</button>
               <ul class="nav nav-pills">
                   <li>
                       <a href="#" style="color:black"><i class="fa fa-map-marker"></i></a>
