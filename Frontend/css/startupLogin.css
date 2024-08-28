@@ -156,7 +156,8 @@ body {
   font-family: 'Poppins';
   margin: 0px;
   background: white;
-  padding: 50px 0; }
+  padding: 50px 0; 
+  background-color: #008080;}
 
 .main {
   position: relative; }
@@ -165,10 +166,11 @@ body {
   margin-bottom: -8px;
 } 
 .container {
-  width: 900px;
-  margin: 0 450px;
+  width: 700px;
+  margin: 0 420px;
   background: #fff;
-padding: 0 0 0 0; }
+padding: 0 0 0 0;
+border-radius: 2px; }
 
 .signup-img {
   position: relative;
@@ -176,8 +178,9 @@ padding: 0 0 0 0; }
   margin-bottom: -8px; }
 
 .signup-form {
-  width: 1015px;
-  margin-top: -2px; }
+  width: 900px;
+  margin-top: -2px;
+  box-shadow:  4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .form-row {
   margin: 0 -30px; }
@@ -190,11 +193,12 @@ padding: 0 0 0 0; }
 
 label, input {
   display: block;
-  width: 130%; }
+  width: 170%; }
 
 label {
   font-weight: bold;
-  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
   margin-bottom: 7px; }
 
 label.required {
@@ -213,10 +217,10 @@ input {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
-  font-size: 14px;
-  font-family: 'Poppins'; }
+  font-size: 20px;
+  font-family: 'Georgia, "Times New Roman", Times, serif'; }
   input:focus {
-    border: 1px solid #329e5e; }
+    border: 1px solid #008080; }
 
 .label-flex {
   justify-content: space-between;
@@ -229,7 +233,7 @@ input {
 
     .form-submit {
       text-align: right;
-      margin: -48px -35px 13px 350px;
+      margin: -48px -35px 13px 290px;
       height: 50px;
      width:150px;
      
@@ -239,14 +243,14 @@ input {
       width: 150px;
       height: 50px;
       display: inline-block;
-      font-family: 'Poppins';
+      font-family: 'Georgia, "Times New Roman", Times, serif';
       color: white;
-      font-weight: bold;
-      font-size: 14px;
+      
+      font-size: 20px;
       padding: 10px;
       border: none;
       cursor: pointer;
-      text-transform: uppercase;
+      
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
@@ -259,31 +263,34 @@ input {
         width: 150px;
         height: 50px;
         display: inline-block;
-        font-family: 'Poppins';
+        font-family: 'Georgia, "Times New Roman", Times, serif';
         font-weight: bold;
-        font-size: 14px;
+        font-size: 20px;
         padding: 10px;
         border: none;
         cursor: pointer;
-        text-transform: uppercase;
+        
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         -o-border-radius: 5px;
         -ms-border-radius: 5px; }
-
+      #demo{
+        font-size: 20px;
+      }
+     
       #submit {
-          background: #207542;;
+          background: #008080;
           color: #fff;
-          margin-right: -25px; 
+           
       }
       #register {
-        background: #207542;;
+        background: #008080;
         color: #fff;
         margin-right: -25px; 
     }
       #submit:hover {
-          background-color: #267747; }
+          background-color: #008080; }
       
       .form-input {
         position: relative; }
@@ -302,7 +309,7 @@ input {
           font-size: 23px;
           color: #c70000; }
           .form{
-            font-size: 14px;
+            font-size: 20px;
             font-family: 'Poppins';
             color: white;
             text-align: center;
@@ -312,16 +319,16 @@ input {
           button{
             width: 150px;
             height: 50px;
-            background-color: #207542;
+            background-color: #008080;
             border: none;
             cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
+            
             border-radius: 5px;
             -moz-border-radius: 5px;
             -webkit-border-radius: 5px;
             -o-border-radius: 5px;
             -ms-border-radius: 5px;
+            font-family: Georgia, "Times New Roman", Times, serif;
             
           }
 
@@ -349,6 +356,9 @@ input {
               .register-form {
                 padding: 93px 30px 90px 30px; } }
             @media screen and (max-width: 768px) {
+              .form-input{
+                width: 60%;
+              }
               .form-row {
                 flex-direction: column;
                 -moz-flex-direction: column;
@@ -361,17 +371,29 @@ input {
                 width: 100%;
                 padding: 0 0px; } }
             @media screen and (max-width: 480px) {
+              .form-input{
+                width: 60%;
+              }
+              .container{
+                width: 130%;
+              }
               .submit {
                 width: 100%;
-              margin-right:10px ; }
-            
-              #submit {
-                margin-bottom: 20px;
-                margin-right: 0px; }
-            
+               }
+               .form-submit {
+                text-align: right;
+                margin: -48px -35px 13px 157px;
+                height: 50px;
+               width:150px;
+               
+              } 
+              
               .form-radio-group {
                 flex-direction: column;
                 -moz-flex-direction: column;
                 -webkit-flex-direction: column;
                 -o-flex-direction: column;
-                -ms-flex-direction: column; } }
+                -ms-flex-direction: column; } } 
+            
+
+                
