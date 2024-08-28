@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import "./Advertisement.css";
+import { Link } from "react-router-dom";
 
 const Advertisement = () => {
   const images = [
@@ -11,9 +12,6 @@ const Advertisement = () => {
     "sliderImage-6.jpg",
     "sliderImage-5.jpg",
     "sliderImage-2.png",
-    // "certificate.svg",
-    // "notification.svg",
-    // "recognised.svg",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -79,12 +77,14 @@ const Advertisement = () => {
           </div>
 
           {/* third box */}
-          <div className="box post">
-            <div className="h3">Discover Latest Posts</div>
-            <div className="h4">
-              Stay updated with the latest posts and trends.
+          <Link to="/post" style={{ textDecoration: "none" }}>
+            <div className="box post">
+              <div className="h3">Discover Latest Posts</div>
+              <div className="h4">
+                Stay updated with the latest posts and trends.
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -92,17 +92,13 @@ const Advertisement = () => {
 
       <div className="container container-fluid">
         <div className="d-flex mb-5 gap-5">
-          <div className="view-button startup">View Startups</div>
-          <div className="view-button invester ">View Investors</div>
+          <Link to="/startups" className="view-button startup">
+            <div>View Startups</div>
+          </Link>
 
-          {/* <Link to="/startups" className={styles.button}> */}
-          {/* </Link> */}
-
-          {/* <Link to="/investors" className={styles.button}> */}
-          {/* </Link> */}
-
-          {/* <Link to="/posts" className={styles.button}> */}
-          {/* </Link> */}
+          <Link to="/investors" className="view-button invester">
+            <div>View Investors</div>
+          </Link>
         </div>
       </div>
     </>

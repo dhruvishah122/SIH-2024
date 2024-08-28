@@ -42,6 +42,7 @@
 
 .button::after {
   content: "";
+  display: block;
   width: 100%;
   height: 3px;
   position: absolute;
