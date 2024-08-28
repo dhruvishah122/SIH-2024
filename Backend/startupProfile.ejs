@@ -40,11 +40,14 @@
   </div>
   <div class="profile-info col-md-9">
       <div class="panel">
-          <form>
-              <textarea placeholder="Whats new idea? share here.." rows="2" class="form-control input-lg p-text-area"></textarea>
-          </form>
+        <form action="/postData" method="post">
+              <textarea placeholder="Whats new idea? share here.." rows="2" class="form-control input-lg p-text-area" name="content"></textarea>
+              <input type="hidden" name="name" value= <%=user?.name%> >
+              <input type="hidden" name="id" value=<%=user?._id %>>
           <footer class="panel-footer">
+            
               <button class="btn btn-warning pull-right" style="background-color: #097d7d;">Post</button>
+            </form>
               <ul class="nav nav-pills">
                   <li>
                       <a href="#" style="color:black"><i class="fa fa-map-marker"></i></a>

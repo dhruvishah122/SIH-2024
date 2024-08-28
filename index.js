@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const path=require("path");
 const startupRegister = require("./models/startupRegister.js");
 const investorRegister = require("./models/investorRegister.js");
+const posts = require("./models/posts.js");
 const methodOverride = require("method-override");
 const port = 8080;
 const cors = require('cors');
@@ -230,7 +231,25 @@ app.post("/investorAuthenticate",async(req,res)=>{
       }
  });
 
+//posts
 
+app.post("/postData",(req,res)=>{
+  console.log(req.body);
+const {content,name,id}=req.body;
+let newPost= new posts({
+  content:content,
+  name:name,
+  id:id
+});
+newPost.save().then(res=>{
+  console.log(res);
+}).catch((err)=>{
+console.log(err);
+});
+
+//   res.render("Backend/posts.ejs",{newPost});
+res.send("done");
+})
  app.listen(8080, ()=>{
     console.log("server is listening on port 8080");
 
