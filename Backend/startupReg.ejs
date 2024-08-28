@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-
     <title>Startup Sign Up </title>
     
-
     <link rel="icon" type="image/x-icon" href="../Frontend/public/logo.jpg">
 
- 
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
 
-    <link rel="stylesheet"  media="all" href="../Frontend/css/style.css">
+    <!-- Main css -->
 
-    <link rel="stylesheet" href="C:\Users\spsjp\OneDrive\Pictures\Desktop\SIH-2024\Frontend\css\style.css">
+    <link rel="stylesheet" href="../Frontend/css/startupReg.css">
+
+    <link rel="stylesheet" href="index.css">
 
     <link rel="stylesheet" href="../Frontend/css/startupReg.css">
 
@@ -27,16 +27,28 @@
 
         <div class="container">
             <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/form-img.jpg" alt="">
+                    <div class="signup-img-content">
+                        <h2>Register now </h2>
+                    </div>
+                </div>
                 <div class="signup-form">
-                    <form action="/investorDataSave" method="POST" class="register-form" id="register-form">
+
+                    <form action="/startupDataSave" method="POST" class="register-form" id="register-form">
+
+                    <form method="POST" class="register-form" id="register-form">
+
+                    <form action="/startupDataSave" method="POST" class="register-form" id="register-form">
+
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="form-input">
-                                    <label for="name" class="required">Name</label>
-                                    <input type="text" name="name" id="name" />
+                                    <label for="first_name" class="required">Name</label>
+                                    <input type="text" name="name" id="first_name" />
                                 </div>
                                 <div class="form-input">
-                                    <label for="email" class="required">E-Mail</label>
+                                    <label for="email" class="required">Email</label>
                                     <input type="text" name="email" id="email" />
                                 </div>
                                 <div class="form-input">
@@ -49,34 +61,88 @@
                                 </div>
                         
                                 <div class="form-input">
-                                    <label for="Investor_Type" class="required">Investor_Type</label>
-                                    <input type="text" name="Investor_Type" id="Investor_Type" />
+                                    <label for="industry_focuse" class="required">Industry_Focus</label>
+                                    <input type="text" name="Industry_Focus" id="industry_focus" />
                                 </div>
                                 <div class="form-input">
-                                    <label for="Year_of_Establishment" class="required">Year_of_Establishment</label>
-                                    <input type="text" name="Year_of_establishment" id="Year_of_Establishment" />
+                                    <label for="criteria" class="required">Startup_eligibility_criteria</label>
+                                    <input type="text" name="Startup_eligibility_criteria" id="criteria" />
                                 </div>
-                            
-                          
                                 <div class="form-input">
-                                        <label for="Employee_count"class="required">Employee_Count</label>
-                                        <input type="number" name="Employee_count" id="Employee_count" />
-                                    </div>
-                                    <div class="form-input">
-                                        <label for="headquaters" class="required">HeadQuaters</label>
-                                        <input type="text" name="headquaters" id="headquaters" />
-                                    </div>
-                                    <div class="form-input">
-                                        <label for="website" class="required">Website</label>
-                                        <input type="text" name="website" id="website" />
-                                    </div>
+                                    <label for="preference" class="required"> Startup_Revenue_Preference</label>
+                                    <input type="text" name="Startup_Revenue_Preference" id="preference" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="location" class="required">Location</label>
+                                    <input type="text" name="location" id="location" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="img" class="required">img</label>
+                                <input type="file" name="img"  required><br>
                             </div>
-                       </div>
-                        <br>
-
-                       <br>
+                            
+                            <!-- <div class="form-group">
+                                <div class="form-select">
+                                    <div class="label-flex">
+                                        <label for="meal_preference">meal preference</label>
+                                        <a href="#" class="form-link">Lunch detail</a>
+                                    </div>
+                                    <div class="select-list">
+                                        <select name="meal_preference" id="meal_preference">
+                                            <option value="Vegetarian">Vegetarian</option>
+                                            <option value="Kosher">Kosher</option>
+                                            <option value="Asian Vegetarian">Asian Vegetarian</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="payment">Payment Mode</label>
+                                        <a href="#" class="form-link">Payment Detail</a>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cash" checked>
+                                            <label for="cash">Cash</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cheque">
+                                            <label for="cheque">Cheque</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="demand">
+                                            <label for="demand">Demand Draf</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="chequeno">DD / Cheque No.</label>
+                                    <input type="text" name="chequeno" id="chequeno" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="blank_name">Drawn on ( Bank Name)</label>
+                                    <input type="text" name="blank_name" id="blank_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="payable">Payable at</label>
+                                    <input type="text" name="payable" id="payable" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="donate-us">
+                            <label>Donate us</label>
+                            <div class="price_slider ui-slider ui-slider-horizontal">
+                                <div id="slider-margin"></div>
+                                <span class="donate-value" id="value-lower"></span>
+                            </div>
+                        </div> -->
+                        
                         <div class="form-submit">
                             <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                        </div>
                         </div>
                     </form>
                 </div>
@@ -85,6 +151,12 @@
 
     </div>
 
-
+    
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

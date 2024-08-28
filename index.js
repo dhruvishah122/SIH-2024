@@ -166,7 +166,7 @@ app.post("/startupAuthenticate",  async function(req, res){
           const result = req.body.password === user.password;
           if (result) {
             console.log(user);
-            res.render("Backend/startupProfile.ejs",{user});
+            res.redirect("http://localhost:3000/startup");
           } else {
             res.render("/startupRegister");
           }
@@ -286,7 +286,7 @@ console.log(err);
 });
 addPostDataToJson(newPost);
 //   res.render("Backend/posts.ejs",{newPost});
-res.send("done");
+res.redirect("http://localhost:3000/post");
 })
  app.listen(8080, ()=>{
     console.log("server is listening on port 8080");
@@ -397,7 +397,7 @@ app.get("/startupProfile",async(req,res)=>{
       </div>
       <div class="panel">
           <div class="bio-graph-heading">
-             <b> AI Technologies: </b><a href="https://www.google.com" style="color:white">See our website</a>
+             <b> ${user?.name} </b><a href="https://www.google.com" style="color:white">See our website</a>
           </div>
           <div class="panel-body bio-graph-info">
               <!-- <h1>Startup Details</h1> -->
@@ -587,7 +587,7 @@ app.post('/iProfile', async(req, res) => {
           </footer>
       </div>
       <div class="panel">
-          <div class="bio-graph-heading" style="color:white">Amazon.com <a href=${user.website} style="color: white;">See our website</a>
+          <div class="bio-graph-heading" style="color:white">${user?.name}<a href=${user.website} style="color: white;">See our website</a>
           </div>
           <div class="panel-body bio-graph-info">
               <!-- <h1>Startup Details</h1> -->
