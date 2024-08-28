@@ -1,0 +1,47 @@
+.bgcolorr{
+    background-color: #8fa2a221;
+    color: rgb(15, 14, 13);
+
+}
+.imggg{
+        /* box-shadow: 4px 4px 3px black; */
+            height: 10rem;
+            width: 15rem;
+            margin-top: 4rem;
+            margin-right: 1rem;
+}
+
+.investmentInfoo {
+    color: #008080;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:00;
+}
+
+.investmentInfoTitlee{
+    color: black;
+}
+
+.titlee {
+    padding-top: 6rem;
+    text-align: center;
+    font-size: 43px;
+    font-weight: 500;
+    color: #008080;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.shadow{
+    box-shadow: 3px 3px black;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.btnn{
+    background-color: #008080;
+    color: white;
+    border: 1px solid white;
+    float: inline-end;
+}
+.btnn:hover{
+    background-color:white ;
+    color: #008080;
+    border: 1px solid #008080;
+}

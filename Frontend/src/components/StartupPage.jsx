@@ -7,7 +7,7 @@ function StartupPage() {
   const [startups, setStartups] = useState([]);
 
   useEffect(function () {
-    async function FetchCities() {
+    async function FetchStartups() {
       try {
         const res = await fetch(`${Base_URL}items`);
         const data = await res.json();
@@ -17,7 +17,7 @@ function StartupPage() {
         alert("There was an error loading data");
       }
     }
-    FetchCities();
+    FetchStartups();
   }, []);
   return (
     <div>

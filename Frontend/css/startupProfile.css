@@ -69,7 +69,7 @@ body {
 
 .profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
     background: #f8f7f5 !important;
-    border-left: 5px solid #036262;;
+    border-left: 5px solid #008080;;
     color: #000000 !important;
 }
 
@@ -94,7 +94,7 @@ body {
     border: none;
     font-weight: 300;
     box-shadow: none;
-    color: #fffbfb;
+    color: #060606;
     font-size: 16px;
 }
 
@@ -164,7 +164,7 @@ body {
 }
 
 .bio-desk h4.terques {
-    color: #1c949c;
+    color: #008080;
 }
 
 .bio-desk h4.red {
@@ -191,7 +191,7 @@ body {
 
 .summary-head {
     background: #ee7272;
-    color: #fff;
+    color: #181818;
     text-align: center;
     border-bottom: 1px solid #ee7272;
 }
@@ -266,7 +266,7 @@ ul.summary-list > li:last-child  {
     -webkit-border-radius: 50%;
     background: #eee;
     text-align: center;
-    color: #fff;
+    color: #1d1b1b;
     font-size: 16px;
 }
 

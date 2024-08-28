@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Investor Registration</title>
+    <title>Investor Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="../Frontend/public/logo.jpg">
 
  
-    <!-- Main css -->
 
     <link rel="stylesheet"  media="all" href="../Frontend/css/style.css">
 
@@ -22,11 +22,6 @@
 
         <div class="container">
             <div class="signup-content">
-                <div class="signup-img">
-                    <div class="signup-img-content">
-                        <h2>Register now </h2>
-                    </div>
-                </div>
                 <div class="signup-form">
                     <form action="/investorDataSave" method="POST" class="register-form" id="register-form">
                         <div class="form-row">
@@ -54,7 +49,7 @@
                                 </div>
                                 <div class="form-input">
                                     <label for="Year_of_Establishment" class="required">Year_of_Establishment</label>
-                                    <input type="number" name="Year_of_Establishment" id="Year_of_Establishment" />
+                                    <input type="text" name="Year_of_establishment" id="Year_of_Establishment" />
                                 </div>
                             
                           
@@ -72,6 +67,9 @@
                                     </div>
                             </div>
                        </div>
+                        <br>
+
+                       <br>
                         <div class="form-submit">
                             <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
                         </div>
@@ -82,12 +80,6 @@
 
     </div>
 
-    <!-- JS -->
-    <!-- <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/nouislider/nouislider.min.js"></script>
-    <script src="vendor/wnumb/wNumb.js"></script>
-    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="js/main.js"></script> -->
+
 </body>
 </html>

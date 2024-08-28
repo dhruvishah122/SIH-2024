@@ -1,5 +1,6 @@
 import styles from "./IPRsIntro.module.css";
 import IPRs from "./IPRs";
+import { Link } from "react-router-dom";
 
 function StartupIntro() {
   return (
@@ -23,6 +24,20 @@ function StartupIntro() {
           </h4>
         </div>
         <IPRs />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "4rem",
+        }}
+      >
+        <div>
+          <Link to="/iprhomepage" className={styles.button}>
+            Know more about IPR
+          </Link>
+        </div>
       </div>
     </>
   );

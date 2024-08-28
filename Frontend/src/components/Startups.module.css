@@ -19,6 +19,7 @@
   border-bottom-left-radius: 2rem;
   font-size: 20px;
   font-weight: 500;
+  height: 3rem;
 }
 
 .button:hover {
