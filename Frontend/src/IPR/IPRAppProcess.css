@@ -1,0 +1,52 @@
+.Aptitle {
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 43px;
+    font-weight: 500;
+    color: #008080;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.para{
+    font-size: 1.12rem;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px black;
+    width: 60%;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #dbf1f1;
+}
+#one{
+    margin-left: 6rem;
+}
+#two{
+    margin-left: 10rem;
+}
+#three{
+    margin-left: 14rem;
+}
+#four{
+    margin-left: 18rem;
+}
+#five{
+    margin-left: 22rem;
+}
+.numberr{
+    height: 2.5rem;
+    width: 2.5rem;
+   margin-right: 1rem;
+    border-radius: 50%;
+}
+.bttn{
+    background-color: #008080;
+    color: white;
+    border: 1px solid white;
+    float: inline-end;
+}
+.bttn:hover{
+    background-color:white ;
+    color: #008080;
+    border: 1px solid #008080;
+}
