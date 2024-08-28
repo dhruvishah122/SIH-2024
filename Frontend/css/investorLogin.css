@@ -278,7 +278,7 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
   
   input {
     box-sizing: border-box;
-    border: 1px solid #ebebeb;
+    border: 1px solid teal;
     padding: 14px 20px;
     border-radius: 5px;
     -moz-border-radius: 5px;
