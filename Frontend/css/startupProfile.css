@@ -191,7 +191,7 @@ body {
 
 .summary-head {
     background: #ee7272;
-    color: #fff;
+    color: #181818;
     text-align: center;
     border-bottom: 1px solid #ee7272;
 }
@@ -266,12 +266,12 @@ ul.summary-list > li:last-child  {
     -webkit-border-radius: 50%;
     background: #eee;
     text-align: center;
-    color: #fff;
+    color: #1d1b1b;
     font-size: 16px;
 }
 
 .activity.terques span {
-    background: #008080;
+    background: #39a9a7;
 }
 
 .activity.terques h4 {

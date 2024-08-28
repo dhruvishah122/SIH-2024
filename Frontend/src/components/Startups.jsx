@@ -3,7 +3,7 @@ import styles from "./Startups.module.css";
 function Startups({ startups }) {
   return (
     <div className={styles["startup-container"]}>
-      <div className={styles["sub-title"]}>Registered Startups</div>
+      <div className={styles["sub-title"]}>Collaborate or invest with Startups</div>
       <div className={`d-flex flex-wrap  justify-content-center gap-4`}>
         {startups.map((startup) => (
           <Startup startup={startup} key={startup.id} />

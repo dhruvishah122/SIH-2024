@@ -4,10 +4,13 @@ const postSchema = mongoose.Schema({
     name:{
         type:String
     },
-    id:{
+    id1:{
         type:String
     },
     content:{
+        type:String
+    },
+    email:{
         type:String
     }
 

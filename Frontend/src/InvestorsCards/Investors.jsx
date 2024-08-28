@@ -34,9 +34,22 @@ function Investor({ investor }) {
         },
         body: JSON.stringify(id),
       });
+      const re = await fetch("http://localhost:8080/iProfile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id),
+      });
+
+      const redirectUrl = `http://localhost:8080/investorProfile?name=${encodeURIComponent(
+        investor.name
+      )}&email=${encodeURIComponent(investor.email)}`;
+      window.location.href = redirectUrl;
     } catch {
       alert("error");
     }
+    
   }
   return (
     <div className={`card ${styles.cards}`}>

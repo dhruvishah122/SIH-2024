@@ -232,21 +232,59 @@ app.post("/investorAuthenticate",async(req,res)=>{
  });
 
 //posts
+function addPostDataToJson(newData) {
+    const filepath = path.join(__dirname, 'posts.json');
+    fs.readFile(filepath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return;
+        }
+  
+        let jsonData = { posts: [] }; // Initialize with an items array
+        try {
+            // Parse existing data or start with a new object if the file is empty
+            jsonData = data ? JSON.parse(data) : jsonData;
+  
+            // Check if the parsed data is an object and has items as an array
+            if (typeof jsonData !== 'object' || !Array.isArray(jsonData.posts)) {
+                console.error('Error: JSON data is not a valid object with items array.');
+                return;
+            }
+  
+        } catch (err) {
+            console.error('Error parsing JSON data:', err);
+            return;
+        }
+  
+        // Add new data as a new object in the items array
+        jsonData.posts.push(newData); // Push newData to the items array
+  
+        // Write the updated data back to the JSON file
+        fs.writeFile(filepath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing to the file:', err);
+                return;
+            }
+            console.log('Data added successfully!');
+        });
+    });
+  }
 
 app.post("/postData",(req,res)=>{
   console.log(req.body);
-const {content,name,id}=req.body;
+const {content,name,id1,email}=req.body;
 let newPost= new posts({
+    name:name,
+    id1:id1,
   content:content,
-  name:name,
-  id:id
+  email:email
 });
 newPost.save().then(res=>{
   console.log(res);
 }).catch((err)=>{
 console.log(err);
 });
-
+addPostDataToJson(newPost);
 //   res.render("Backend/posts.ejs",{newPost});
 res.send("done");
 })
@@ -299,7 +337,8 @@ app.get("/startupProfile",async(req,res)=>{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${user?.name}</title>
-    <link href="../Frontend/css/startupProfile.css" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="Frontend/public/logo.jpg">
+    <link href="Frontend/css/startupProfile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -316,7 +355,7 @@ app.get("/startupProfile",async(req,res)=>{
       <div class="panel">
           <div class="user-heading round">
               <a href="#">
-                  <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                  <img src="uploads/startup.png" alt="">
               </a>
                <h1>${user?.name}</h1>
               <h4>${user?.email}</h4>
@@ -327,7 +366,7 @@ app.get("/startupProfile",async(req,res)=>{
               <li><a href="#"> <i class="fa fa-calendar"></i> Chat with me </a></li>
               <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
           </ul>
-          <img class=".high-quality-gif" src="../uploads/sales_vs_year.gif" alt="Loading..." style=" width:350px; /* Ensure it scales within its container */
+          <img class=".high-quality-gif" src="uploads/sales_vs_year.gif" alt="Loading..." style=" width:350px; /* Ensure it scales within its container */
           image-rendering: crisp-edges; /* For sharp edges in pixel art */
           image-rendering: pixelated; /* Another option for pixel art */
           object-fit: cover;height: 250px;float: left;display: flex;">
@@ -446,3 +485,194 @@ app.get("/startupProfile",async(req,res)=>{
         res.send(htmlResponse);
   // res.render("Backend/startupProfile.ejs",{user});
 });
+
+
+//investor profile 
+
+app.post('/iProfile', async(req, res) => {
+    const filepath = path.join(__dirname, 'Frontend', 'investor.json');
+  
+    // Read the JSON file
+    fs.readFile(filepath, 'utf8', async (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return;
+        }
+        
+        // Parse the JSON data
+        const jsonData = JSON.parse(data);
+        const lastElement = jsonData.ids[jsonData.ids.length - 1];
+            
+            // Print the id of the last element
+            console.log('Last Element id:', lastElement.id);
+           const ans = await investorRegister.findById(lastElement.id);
+           const user = await investorRegister.findOne({ email: ans.email });
+               console.log(user.name);
+          
+               res.redirect(`/investorProfile?name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}`);
+  
+      
+    });
+    //  const dat =  await startupRegister.findOne({ _id: new ObjectId(lastElement._id) });
+     // console.log(lastElement);
+    
+    });
+
+    //send profile
+
+    app.get("/investorProfile",async(req,res)=>{
+        const user = await investorRegister.findOne({ email: req.query.email });
+        console.log("here is your user");
+        console.log(user);
+        const htmlResponse = `
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${user?.name}</title>
+     <link rel="icon" type="image/x-icon" href="Frontend/public/logo.jpg">
+    <link href="Frontend/css/startupProfile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+   
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-3">
+      <div class="panel">
+          <div class="user-heading round">
+              <a href="#">
+                  <img src="uploads/investor.png" alt="">
+              </a>
+              <h1>${user?.name}</h1>
+              <h4>${user?.email}</h4>
+          </div>
+         
+          <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
+              <li><a href="#"> <i class="fa fa-calendar"></i> Chat with me </a></li>
+              <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
+          </ul></div>
+          <img  src="uploads/pie1.gif" alt="Loading..." style="height: 350px; margin-top: -10px;">
+        
+  </div>
+  <div class="profile-info col-md-9">
+      <div class="panel">
+          <form>
+              <textarea placeholder="Want to invest? share here.." rows="2" class="form-control input-lg p-text-area"></textarea>
+          </form>
+          <footer class="panel-footer">
+              <button class="btn btn-warning pull-right" style="background-color: #097d7d;">Post</button>
+              <ul class="nav nav-pills">
+                  <li>
+                      <a href="#" style="color:black"><i class="fa fa-map-marker"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i class="fa fa-camera"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i class=" fa fa-film"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i class="fa fa-microphone"></i></a>
+                  </li>
+              </ul>
+          </footer>
+      </div>
+      <div class="panel">
+          <div class="bio-graph-heading" style="color:white">Amazon.com <a href=${user.website} style="color: white;">See our website</a>
+          </div>
+          <div class="panel-body bio-graph-info">
+              <!-- <h1>Startup Details</h1> -->
+              <div class="row">
+                   
+                    <p><span><b><b>Technology</b></b></span> :  ${user?.technology}</p>
+                
+                 
+                      <p><span><b><b>Investor type </b></b></span> :   ${user?. Investor_Type}</p>
+                 
+                  
+                      <p><span><b><b>Year of establishment</b> </b></span> : 2010</p>
+                      <p><span><b> <b>No of Employees</b></b> </span> :  ${user?.Employee_count}</p>
+                      <p><span><b> <b>Headquaters</b></b> </span> :  ${user?.headquaters}</p>
+                  
+                
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                              <div style="display:inline;width:70px;height:70px;"><canvas width="100" height="70px"></canvas><input class="knob" data-width="100" data-height="70" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#e06b7d" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -77px; border: 2px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(224, 107, 125); padding: 0px; -webkit-appearance: none; background: none;"></div>
+                          </div>
+                          <div class="bio-desk">
+                           <h4 class="red"> <b>50+ startups funded</b> </h4><br>
+                             <h4 class="red"> <b>30+ investors Collaborated</b> </h4>
+                             
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                              <div style="display:inline;width:100px;height:70px;"><canvas width="100" height="100px"></canvas><input class="knob" data-width="100" data-height="100" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#4CC5CD" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 2px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(76, 197, 205); padding: 0px; -webkit-appearance: none; background: none;"></div>
+                          </div>
+                          
+                          <div class="bio-desk">
+                            <h4 class="green"><b>100+ invested companies with 16 crores valuation</b></h4>
+                            <h4 class="green"><b>50+ invested companies 5 crores turnover FY2023</b></h4>
+                            <h4 class="green"><b>70+ invested companies having 60% plus profit margin</b></h4>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                              <div style="display:inline;width:100px;height:80px;"><canvas width="100" height="80px"></canvas><input class="knob" data-width="100" data-height="100" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#96be4b" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 2px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(150, 190, 75); padding: 0px; -webkit-appearance: none; background: none;"></div>
+                          </div>
+                          <div class="bio-desk">
+                            <h4 class="terques"><b>Yearly Average investment : 7+ crores </b> </h4><br>
+                            <h4 class="terques"><b>Funding type : Both Royalty and Equity</b> </h4>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart"> 
+                              <div style="display:inline;width:100px;height:100px;"><canvas width="100" height="100px"></canvas><input class="knob" data-width="100" data-height="100" data-displayprevious="true" data-thickness=".2" value="" data-fgcolor="#cba4db" data-bgcolor="#e8e8e8" style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 2px ; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(203, 164, 219); padding: 0px; -webkit-appearance: none; background: none;"></div>
+                          </div>
+                          <div class="bio-desk">
+                              <h4 class="purple"><b>See Our Investments..</b></h4>
+                              <h4 class="purple" style="text-decoration: none;"><b><a href="#">Click here..</a></b></h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</body>
+</html>`;
+      
+              // Send the HTML response
+              res.send(htmlResponse);
+        // res.render("Backend/startupProfile.ejs",{user});
+      });

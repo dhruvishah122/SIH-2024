@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%=user?.name%></title>
+    <link rel="icon" type="image/x-icon" href="../Frontend/public/logo.jpg">
     <link href="../Frontend/css/startupProfile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -43,7 +44,8 @@
         <form action="/postData" method="post">
               <textarea placeholder="Whats new idea? share here.." rows="2" class="form-control input-lg p-text-area" name="content"></textarea>
               <input type="hidden" name="name" value= <%=user?.name%> >
-              <input type="hidden" name="id" value=<%=user?._id %>>
+              <input type="hidden" name="id1" value=<%=user?._id %>>
+              <input type="hidden" name="email" value=<%=user?.email %>>
           <footer class="panel-footer">
             
               <button class="btn btn-warning pull-right" style="background-color: #097d7d;">Post</button>
