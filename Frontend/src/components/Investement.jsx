@@ -85,8 +85,12 @@ export default function Investement() {
           justifyContent: "center",
         }}
       >
-        <Link to="/investors" className="btn--investors">
-          <div style={{ marginBottom: "3rem" }}>Connect with Investors</div>
+        <Link
+          to="/investors"
+          className="btn--investors"
+          style={{ marginBottom: "3rem" }}
+        >
+          <div>Connect with Investors</div>
         </Link>
       </div>
     </>
