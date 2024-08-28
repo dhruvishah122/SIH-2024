@@ -206,3 +206,12 @@
     }
   }
 }
+
+.content {
+  height: 6rem;
+  overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
