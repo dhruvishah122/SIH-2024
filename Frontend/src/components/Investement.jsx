@@ -86,7 +86,7 @@ export default function Investement() {
         }}
       >
         <Link to="/investors" className="btn--investors">
-          <div>Connect with Investors</div>
+          <div style={{ marginBottom: "3rem" }}>Connect with Investors</div>
         </Link>
       </div>
     </>

@@ -20,7 +20,9 @@ function StartupIntro() {
         </div>
         <Cards />
         <div className="mb-5">
-          <StartupButton>Know More About Startups</StartupButton>
+          <StartupButton path={"/startup"}>
+            Know More About Startups
+          </StartupButton>
         </div>
       </div>
     </>

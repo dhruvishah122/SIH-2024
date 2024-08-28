@@ -17,7 +17,7 @@ function FeaturedStartup() {
           dreams.
         </h4>
         <Startups />
-        <StartupButton>View All Startups</StartupButton>
+        <StartupButton path={"/startups"}>View All Startups</StartupButton>
       </div>
       <hr></hr>
     </>

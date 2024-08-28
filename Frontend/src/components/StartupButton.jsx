@@ -1,9 +1,9 @@
 import styles from "./StartupButton.module.css";
 import { Link } from "react-router-dom";
 
-function StartupButton({ children }) {
+function StartupButton({ children, path }) {
   return (
-    <Link to="/startups" className={styles.button}>
+    <Link to={path} className={styles.button}>
       <div>{children}</div>
     </Link>
   );

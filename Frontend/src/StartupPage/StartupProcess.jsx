@@ -9,7 +9,7 @@ function StartupProcess() {
       <div className={`${styles.container} container-fluid`}>
         <div className={styles["one"]}>
           <div className={`${styles.processBox} d-flex`}>
-            <img className={`styles["image"]`} src="./1.png" alt="1" />
+            <img className={styles["image"]} src="./1.png" alt="1" />
             <div>
               <div className={styles.subHeading}>Eligibility Check</div>
               <div className={`${styles.info} h5 pt-2`}>
