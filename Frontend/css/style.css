@@ -158,7 +158,7 @@ box-shadow: none !important;
 -o-box-shadow: none !important;
 -ms-box-shadow: none !important; }
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   height: 100%;
   margin: 0;
   display: flex;
@@ -222,7 +222,7 @@ label.required:after {
 
 input {
 box-sizing: border-box;
-border: 1px solid #ebebeb;
+border: 1px solid teal;
 padding: 14px 20px;
 border-radius: 5px;
 -moz-border-radius: 5px;
