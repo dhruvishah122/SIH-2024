@@ -1,19 +1,44 @@
 {
   "posts": [
+   
     {
-      "name": "Dhruvi",
-      "id1": "66cdc343b34e09ef2fe77303",
-      "content": "hello",
-      "email": "amazon@gmail.com",
-      "_id": "66ced6c3c580deaab2086b72",
+      "name": "GreenBite Ventures",
+      "id1": "66cf1be76bdad1d47b19ae26",
+      "content": "Revolutionizing plant-based dining! Our vegan startup offers delicious, sustainable meals that cater to growing demand. We're transforming the food industry with innovative products and scalable growth potential. Join us in driving the future of food and making healthy, eco-friendly choices accessible to all. Invest in a better tomorrow!",
+      "email": "greenbite@gmail.com",
+      "_id": "66cf1c066bdad1d47b19ae29",
       "__v": 0
     },
     {
-      "name": "Mahi",
-      "id1": "66cae3c7b14c109c02a9c4c3",
-      "content": "Hello there? Can anyone suggest a food startup idea?",
-      "email": "mahapatwa@gmail.com",
-      "_id": "66cf04983e25d0471b2c55c1",
+      "name": "FinPath solutions",
+      "id1": "66cf1fde85f4f0202ba2be34",
+      "content": "Empowering financial freedom with FinPath Solutions! We're redefining personal finance through cutting-edge technology and user-centric tools that make managing money simple and effective. With a strong market demand and a scalable model, we're poised for rapid growth. We're seeking investors to join us in revolutionizing how people achieve financial security. Let's build a brighter financial future together!",
+      "email": "finpath@gmail.com",
+      "_id": "66cf201185f4f0202ba2be37",
+      "__v": 0
+    },
+    {
+      "name": "TechWave solutions",
+      "id1": "66cf2266846b47216990b079",
+      "content": "Transforming businesses with TechWave Innovations! We're an IT startup delivering next-gen solutions that drive efficiency and growth. Our cutting-edge technology and tailored services empower companies to thrive in the digital era. With a strong market presence and scalable potential, we're seeking investors to fuel our expansion. Join us in shaping the future of IT!",
+      "email": "techwave@gmail.com",
+      "_id": "66cf2296846b47216990b07c",
+      "__v": 0
+    },
+    {
+      "name": "Harvest capital",
+      "id1": "66cf23ba846b47216990b07f",
+      "content": "We are looking to invest in innovative food startups focused on sustainability, health, and technology. If you have a unique product or solution with growth potential, we want to hear from you! Please share your pitch deck and let’s explore a partnership!",
+      "email": "harvestcapital@gmail.com",
+      "_id": "66cf2422846b47216990b082",
+      "__v": 0
+    },
+    {
+      "name": "FutureTech capital",
+      "id1": "66cf250d846b47216990b084",
+      "content": "We're looking to fund innovative SaaS solutions that disrupt markets and demonstrate strong growth potential. If you have a compelling product and a dedicated team, we want to hear from you! Send your pitch deck to explore partnership opportunities.",
+      "email": "futuretech@gmail.com",
+      "_id": "66cf2559846b47216990b087",
       "__v": 0
     }
   ]
