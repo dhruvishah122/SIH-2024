@@ -33,9 +33,11 @@ function StartupIntro() {
           marginTop: "4rem",
         }}
       >
-        <Link to="/iprhomepage" className={styles.button}>
-          <div>Know more about IPR</div>
-        </Link>
+        <div>
+          <Link to="/iprhomepage" className={styles.button}>
+            Know more about IPR
+          </Link>
+        </div>
       </div>
     </>
   );

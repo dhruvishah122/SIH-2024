@@ -1,0 +1,61 @@
+.container {
+  /* height: 100vh; */
+  margin-bottom: 2rem;
+}
+
+.image {
+  height: 3.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.processBox {
+  width: 50rem;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #008080;
+  background-color: #dbf1f1;
+  box-shadow: 0 0 6px black;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 500;
+  color: #008080;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.subHeading {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.info {
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.one {
+  margin-left: 3rem;
+}
+
+.two {
+  margin-left: 10rem;
+}
+
+.three {
+  margin-left: 17rem;
+}
+
+.four {
+  margin-left: 24rem;
+}
+
+.five {
+  margin-left: 31rem;
+}

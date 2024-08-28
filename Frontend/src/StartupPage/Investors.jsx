@@ -1,9 +1,59 @@
 import styles from "./Investors.module.css";
 
-function Investors({ investors }) {
+const investors = [
+  {
+    name: "ML technologies",
+    email: "ml@gmail.com",
+    password: "123",
+    technology: "ML",
+    Investor_Type: "Government",
+    Employee_count: 200,
+    headquaters: "Delhi,India",
+    website: "www.github.com",
+    _id: "66cdf0858290fb967d4a9583",
+    __v: 0,
+  },
+  {
+    name: "Deep-ML technologies",
+    email: "aiml1@gmail.com",
+    password: "123",
+    technology: "DEEP LEARNING",
+    Investor_Type: "Government",
+    Employee_count: 200,
+    headquaters: "Delhi,India",
+    website: "www.github.com",
+    _id: "66cdf2d36c0a6e33cda056a6",
+    __v: 0,
+  },
+  {
+    name: "ML technologies",
+    email: "ml@gmail.com",
+    password: "123",
+    technology: "ML",
+    Investor_Type: "Government",
+    Employee_count: 200,
+    headquaters: "Delhi,India",
+    website: "www.github.com",
+    _id: "66cdf0858290fb967d4a9583",
+    __v: 0,
+  },
+  {
+    name: "Deep-ML technologies",
+    email: "aiml1@gmail.com",
+    password: "123",
+    technology: "DEEP LEARNING",
+    Investor_Type: "Government",
+    Employee_count: 200,
+    headquaters: "Delhi,India",
+    website: "www.github.com",
+    _id: "66cdf2d36c0a6e33cda056a6",
+    __v: 0,
+  },
+];
+
+function Investors() {
   return (
-    <div className={styles["investor-container"]}>
-      <div className={styles["sub-title"]}>Empowering Startups for Success</div>
+    <div className={styles["investor-container"]} style={{ marginTop: "3rem" }}>
       <div className={`d-flex flex-wrap  justify-content-center gap-4`}>
         {investors.map((investor) => (
           <Investor investor={investor} key={investor.id} />

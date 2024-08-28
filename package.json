@@ -9,6 +9,7 @@
   },
   "scripts": {
     "server": "json-server --watch ./data.json --port 900",
-    "server-1": "json-server --watch ./investorData.json --port 800"
+    "server-1": "json-server --watch ./investorData.json --port 800",
+    "server-2": "json-server --watch ./posts.json --port 700"
   }
 }

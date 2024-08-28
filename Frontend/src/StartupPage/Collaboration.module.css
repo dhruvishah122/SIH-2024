@@ -2,25 +2,28 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-top: 10rem;
+  gap: 1rem;
+  margin-top: 5rem;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding: 0 3rem 0 3rem;
 }
 
-.fundings-titlee {
+.featured-titlee {
   font-size: 34px;
   font-weight: 500;
   color: #008080;
+
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
-  /* text-decoration-line: underline; */
+  text-align: center;
 }
 
-.iprInfoo {
+.info {
   margin-left: 8rem;
   margin-right: 8rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
 }

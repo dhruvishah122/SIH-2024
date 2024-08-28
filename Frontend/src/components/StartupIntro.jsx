@@ -20,7 +20,7 @@ function StartupIntro() {
         </div>
         <Cards />
         <div className="mb-5">
-          <StartupButton />
+          <StartupButton>Know More About Startups</StartupButton>
         </div>
       </div>
     </>
