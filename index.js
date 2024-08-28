@@ -299,6 +299,7 @@ app.get("/startupProfile",async(req,res)=>{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${user?.name}</title>
+     <link rel="icon" type="image/x-icon" href="Frontend/public/logo.jpg">
     <link href="Frontend/css/startupProfile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -492,6 +493,7 @@ app.post('/iProfile', async(req, res) => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${user?.name}</title>
+     <link rel="icon" type="image/x-icon" href="Frontend/public/logo.jpg">
     <link href="Frontend/css/startupProfile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
