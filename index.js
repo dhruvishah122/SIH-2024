@@ -272,10 +272,10 @@ function addPostDataToJson(newData) {
 
 app.post("/postData",(req,res)=>{
   console.log(req.body);
-const {content,name,id,email}=req.body;
+const {content,name,id1,email}=req.body;
 let newPost= new posts({
     name:name,
-    id:id,
+    id1:id1,
   content:content,
   email:email
 });

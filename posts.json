@@ -2,10 +2,18 @@
   "posts": [
     {
       "name": "Dhruvi",
-      "id": "66cdc343b34e09ef2fe77303",
+      "id1": "66cdc343b34e09ef2fe77303",
       "content": "hello",
       "email": "amazon@gmail.com",
       "_id": "66ced6c3c580deaab2086b72",
+      "__v": 0
+    },
+    {
+      "name": "Mahi",
+      "id1": "66cae3c7b14c109c02a9c4c3",
+      "content": "Hello there? Can anyone suggest a food startup idea?",
+      "email": "mahapatwa@gmail.com",
+      "_id": "66cf04983e25d0471b2c55c1",
       "__v": 0
     }
   ]
