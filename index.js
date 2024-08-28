@@ -232,21 +232,59 @@ app.post("/investorAuthenticate",async(req,res)=>{
  });
 
 //posts
+function addPostDataToJson(newData) {
+    const filepath = path.join(__dirname, 'posts.json');
+    fs.readFile(filepath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return;
+        }
+  
+        let jsonData = { posts: [] }; // Initialize with an items array
+        try {
+            // Parse existing data or start with a new object if the file is empty
+            jsonData = data ? JSON.parse(data) : jsonData;
+  
+            // Check if the parsed data is an object and has items as an array
+            if (typeof jsonData !== 'object' || !Array.isArray(jsonData.posts)) {
+                console.error('Error: JSON data is not a valid object with items array.');
+                return;
+            }
+  
+        } catch (err) {
+            console.error('Error parsing JSON data:', err);
+            return;
+        }
+  
+        // Add new data as a new object in the items array
+        jsonData.posts.push(newData); // Push newData to the items array
+  
+        // Write the updated data back to the JSON file
+        fs.writeFile(filepath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing to the file:', err);
+                return;
+            }
+            console.log('Data added successfully!');
+        });
+    });
+  }
 
 app.post("/postData",(req,res)=>{
   console.log(req.body);
-const {content,name,id}=req.body;
+const {content,name,id,email}=req.body;
 let newPost= new posts({
+    name:name,
+    id:id,
   content:content,
-  name:name,
-  id:id
+  email:email
 });
 newPost.save().then(res=>{
   console.log(res);
 }).catch((err)=>{
 console.log(err);
 });
-
+addPostDataToJson(newPost);
 //   res.render("Backend/posts.ejs",{newPost});
 res.send("done");
 })

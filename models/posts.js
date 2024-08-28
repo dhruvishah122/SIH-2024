@@ -9,6 +9,9 @@ const postSchema = mongoose.Schema({
     },
     content:{
         type:String
+    },
+    email:{
+        type:String
     }
 
 });
