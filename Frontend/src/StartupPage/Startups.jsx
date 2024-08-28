@@ -63,7 +63,7 @@ function Startups() {
       className={styles["startup-container"]}
       style={{ marginTop: "3rem", marginBottom: "3rem" }}
     >
-      <div className={`d-flex flex-wrap  justify-content-center gap-4`}>
+      <div className={`d-flex flex-wrap  justify-content-center gap-5`}>
         {startups.map((startup) => (
           <Startup startup={startup} key={startup.id} />
         ))}

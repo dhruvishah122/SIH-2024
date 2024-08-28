@@ -54,7 +54,7 @@ const investors = [
 function Investors() {
   return (
     <div className={styles["investor-container"]} style={{ marginTop: "3rem" }}>
-      <div className={`d-flex flex-wrap  justify-content-center gap-4`}>
+      <div className={`d-flex flex-wrap  justify-content-center gap-5`}>
         {investors.map((investor) => (
           <Investor investor={investor} key={investor.id} />
         ))}

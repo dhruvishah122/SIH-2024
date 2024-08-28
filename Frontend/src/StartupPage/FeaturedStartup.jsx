@@ -19,7 +19,6 @@ function FeaturedStartup() {
         <Startups />
         <StartupButton path={"/startups"}>View All Startups</StartupButton>
       </div>
-      <hr></hr>
     </>
   );
 }

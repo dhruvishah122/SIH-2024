@@ -78,7 +78,6 @@ function StartupProcess() {
           </div>
         </div>
       </div>
-      <hr></hr>
     </>
   );
 }

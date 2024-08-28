@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: 6rem;
+  margin-bottom: 7rem;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
@@ -11,6 +12,7 @@
 }
 
 .startup-titlee {
+  margin-top: 1rem;
   font-size: 34px;
   font-weight: 500;
   color: #008080;

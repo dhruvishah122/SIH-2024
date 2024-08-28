@@ -15,7 +15,7 @@ function IntroSection() {
         <img
           src="startupimage.jpg"
           alt="startup image"
-          className="h-25 w-25 border rounded-4 border-white "
+          className="h-30 w-25 mt-3 border rounded-4 border-white "
         />
         <h4 className={`text-center  ${styles.startupInfoo}`}>
           Our platform is dedicated to fostering innovation and growth for
@@ -25,7 +25,6 @@ function IntroSection() {
           entrepreneurship and turn your vision into reality.
         </h4>
       </div>
-      <hr></hr>
     </>
   );
 }
