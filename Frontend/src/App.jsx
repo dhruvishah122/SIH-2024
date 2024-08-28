@@ -1,5 +1,6 @@
 import HomePage from "./components/HomePage";
 import StartupPage from "./components/StartupPage";
+import ResearchHomePage from "./Research Components/ResearchHomePage";
 import "./index.css";
 import IPRHomePage from "./IPR/IPRHomePage";
 import InvestorPage from "./InvestorsCards/InvestorPage";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/investors" element={<InvestorPage />}></Route>
         <Route path="/post" element={<PostPage />}></Route>
         <Route path="/startup" element={<StartupHomePage />}></Route>
+        <Route path="/ResearchHomePage" element={<ResearchHomePage />}></Route>
       </Routes>
     </BrowserRouter>
   );

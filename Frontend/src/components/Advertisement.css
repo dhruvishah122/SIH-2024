@@ -28,41 +28,77 @@
   width: 100%;
 }
 
-.image-container{
+.image-container {
   border: 3px solid black;
   box-shadow: 10px 5px 5px 10px black;
   border-radius: 1rem;
   margin-top: 3rem;
 }
 
-.adv-images{
+.adv-images {
   padding: 2rem;
   height: 500px;
 }
 
-.boxShadow{
+.boxShadow {
   /* background-color: rgba(0, 0, 0, 0.8); */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-decoration: none;
 }
 
+.box {
+  background-color: #008080;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
 
-/* .advertisement-container {
-  display: flex;
-  height: 100vh;
+.startup {
+  margin-left: 7rem;
+  text-decoration: none;
+}
+
+.invester {
+  margin-left: 7.5rem;
+  text-decoration: none;
+}
+
+.view-button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  color: #008080;
+  text-decoration: none;
+}
+
+.view-button:hover {
+  cursor: pointer;
+}
+
+.view-button::after {
+  content: "";
+  display: block;
   width: 100%;
-  align-items: center;
-  justify-content: center;
+  height: 3px;
+  position: relative;
+  transition: all 0.5s;
 }
 
-.image-container{
-  border: 2px solid black;
-  padding: 10rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+.view-button:hover::after {
+  background: #008080;
 }
 
-.adv-images {
-  padding: 4rem;
-  height: 350px;
-} */
+.post {
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.post:hover {
+  scale: 1.02;
+  cursor: pointer;
+  color: #008080;
+  background-color: white;
+  border: #008080;
+  box-shadow: 0 0 2px #008080;
+}

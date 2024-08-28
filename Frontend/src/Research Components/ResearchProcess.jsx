@@ -1,20 +1,20 @@
-import styles from "./StartupProcess.module.css";
+import styles from "./ResearchProcess.module.css";
 
-function StartupProcess() {
+function ResearchProcess() {
   return (
     <>
-      <div className={styles["title"]}>
-        Startup Registration Process Overview
-      </div>
+      <div className={styles["title"]}>Research Process Overview</div>
       <div className={`${styles.container} container-fluid`}>
         <div className={styles["one"]}>
-          <div className={`${styles.processBox} d-flex`}>
+          <div className={`${styles.processBox} container d-flex`}>
             <img className={styles["image"]} src="./1.png" alt="1" />
             <div>
-              <div className={styles.subHeading}>Eligibility Check</div>
+              <div className={styles.subHeading}>
+                Define the Research Problem
+              </div>
               <div className={`${styles.info} h5 pt-2`}>
-                Confirm that your business meets Gujarat’s criteria for
-                startups, including innovation and turnover requirements
+                Identify the research question or issue and conduct a literature
+                review to understand existing knowledge and gaps.
               </div>
             </div>
           </div>
@@ -25,11 +25,11 @@ function StartupProcess() {
             <img className={styles["image"]} src="./2.png" alt="1" />
             <div>
               <div className={styles.subHeading}>
-                Register on Startup Gujarat Portal
+                Formulate Objectives and Hypotheses
               </div>
               <div className={`${styles.info} h5 pt-2`}>
-                Create an account and submit your startup details on the
-                official Startup Gujarat portal
+                Develop specific objectives or hypotheses that guide what the
+                research aims to achieve.
               </div>
             </div>
           </div>
@@ -39,10 +39,10 @@ function StartupProcess() {
           <div className={`${styles.processBox} d-flex`}>
             <img className={styles["image"]} src="./3.png" alt="1" />
             <div>
-              <div className={styles.subHeading}>Documentation Submission</div>
+              <div className={styles.subHeading}>Design and Plan</div>
               <div className={`${styles.info} h5 pt-2`}>
-                Upload required documents, such as proof of business,
-                identification, and innovation details, on the portal
+                Choose the research methodology and design the study, including
+                data collection methods and sampling strategies.
               </div>
             </div>
           </div>
@@ -52,12 +52,10 @@ function StartupProcess() {
           <div className={`${styles.processBox} d-flex`}>
             <img className={styles["image"]} src="./4.png" alt="1" />
             <div>
-              <div className={styles.subHeading}>
-                Startup Recognition Application
-              </div>
+              <div className={styles.subHeading}>Collect and Analyze Data</div>
               <div className={`${styles.info} h5 pt-2`}>
-                Apply for official startup recognition, which may include
-                evaluation by a panel for innovation and scalability
+                Gather data using the selected methods and analyze it to draw
+                conclusions and interpret results.
               </div>
             </div>
           </div>
@@ -68,19 +66,19 @@ function StartupProcess() {
             <img className={styles["image"]} src="./5.png" alt="1" />
             <div>
               <div className={styles.subHeading}>
-                Approval and Certification
+                Report and Disseminate Findings
               </div>
               <div className={`${styles.info} h5 pt-2`}>
-                Upon approval, receive your startup recognition certificate,
-                making you eligible for government schemes and benefits
+                Document the findings, prepare reports or publications, and
+                share the results with stakeholders while ensuring ethical
+                compliance.
               </div>
             </div>
           </div>
         </div>
       </div>
-      <hr></hr>
     </>
   );
 }
 
-export default StartupProcess;
+export default ResearchProcess;
