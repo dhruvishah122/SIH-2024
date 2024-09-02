@@ -12,7 +12,7 @@
 }
 
 .investmentInfoo {
-    color: #008080;
+    color: #d2631f;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight:00;
 }
@@ -26,7 +26,7 @@
     text-align: center;
     font-size: 43px;
     font-weight: 500;
-    color: #008080;
+    color: #d2631f;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .shadow{
@@ -35,13 +35,13 @@
     border-radius: 2rem;
 }
 .btnn{
-    background-color: #008080;
+    background-color: #d2631f;
     color: white;
     border: 1px solid white;
     float: inline-end;
 }
 .btnn:hover{
     background-color:white ;
-    color: #008080;
-    border: 1px solid #008080;
+    color: #d2631f;
+    border: 1px solid #d2631f;
 }

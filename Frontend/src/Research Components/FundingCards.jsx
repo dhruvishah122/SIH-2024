@@ -44,11 +44,11 @@ export default function Cards() {
 
 function Card({ title, para, button, id }) {
   const cardsColor = {
-    color: "#008080",
+    color: "#d2631f",
   };
 
   const buttonStyling = {
-    backgroundColor: "#008080",
+    backgroundColor: "#d2631f",
     color: "white",
   };
 
