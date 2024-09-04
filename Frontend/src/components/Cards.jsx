@@ -50,11 +50,11 @@ function Cards() {
 
 function Card({ title, para, button, image, id }) {
   const cardsColor = {
-    color: "#008080",
+    color: "#d2631f",
   };
 
   const buttonStyling = {
-    backgroundColor: "#008080",
+    backgroundColor: "#d2631f",
     color: "white",
   };
 

@@ -23,8 +23,8 @@
 }
 
 .btn--cards:hover {
-  border: 2px solid #008080;
-  box-shadow: 0px 0px 3px #008080;
-  color: #008080 !important;
+  border: 2px solid #d2631f;
+  box-shadow: 0px 0px 3px #d2631f;
+  color: #d2631f !important;
   background-color: white !important;
 }

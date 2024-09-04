@@ -5,7 +5,7 @@
 
 .button:link,
 .button:visited {
-  color: #008080;
+  color: #d2631f;
   text-decoration: none;
   font-size: 25px;
 }
@@ -24,5 +24,5 @@
 }
 
 .button:hover::after {
-  background: #008080;
+  background: #d2631f;
 }

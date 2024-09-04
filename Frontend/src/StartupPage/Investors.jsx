@@ -108,7 +108,7 @@ function Investor({ investor }) {
         <h5
           className="text-center"
           style={{
-            color: "#008080",
+            color: "#d2631f",
             fontWeight: "600",
             fontSize: "24px",
             marginBottom: "2rem",
