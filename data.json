@@ -113,6 +113,42 @@
       "_id": "66cb71746cad902b366c4d6b",
       "__v": 0,
       "id": "dddf"
+    },
+    {
+      "name": "Web Solutions",
+      "email": "webdevelopment@gmail.com",
+      "password": "123",
+      "technology": "MERN stack",
+      "Industry_Focus": "Advertising,Media & Entertainment",
+      "Startup_eligibility_criteria": "VC Funded startups",
+      "Startup_Revenue_Preference": 200000,
+      "location": "Gujarat, IND",
+      "_id": "66cf4d1329f615f983279903",
+      "__v": 0
+    },
+    {
+      "name": "Foodies",
+      "email": "foodies@gmail.com",
+      "password": "123",
+      "technology": "Food Science & Biotechnology, Supply Chain Management Software",
+      "Industry_Focus": "Food tech, Eccomerce, online services",
+      "Startup_eligibility_criteria": "gov. certified",
+      "Startup_Revenue_Preference": 5000000,
+      "location": "Delhi, INDIA",
+      "_id": "66cf4dd129f615f98327990a",
+      "__v": 0
+    },
+    {
+      "name": "zurutech",
+      "email": "zurutech@gmail.com",
+      "password": "123",
+      "technology": "Artificial Intelligence (AI), Consumer Apps",
+      "Industry_Focus": "Financial Services, SAAS",
+      "Startup_eligibility_criteria": "gov. certified",
+      "Startup_Revenue_Preference": 5000000,
+      "location": "Ahmedabad, Gujarat, IND",
+      "_id": "66cf522529f615f98327991d",
+      "__v": 0
     }
   ]
 }

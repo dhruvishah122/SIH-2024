@@ -39,6 +39,22 @@
       "email": "futuretech@gmail.com",
       "_id": "66cf2559846b47216990b087",
       "__v": 0
+    },
+    {
+      "name": "Dhruvi",
+      "id1": "66cdc343b34e09ef2fe77303",
+      "content": "Hello everyone, I want to do a funding in Finance company. Any startup can contact. Thanks",
+      "email": "amazon@gmail.com",
+      "_id": "66cf46e574f88cf324057958",
+      "__v": 0
+    },
+    {
+      "name": "FutureTech",
+      "id1": "66cf250d846b47216990b084",
+      "content": "Looking for investments in Finance company... If any startups interested, contact : futuretech@gmail.com.",
+      "email": "futuretech@gmail.com",
+      "_id": "66cf52c629f615f983279925",
+      "__v": 0
     }
   ]
 }
