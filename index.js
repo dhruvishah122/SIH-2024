@@ -136,6 +136,21 @@ function addInvestorDataToJson(newData) {
 app.post("/startupDataSave",upload.single("img"),(req,res)=>{
  
 let {name,email,password,technology, Industry_Focus,Startup_eligibility_criteria,Startup_Revenue_Preference,location} = req.body;
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+
+let yyyy = today.getFullYear();
+
+if (dd < 10) {
+    dd = '0' + dd;
+}
+if (mm < 10) {
+    mm = '0' + mm;
+}
+today = dd + '-' + mm + '-' + yyyy;
+
+console.log(today);
 let newStartup = new startupRegister({
     name:name,
     email:email,
@@ -145,7 +160,9 @@ let newStartup = new startupRegister({
     Startup_eligibility_criteria:Startup_eligibility_criteria,
     Startup_Revenue_Preference:Startup_Revenue_Preference,
     location:location,
-   
+    date:today,
+    status:"Registered",
+    funds_sanctioned:0
 });
 newStartup.save().then(res=>{
     console.log(res);

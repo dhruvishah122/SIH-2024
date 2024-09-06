@@ -24,9 +24,14 @@ const startupSchema = mongoose.Schema({
     location:{
         type:String
     },
-    img: {
-        data: Buffer,
-        contentType: String
+    date:{
+        type:String
+    },
+    status:{
+        type:String
+    },
+    funds_sanctioned:{
+        type:Number
     }
 });
 const Startup = mongoose.model("Startup",startupSchema);

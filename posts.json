@@ -55,6 +55,14 @@
       "email": "futuretech@gmail.com",
       "_id": "66cf52c629f615f983279925",
       "__v": 0
+    },
+    {
+      "name": "FutureTech",
+      "id1": "66cf250d846b47216990b084",
+      "content": "We want to invest in a fintech startup",
+      "email": "futuretech@gmail.com",
+      "_id": "66d7fe145b3fd83894538b47",
+      "__v": 0
     }
   ]
 }
