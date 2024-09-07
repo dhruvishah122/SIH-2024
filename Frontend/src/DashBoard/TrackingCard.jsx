@@ -21,6 +21,7 @@ const startup = {
 function TrackingCard() {
   return (
     <>
+     
       <div className="card-body">
         <div className="steps d-flex flex-wrap flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
           <div

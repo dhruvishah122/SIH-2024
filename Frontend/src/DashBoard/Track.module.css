@@ -11,14 +11,17 @@
   justify-content: space-between;
   font-size: 24px;
   align-self: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ee762c !important;
 }
 .label {
-  font-size: 18px;
+  font-size: 24px;
   padding-right: 2rem;
 }
 
 .validation {
   display: flex;
+  align-items: center;
 }
 
 .table {
@@ -32,4 +35,29 @@ th,
 td {
   border: 1px solid black;
   padding: 1rem;
+}
+
+input {
+  border: 2px solid #ee762c;
+  border-radius: 4px;
+  background-color: white;
+  margin-right: 1rem;
+  height: 3rem;
+  width: 25rem;
+  color: black;
+}
+button {
+  text-decoration: none;
+  color: white;
+  background-color: #ee762c;
+  height: 3rem;
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s;
+}
+button:hover {
+  color: #ee762c;
+  background-color: white;
+  box-shadow: 0 0 3px #ee762c;
 }

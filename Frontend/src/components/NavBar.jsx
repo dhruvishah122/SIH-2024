@@ -55,7 +55,7 @@ function NavBar() {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              style={{ ...navColor, ...buttonStyles }}
+              style={{ ...navColor, ...buttonStyles, width: "6rem" }}
             >
               Login As
             </button>

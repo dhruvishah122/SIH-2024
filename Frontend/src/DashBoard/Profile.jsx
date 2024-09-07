@@ -24,19 +24,19 @@ function Profile() {
     <div className={styles.container}>
       <div className={styles.title}>
         <div>{startup.name}</div>
-        <Link>
-          <div>View Our Website</div>
+        <Link className={styles.title}>
+          <div className={styles.website}>View Our Website</div>
         </Link>
       </div>
       <div className={styles.info}>
-        <div>Technology</div> <div>{startup.technology}</div>
-        <div>Location</div> <div>{startup.location}</div>
-        <div>Industry Focus</div> <div> {startup.Industry_Focus}</div>
-        <div>Startup Eligibility Criteria</div>
+        <div>Technology :</div> <div>{startup.technology}</div>
+        <div>Location :</div> <div>{startup.location}</div>
+        <div>Industry Focus :</div> <div> {startup.Industry_Focus}</div>
+        <div>Startup Eligibility Criteria :</div>
         <div> {startup.Startup_eligibility_criteria}</div>
-        <div>Startup Revenue Preference</div>
+        <div>Startup Revenue Preference :</div>
         <div> {startup.Startup_Revenue_Preference}</div>
-        <div>Profit Margin</div>
+        <div>Profit Margin :</div>
         <div> 60%</div>
       </div>
     </div>
