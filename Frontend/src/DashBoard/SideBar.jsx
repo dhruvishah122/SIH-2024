@@ -1,16 +1,40 @@
 import { NavLink } from "react-router-dom";
 import styles from "./SideBar.module.css";
+import { useState } from "react";
 function SideBar() {
+  const [activeTab, setActiveTab] = useState(1);
+
   return (
     <div className={styles["container"]}>
-      <NavLink to="profile">
-        <div className={styles.menuItems}>Profile</div>
+      <NavLink to="profile" className={styles.links}>
+        <div
+          className={`${styles.menuItems} ${
+            activeTab === 1 ? styles.active : ""
+          }`}
+          onClick={() => setActiveTab(1)}
+        >
+          Profile
+        </div>
       </NavLink>
-      <NavLink to="track">
-        <div className={styles.menuItems}>Track Status</div>
+      <NavLink to="track" className={styles.links}>
+        <div
+          className={`${styles.menuItems} ${
+            activeTab === 2 ? styles.active : ""
+          }`}
+          onClick={() => setActiveTab(2)}
+        >
+          Track Status
+        </div>
       </NavLink>
-      <NavLink to="createpost">
-        <div className={styles.menuItems}>Create Post</div>
+      <NavLink to="createpost" className={styles.links}>
+        <div
+          className={`${styles.menuItems} ${
+            activeTab === 3 ? styles.active : ""
+          }`}
+          onClick={() => setActiveTab(3)}
+        >
+          Create Post
+        </div>
       </NavLink>
     </div>
   );

@@ -1,5 +1,6 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import logo from "../logo.jpg";
 
 function NavBar() {
   const navColor = {
@@ -19,15 +20,14 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top p-2">
       <div className="container-fluid text-warning logo ">
-        <Link to="/">
-          <a className="navbar-brand  text-success " href="#">
-            <img
-              src="logo.jpg"
-              alt="InnoHub Logo"
-              style={{ height: "60px", marginLeft: "30px" }}
-            />
-          </a>
+        <Link to="/" className="navbar-brand  text-warning">
+          <img
+            src={logo}
+            alt="InnoHub Logo"
+            style={{ height: "60px", marginLeft: "30px" }}
+          />
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -127,7 +127,11 @@ function List({ navColor }) {
 
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item " href= "http://localhost:8080/startupRegister" style={{ color: "#d2631f" }}>
+            <a
+              className="dropdown-item "
+              href="http://localhost:8080/startupRegister"
+              style={{ color: "#d2631f" }}
+            >
               Startup Registration
             </a>
           </li>
@@ -137,12 +141,20 @@ function List({ navColor }) {
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/investors" style={{ color: "#d2631f" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/investors"
+              style={{ color: "#d2631f" }}
+            >
               Startup Funding
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/startups" style={{ color: "#d2631f" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/startups"
+              style={{ color: "#d2631f" }}
+            >
               Collaboration Opportunities
             </a>
           </li>
@@ -227,17 +239,29 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/startups" style={{ color: "#d2631f" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/startups"
+              style={{ color: "#d2631f" }}
+            >
               Start Investing
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/investors" style={{ color: "#d2631f" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/investors"
+              style={{ color: "#d2631f" }}
+            >
               Browse Investors
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:8080/investorRegister" style={{ color: "#d2631f" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:8080/investorRegister"
+              style={{ color: "#d2631f" }}
+            >
               Register as Invester
             </a>
           </li>

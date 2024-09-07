@@ -34,6 +34,7 @@ function App() {
         <Route path="/post" element={<PostPage />}></Route>
         <Route path="/dashboard" element={<DashBoard />}>
           <Route index element={<Profile />}></Route>
+          <Route path="" element={<Profile />}></Route>
           <Route path="profile" element={<Profile />}></Route>
           <Route path="track" element={<Track />}></Route>
           <Route path="createpost" element={<CreatePost />}></Route>
