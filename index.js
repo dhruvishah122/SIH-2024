@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const path=require("path");
 const startupRegister = require("./models/startupRegister.js");
 const investorRegister = require("./models/investorRegister.js");
+const startupStatus =  require("./models/startupStatus.js");
 const posts = require("./models/posts.js");
 const methodOverride = require("method-override");
 const port = 8080;
@@ -310,7 +311,130 @@ res.redirect("http://localhost:3000/post");
 
 }
 );
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+async function updateStartup(id, newStatus, newFundsSanctioned,date) {
+    // Connect to the MongoDB database
+  
+    try {
+      // Update the document
+      const result = await startupRegister.updateOne(
+        { _id: id },
+        {
+          $set: {
+            status: newStatus,
+            date:date,
+            funds_sanctioned: newFundsSanctioned,
+          },
+        }
+      );
+  
+      console.log(`Document updated: ${result.nModified} document(s) updated.`);
+    } finally {
+      // Disconnect from the database
+      await mongoose.disconnect();
+    }
+  }
+  async function updateStatusDb(id, newStatus, newFundsSanctioned,date) {
+    // Connect to the MongoDB database
+  
+    try {
+      // Update the document
+      const result = await startupStatus.updateOne(
+        { _id: id },
+        {
+          $set: {
+            status: newStatus,
+            date: date,
+            funds_sanctioned: newFundsSanctioned,
+          },
+        }
+      );
+  
+      console.log(`Document updated: ${result.nModified} document(s) updated.`);
+    } finally {
+      // Disconnect from the database
+      await mongoose.disconnect();
+    }
+  }
+app.post("/update-status", (req, res) => {
+  const { investorName,startupName, fundingDetails, date,status,funds_sanctioned,id} = req.body;
+  // const data = loadData();
+console.log(req.body);
+updateObjectById(req.body);
+updateStartupStatus(req.body.id, req.body.status, req.body.funds_sanctioned,req.body.date);
+updateStartup(req.body.id,req.body.status, req.body.funds_sanctioned,req.body.date);
+updateStatusDb(req.body._id,req.body.status, req.body.funds_sanctioned,req.body.date);
+});
 
+
+
+// Function to update the status, date, and funds_sanctioned fields
+const updateStartupStatus = (id, newStatus, newFundsSanctioned,date) => {
+  // Read the data from the JSON file
+  fs.readFile("./data.json", "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading file:", err);
+      return;
+    }
+
+    // Parse the JSON data
+    const jsonData = JSON.parse(data);
+
+    // Find the startup with the matching _id
+    const startupIndex = jsonData.items.findIndex((item) => item._id === id);
+console.log(startupIndex);
+    if (startupIndex !== -1) {
+      // Update the status, date, and funds_sanctioned fields
+      jsonData.items[startupIndex].status = newStatus;
+      jsonData.items[startupIndex].date = date;
+      jsonData.items[startupIndex].funds_sanctioned = newFundsSanctioned;
+
+      // Write the updated data back to the JSON file
+      fs.writeFile("./data.json", JSON.stringify(jsonData, null, 2), (err) => {
+        if (err) {
+          console.error("Error writing file:", err);
+          return;
+        }
+
+        console.log("Startup status updated successfully!");
+      });
+    } else {
+      console.log("Startup not found with _id:", id);
+    }
+  });
+};
+function updateObjectById(newObject) {
+  fs.readFile("Frontend/public/statusData.json", 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return;
+    }
+
+    let jsonData = JSON.parse(data);
+
+    // Find the index of the object with the matching _id
+    const objectIndex = jsonData.status.findIndex(item => item.id === newObject.id);
+
+    if (objectIndex === -1) {
+      console.log('Object with the specified _id not found');
+      return;
+    }
+
+    // Replace the old object with the new one
+    jsonData.status[objectIndex] = newObject;
+
+    // Write the updated data back to the file
+    fs.writeFile("Frontend/public/statusData.json", JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+      if (err) {
+        console.error('Error writing file:', err);
+        return;
+      }
+      console.log('Object updated successfully');
+    });
+  });
+}
 //get startupProfile Data
 app.get('/profile',cors(),(req,res)=>{
 

@@ -4,7 +4,7 @@ import ResearchHomePage from "./Research Components/ResearchHomePage";
 import "./index.css";
 import IPRHomePage from "./IPR/IPRHomePage";
 import InvestorPage from "./InvestorsCards/InvestorPage";
-
+import StartupStatus from "./StartupStatus";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StartupHomePage from "./StartupPage/StartupHomePage";
 import PostPage from "./Post/PostPage";
@@ -21,6 +21,7 @@ function App() {
         <Route path="/post" element={<PostPage />}></Route>
         <Route path="/startup" element={<StartupHomePage />}></Route>
         <Route path="/ResearchHomePage" element={<ResearchHomePage />}></Route>
+        <Route path="/Startupstatus" element={<StartupStatus />}></Route>
       </Routes>
     </BrowserRouter>
   );

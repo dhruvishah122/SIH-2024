@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "_id": "66db3c1b09acff07fc27f88a",
+      "name": "Marketing ventures",
+      "email": "marketing@gmail.com",
+      "password": "123",
+      "technology": "Artificial Intelligence (AI), Consumer Apps, Enterprise Apps, AdTech, AgriTech, EdTech, FinTech, HealthTech, RetailTech, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
+      "Industry_Focus": "Advertising,Media & EntertainmentTraining,Energy & Utilities,Healthcare & Pharmaceuticals,IT & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
+      "Startup_eligibility_criteria": "VC Funded startups",
+      "Startup_Revenue_Preference": 7000000,
+      "location": "Ahmedabad, Gujarat, IND",
+      "date": "07/09/2024",
+      "status": "In Progress",
+      "funds_sanctioned": 700,
+      "__v": 0
+    },
+    {
       "name": "GreenBite Ventures",
       "email": "greenbite@gmail.com",
       "password": "123",
@@ -9,6 +24,9 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 200000,
       "location": "Ahmedabad, Gujarat, IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cf1be76bdad1d47b19ae26",
       "__v": 0
     },
@@ -21,6 +39,9 @@
       "Startup_eligibility_criteria": "Gov. Funded startups",
       "Startup_Revenue_Preference": 1500000,
       "location": "Delhi, INDIA",
+      "date": "07/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 600,
       "_id": "66cf1fde85f4f0202ba2be34",
       "__v": 0
     },
@@ -33,6 +54,9 @@
       "Startup_eligibility_criteria": "Kickstarter",
       "Startup_Revenue_Preference": 7000000,
       "location": "Bengaluru, INDIA",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cf2266846b47216990b079",
       "__v": 0
     },
@@ -45,6 +69,9 @@
       "Startup_eligibility_criteria": "gov. certified",
       "Startup_Revenue_Preference": 7000000,
       "location": "IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cb720f7ecb54eac3776e83",
       "__v": 0,
       "id": "325d"
@@ -58,6 +85,9 @@
       "Startup_eligibility_criteria": " certified",
       "Startup_Revenue_Preference": 450000000,
       "location": "INDIA",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cc30b65ba09366ee412a04",
       "__v": 0,
       "id": "3e16"
@@ -71,6 +101,9 @@
       "Startup_eligibility_criteria": " certified",
       "Startup_Revenue_Preference": 150000000,
       "location": "Bengaluru, INDIA",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cc40c7ae53a3297bda13f6",
       "__v": 0,
       "id": "5666"
@@ -84,6 +117,9 @@
       "Startup_eligibility_criteria": " startups",
       "Startup_Revenue_Preference": 1000000,
       "location": "IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cb6ddb43a2f8cc103e6d89",
       "__v": 0,
       "id": "c78d"
@@ -97,6 +133,9 @@
       "Startup_eligibility_criteria": " startup",
       "Startup_Revenue_Preference": 7000000,
       "location": "IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cb6e5fdf82c6794ce543b7",
       "__v": 0,
       "id": "4df6"
@@ -110,6 +149,9 @@
       "Startup_eligibility_criteria": "gov. certified",
       "Startup_Revenue_Preference": 7000000,
       "location": "IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cb71746cad902b366c4d6b",
       "__v": 0,
       "id": "dddf"
@@ -123,6 +165,9 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 200000,
       "location": "Gujarat, IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cf4d1329f615f983279903",
       "__v": 0
     },
@@ -135,6 +180,9 @@
       "Startup_eligibility_criteria": "gov. certified",
       "Startup_Revenue_Preference": 5000000,
       "location": "Delhi, INDIA",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cf4dd129f615f98327990a",
       "__v": 0
     },
@@ -147,6 +195,9 @@
       "Startup_eligibility_criteria": "gov. certified",
       "Startup_Revenue_Preference": 5000000,
       "location": "Ahmedabad, Gujarat, IND",
+      "date": "06-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "_id": "66cf522529f615f98327991d",
       "__v": 0
     },
@@ -159,9 +210,9 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 7000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "06-09-2024",
-      "status": "Registered",
-      "funds_sanctioned": 0,
+      "date": "07/09/2024",
+      "status": "Rejected",
+      "funds_sanctioned": 800,
       "_id": "66db3e1270fc7617f926c888",
       "__v": 0
     }
