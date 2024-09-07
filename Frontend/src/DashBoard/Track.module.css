@@ -1,0 +1,35 @@
+.main-container {
+  display: flex;
+
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  display: flex;
+  padding: 0 5rem 0 5rem;
+  justify-content: space-between;
+  font-size: 24px;
+  align-self: center;
+}
+.label {
+  font-size: 18px;
+  padding-right: 2rem;
+}
+
+.validation {
+  display: flex;
+}
+
+.table {
+  margin-top: 3rem;
+  border: 2px solid black;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}

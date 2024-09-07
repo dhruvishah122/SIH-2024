@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.title {
+  display: flex;
+  padding: 0 5rem 0 5rem;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 15rem auto;
+  row-gap: 2rem;
+  width: 100%;
+}

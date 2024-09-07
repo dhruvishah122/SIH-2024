@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  width: 100%;
+  height: calc(100vh - 4.2rem);
+  margin-top: 4rem;
+  padding: 0 1rem 0 0;
+  gap: 2rem;
+}
+
+.main-container {
+  box-shadow: 0px 0px 2px black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.side-container {
+  border-right: 1px solid black;
+}

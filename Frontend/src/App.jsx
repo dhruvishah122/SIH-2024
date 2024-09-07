@@ -13,6 +13,10 @@ import PostPage from "./Post/PostPage";
 import ScrollToTop from "./ScrollToTop.jsx";
 
 import "./index.css";
+import DashBoard from "./DashBoard/DashBoard.jsx";
+import Profile from "./DashBoard/Profile.jsx";
+import Track from "./DashBoard/Track.jsx";
+import CreatePost from "./DashBoard/CreatePost.jsx";
 
 function App() {
   return (
@@ -28,6 +32,12 @@ function App() {
         <Route path="/investors" element={<InvestorPage />}></Route>
         <Route path="/startups" element={<StartupPage />}></Route>
         <Route path="/post" element={<PostPage />}></Route>
+        <Route path="/dashboard" element={<DashBoard />}>
+          <Route index element={<Profile />}></Route>
+          <Route path="profile" element={<Profile />}></Route>
+          <Route path="track" element={<Track />}></Route>
+          <Route path="createpost" element={<CreatePost />}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
