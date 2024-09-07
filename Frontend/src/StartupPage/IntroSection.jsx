@@ -8,7 +8,7 @@ function IntroSection() {
           Accelerate Your Startup Journey
         </h1>
         <h3 className={styles["startup-titlee"]} style={{ fontSize: "28px" }}>
-          "Discover Resources, connect with Mentors, and scale your Innovation "
+          "Discover Resources, connect with Mentors, and scale your Innovation"
         </h3>
 
         <img

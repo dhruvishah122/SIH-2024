@@ -127,9 +127,9 @@ const handleStatusChange = (index) => {
 
   return (
     <div className="Table">
-      <h3>Application Status Tracking</h3>
+      <h3>     Application Status Tracking</h3><br></br>
       <Button variant="contained" color="primary" className="csv-btn" onClick={downloadCSV}>
-        Download as CSV
+        Download CSV
       </Button>
       <TableContainer component={Paper} style={{ boxShadow: "0px 13px 20px 0px #80808029" }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">

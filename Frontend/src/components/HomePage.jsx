@@ -1,16 +1,18 @@
 import NavBar from "./NavBar";
-import StartupIntro from "./StartupIntro";
 import Advertisement from "./Advertisement";
+import StartupIntro from "./StartupIntro";
 import IPRsIntro from "./IPRsIntro";
-import Footer from "./Footer";
 import HomePageInformation from "./Investement";
 import Research from "./Research";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function HomePage() {
   return (
     <>
       <NavBar />
-      <Advertisement />
+      <Header />
+      {/* <Advertisement /> */}
       <StartupIntro />
       <Research />
       <IPRsIntro />
