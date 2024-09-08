@@ -17,9 +17,9 @@ const StatusTable = () => {
   const [fundsSanctioned, setFundsSanctioned] = useState(0); // State to hold funds sanctioned
 
   useEffect(() => {
-    const data = localStorage.getItem("statusData");
+    // const data = localStorage.getItem("statusData");
    
-      setRows(JSON.parse(data).status); // Load data from localStorage if it exists
+    //   setRows(JSON.parse(data).status); // Load data from localStorage if it exists
    
       // If no data in localStorage, fetch from startupStatus.json
       fetch("/statusData.json")
@@ -127,21 +127,31 @@ const handleStatusChange = (index) => {
 
   return (
     <div className="Table">
-      <h3>     Application Status Tracking</h3><br></br>
-      <Button variant="contained" color="primary" className="csv-btn" onClick={downloadCSV}>
-        Download CSV
-      </Button>
+<h3 style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
+  <img src="../public/govLogo.png" alt="Logo" style={{ width: "70px", height: "70px", marginRight: "10px" }} />
+  Startup Funding Application Status and Data
+</h3>
+<Button
+    variant="contained"
+    color="primary"
+    className="csv-btn"
+    onClick={downloadCSV}
+    style={{ marginTop: "10px" }}
+  >
+    Download Report
+  </Button>
+  <br></br>
       <TableContainer component={Paper} style={{ boxShadow: "0px 13px 20px 0px #80808029" }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Investor Name</TableCell>
-              <TableCell align="left">Startup Name</TableCell>
-              <TableCell align="left">Funding Details</TableCell>
-              <TableCell align="left">Date</TableCell>
-              <TableCell align="left">Status</TableCell>
-              <TableCell align="left">Funds Sanctioned</TableCell>
-              <TableCell align="left">Actions</TableCell>
+              <TableCell><b>Investor Name</b></TableCell>
+              <TableCell align="left"><b>Startup Name</b></TableCell>
+              <TableCell align="left"><b>Funding Details</b></TableCell>
+              <TableCell align="left"><b>Date</b></TableCell>
+              <TableCell align="left"><b>Status</b></TableCell>
+              <TableCell align="left"><b>Funds Sanctioned</b></TableCell>
+              <TableCell align="left"><b>Actions</b></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

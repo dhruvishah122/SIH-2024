@@ -331,9 +331,9 @@ async function updateStartup(id, newStatus, newFundsSanctioned,date) {
       );
   
       console.log(`Document updated: ${result.nModified} document(s) updated.`);
-    } finally {
+    } catch(err) {
       // Disconnect from the database
-      await mongoose.disconnect();
+      console.log(err);
     }
   }
   async function updateStatusDb(id, newStatus, newFundsSanctioned,date) {
@@ -353,10 +353,10 @@ async function updateStartup(id, newStatus, newFundsSanctioned,date) {
       );
   
       console.log(`Document updated: ${result.nModified} document(s) updated.`);
-    } finally {
-      // Disconnect from the database
-      await mongoose.disconnect();
-    }
+    }catch(err) {
+        // Disconnect from the database
+        console.log(err);
+      }
   }
 app.post("/update-status", (req, res) => {
   const { investorName,startupName, fundingDetails, date,status,funds_sanctioned,id} = req.body;

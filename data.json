@@ -10,9 +10,9 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 7000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "07/09/2024",
-      "status": "In Progress",
-      "funds_sanctioned": 700,
+      "date": "08/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 4500000,
       "__v": 0
     },
     {
@@ -210,10 +210,25 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 7000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "07/09/2024",
-      "status": "Approved",
-      "funds_sanctioned": 500,
+      "date": "08/09/2024",
+      "status": "In Progress",
+      "funds_sanctioned": 5000,
       "_id": "66db3e1270fc7617f926c888",
+      "__v": 0
+    },
+    {
+      "name": "ISRO",
+      "email": "isro@gmail.com",
+      "password": "123",
+      "technology": "AgriTech, EdTech, FinTech, Space tecnology, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
+      "Industry_Focus": " EntertainmentTraining,Energy  & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
+      "Startup_eligibility_criteria": "Gov Funded startups",
+      "Startup_Revenue_Preference": 12000000,
+      "location": "Ahmedabad, Gujarat, IND",
+      "date": "08-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "_id": "66dd5d66d12e5c805a1fc21e",
       "__v": 0
     }
   ]
