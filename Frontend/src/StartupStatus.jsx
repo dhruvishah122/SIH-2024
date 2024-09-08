@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField"; // Import TextField
 import Button from "@mui/material/Button"; // Import Button
 import "./StartupStatus.css";
+import NewNavBar from "./components/NewNavBar";
 
 const StatusTable = () => {
   const [rows, setRows] = useState([]);
@@ -18,25 +19,25 @@ const StatusTable = () => {
 
   useEffect(() => {
     // const data = localStorage.getItem("statusData");
-   
+
     //   setRows(JSON.parse(data).status); // Load data from localStorage if it exists
-   
-      // If no data in localStorage, fetch from startupStatus.json
-      fetch("/statusData.json")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          localStorage.setItem("statusData", JSON.stringify(data)); // Save to localStorage
-          setRows(data.status); // Set the rows from the fetched data
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
-        const data = localStorage.getItem("statusData");
+
+    // If no data in localStorage, fetch from startupStatus.json
+    fetch("/statusData.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        localStorage.setItem("statusData", JSON.stringify(data)); // Save to localStorage
+        setRows(data.status); // Set the rows from the fetched data
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+    const data = localStorage.getItem("statusData");
 
     setRows(JSON.parse(data).status); // Load data from localStorage if it exists
 
@@ -55,7 +56,6 @@ const StatusTable = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-
   }, []);
 
   // Function to style the status based on the status value
@@ -151,121 +151,154 @@ const StatusTable = () => {
   };
 
   return (
-    <div className="Table">
-<h3 style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
-  <img src="../public/govLogo.png" alt="Logo" style={{ width: "70px", height: "70px", marginRight: "10px" }} />
-  Startup Funding Application Status and Data
-</h3>
-<Button
-    variant="contained"
-    color="primary"
-    className="csv-btn"
-    onClick={downloadCSV}
-    style={{ marginTop: "10px" }}
-  >
-    Download Report
-  </Button>
-  <br></br>
-      <TableContainer component={Paper} style={{ boxShadow: "0px 13px 20px 0px #80808029" }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell><b>Investor Name</b></TableCell>
-              <TableCell align="left"><b>Startup Name</b></TableCell>
-              <TableCell align="left"><b>Funding Details</b></TableCell>
-              <TableCell align="left"><b>Date</b></TableCell>
-              <TableCell align="left"><b>Status</b></TableCell>
-              <TableCell align="left"><b>Funds Sanctioned</b></TableCell>
-              <TableCell align="left"><b>Actions</b></TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row, index) => (
-              <TableRow
-                key={row._id}
-                style={{
-                  backgroundColor: index % 2 === 0 ? "#f5f5f5" : "#ffffff",
-                }}
-              >
-                <TableCell>{row.investorName}</TableCell>
-                <TableCell align="left">{row.startupName}</TableCell>
-                <TableCell align="left">
-                  <a
-                    href={row.fundingDetails}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Funding Details
-                  </a>
+    <>
+      <NewNavBar />
+      <div className="Table">
+        <h3
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="../public/govLogo.png"
+            alt="Logo"
+            style={{ width: "70px", height: "70px", marginRight: "10px" }}
+          />
+          Startup Funding Application Status and Data
+        </h3>
+        <Button
+          variant="contained"
+          color="primary"
+          className="csv-btn"
+          onClick={downloadCSV}
+          style={{ margin: "1.5rem 0 1.5rem 0" }}
+        >
+          Download Report
+        </Button>
+        <br></br>
+        <TableContainer
+          component={Paper}
+          style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
+        >
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>
+                  <b>Investor Name</b>
                 </TableCell>
-                <TableCell align="left">{row.date}</TableCell>
                 <TableCell align="left">
-                  <span
-                    className="status-btn"
-                    style={makeStatusStyle(row.status)}
-                  >
-                    {row.status}
-                  </span>
+                  <b>Startup Name</b>
                 </TableCell>
-                <TableCell align="left">{row.funds_sanctioned}</TableCell>
                 <TableCell align="left">
-                  {selectedRow === index ? (
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "flex-start",
-                      }}
-                    >
-                      <select
-                        className="action-dropdown"
-                        value={actionStatus}
-                        onChange={(e) => setActionStatus(e.target.value)}
-                      >
-                        <option value="">Select Action</option>
-                        <option value="Approved">Approve</option>
-                        <option value="Rejected">Reject</option>
-                        <option value="Request Changes">Request Changes</option>
-                      </select>
-                      {actionStatus === "Approved" && (
-                        <TextField
-                          variant="outlined"
-                          type="number"
-                          label="Funds Sanctioned"
-                          value={fundsSanctioned}
-                          onChange={(e) =>
-                            setFundsSanctioned(Number(e.target.value))
-                          }
-                          style={{ marginTop: "10px", width: "200px" }} // Add some margin and set width
-                        />
-                      )}
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className="action-btn"
-                        onClick={() => handleStatusChange(index)}
-                        style={{ marginTop: "10px" }} // Add margin for spacing
-                      >
-                        Confirm
-                      </Button>
-                    </div>
-                  ) : (
-                    <Button
-                      variant="contained"
-                      color="secondary"
-                      className="action-btn"
-                      onClick={() => setSelectedRow(index)}
-                    >
-                      Change Status
-                    </Button>
-                  )}
+                  <b>Funding Details</b>
+                </TableCell>
+                <TableCell align="left">
+                  <b>Date</b>
+                </TableCell>
+                <TableCell align="left">
+                  <b>Status</b>
+                </TableCell>
+                <TableCell align="left">
+                  <b>Funds Sanctioned</b>
+                </TableCell>
+                <TableCell align="left">
+                  <b>Actions</b>
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </div>
+            </TableHead>
+            <TableBody>
+              {rows.map((row, index) => (
+                <TableRow
+                  key={row._id}
+                  style={{
+                    backgroundColor: index % 2 === 0 ? "#f5f5f5" : "#ffffff",
+                  }}
+                >
+                  <TableCell>{row.investorName}</TableCell>
+                  <TableCell align="left">{row.startupName}</TableCell>
+                  <TableCell align="left">
+                    <a
+                      href={row.fundingDetails}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Funding Details
+                    </a>
+                  </TableCell>
+                  <TableCell align="left">{row.date}</TableCell>
+                  <TableCell align="left">
+                    <span
+                      className="status-btn"
+                      style={makeStatusStyle(row.status)}
+                    >
+                      {row.status}
+                    </span>
+                  </TableCell>
+                  <TableCell align="left">{row.funds_sanctioned}</TableCell>
+                  <TableCell align="left">
+                    {selectedRow === index ? (
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                        }}
+                      >
+                        <select
+                          className="action-dropdown"
+                          value={actionStatus}
+                          onChange={(e) => setActionStatus(e.target.value)}
+                        >
+                          <option value="">Select Action</option>
+                          <option value="Approved">Approve</option>
+                          <option value="Rejected">Reject</option>
+                          <option value="Request Changes">
+                            Request Changes
+                          </option>
+                        </select>
+                        {actionStatus === "Approved" && (
+                          <TextField
+                            variant="outlined"
+                            type="number"
+                            label="Funds Sanctioned"
+                            value={fundsSanctioned}
+                            onChange={(e) =>
+                              setFundsSanctioned(Number(e.target.value))
+                            }
+                            style={{ marginTop: "10px", width: "200px" }} // Add some margin and set width
+                          />
+                        )}
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          className="action-btn"
+                          onClick={() => handleStatusChange(index)}
+                          style={{ marginTop: "10px" }} // Add margin for spacing
+                        >
+                          Confirm
+                        </Button>
+                      </div>
+                    ) : (
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        className="action-btn"
+                        onClick={() => setSelectedRow(index)}
+                      >
+                        Change Status
+                      </Button>
+                    )}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+    </>
   );
 };
 
