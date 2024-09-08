@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import styles from "./Startups.module.css";
 
 function Startups({ startups }) {
   return (
     <div className={styles["startup-container"]}>
-      <div className={styles["sub-title"]}>Collaborate or invest with Startups</div>
+      <div className={styles["sub-title"]}>
+        Collaborate or invest with Startups
+      </div>
       <div className={`d-flex flex-wrap  justify-content-center gap-4`}>
         {startups.map((startup) => (
           <Startup startup={startup} key={startup.id} />
@@ -29,37 +32,37 @@ function Startup({ startup }) {
     industryFocusString = startup["Industry_Focus"].slice(0, 60);
     industryFocusString = techString.concat("...");
   }
-  const id = {
-    id: startup._id,
-  };
+  // const id = {
+  //   id: startup._id,
+  // };
 
-  async function handleClick() {
-    // Send a POST request to add a new user
-    try {
-      const res = await fetch("http://localhost:9000/ids", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      });
+  // async function handleClick() {
+  //   // Send a POST request to add a new user
+  //   try {
+  //     const res = await fetch("http://localhost:9000/ids", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(id),
+  //     });
 
-      const re = await fetch("http://localhost:8080/profile", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      });
+  //     const re = await fetch("http://localhost:8080/profile", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(id),
+  //     });
 
-      const redirectUrl = `http://localhost:8080/startupProfile?name=${encodeURIComponent(
-        startup.name
-      )}&email=${encodeURIComponent(startup.email)}`;
-      window.location.href = redirectUrl;
-    } catch {
-      alert("error");
-    }
-  }
+  //     const redirectUrl = `http://localhost:8080/startupProfile?name=${encodeURIComponent(
+  //       startup.name
+  //     )}&email=${encodeURIComponent(startup.email)}`;
+  //     window.location.href = redirectUrl;
+  //   } catch {
+  //     alert("error");
+  //   }
+  // }
 
   return (
     <div className={`card ${styles.cards}`}>
@@ -92,10 +95,12 @@ function Startup({ startup }) {
       </div>
 
       {/* onClick={handleClick} */}
-
-      <button onClick={handleClick} className={styles.button}>
-        View Profile
-      </button>
+      <Link
+        to={`/profile/${startup.id}?name=${startup.name}`}
+        className={styles.link}
+      >
+        <button className={styles.buttonn}>View Profile</button>
+      </Link>
     </div>
   );
 }

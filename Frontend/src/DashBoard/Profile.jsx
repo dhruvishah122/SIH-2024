@@ -1,4 +1,4 @@
-const startup = {
+const data = {
   name: "Hopscotch",
   email: "hopscotch@gmail.com",
   password: "123",
@@ -19,27 +19,33 @@ const startup = {
 import { Link } from "react-router-dom";
 import styles from "./Profile.module.css";
 
-function Profile() {
+function Profile({ startup }) {
+  if (!startup) startup = data;
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <div>{startup.name}</div>
-        <Link className={styles.title}>
-          <div className={styles.website}>View Our Website</div>
-        </Link>
-      </div>
-      <div className={styles.info}>
-        <div>Technology :</div> <div>{startup.technology}</div>
-        <div>Location :</div> <div>{startup.location}</div>
-        <div>Industry Focus :</div> <div> {startup.Industry_Focus}</div>
-        <div>Startup Eligibility Criteria :</div>
-        <div> {startup.Startup_eligibility_criteria}</div>
-        <div>Startup Revenue Preference :</div>
-        <div> {startup.Startup_Revenue_Preference}</div>
-        <div>Profit Margin :</div>
-        <div> 60%</div>
-      </div>
-    </div>
+    <>
+      {startup.name && (
+        <div className={styles.container}>
+          <div className={styles.title}>
+            <div>{startup.name}</div>
+            <Link className={styles.title}>
+              <div className={styles.website}>View Our Website</div>
+            </Link>
+          </div>
+          <div className={styles.info}>
+            <div>Email :</div> <div>{startup.email}</div>
+            <div>Technology :</div> <div>{startup.technology}</div>
+            <div>Location :</div> <div>{startup.location}</div>
+            <div>Industry Focus :</div> <div> {startup.Industry_Focus}</div>
+            <div>Startup Eligibility Criteria :</div>
+            <div> {startup.Startup_eligibility_criteria}</div>
+            <div>Startup Revenue Preference :</div>
+            <div> {startup.Startup_Revenue_Preference}</div>
+            <div>Profit Margin :</div>
+            <div> 60%</div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

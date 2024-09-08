@@ -38,7 +38,9 @@ function Track() {
         <label className={styles.label}>Enter application id</label>
         <form onSubmit={handleSubmit}>
           <input value={query} onChange={(e) => setQuery(e.target.value)} />
-          <button type="submit">Submit</button>
+          <button className={styles.button} type="submit">
+            Submit
+          </button>
         </form>
       </div>
       {showTable && (
