@@ -37,7 +37,7 @@ function InvestorSideBar({ name }) {
           Create Post
         </div>
       </NavLink>
-      <NavLink to={`#`} className={styles.links}>
+      <NavLink to={`form`} className={styles.links}>
         <div
           className={`${styles.menuItems} ${
             activeTab === 4 ? styles.active : ""

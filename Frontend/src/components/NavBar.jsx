@@ -94,7 +94,7 @@ function NavBar() {
                 type="button"
                 style={{ color: "#d2631f" }}
                 onClick={() =>
-                  (window.location.href = "http://localhost:3000/startupStatus")
+                  (window.location.href = "http://localhost:8080/authlogin")
                 }
               >
                 Government authority
