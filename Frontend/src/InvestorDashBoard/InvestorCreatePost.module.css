@@ -1,0 +1,27 @@
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: #ee762c;
+  height: 3rem;
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s;
+}
+.button:hover {
+  color: #ee762c;
+  background-color: white;
+  box-shadow: 0 0 3px #ee762c;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ee762c !important;
+  display: flex;
+  padding: 0 5rem 0 5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  width: 100%;
+}

@@ -49,6 +49,19 @@
       "website": "https://www.harvestcapital.com",
       "_id": "66cf23ba846b47216990b07f",
       "__v": 0
+    },
+    {
+      "name": "Angel investors",
+      "email": "angel@gmail.com",
+      "password": "123",
+      "technology": "Artificial Intelligence (AI), Consumer Apps, Enterprise Apps, AdTech, AgriTech, EdTech, FinTech, HealthTech, RetailTech, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
+      "Investor_Type": "Government",
+      "Year_of_establishment": "2006",
+      "Employee_count": 20000,
+      "headquaters": "Mumbai , India",
+      "website": "https://github.com/dhruvishah122",
+      "_id": "66dd7a0cb4fa13b2a6c42102",
+      "__v": 0
     }
   ]
 }

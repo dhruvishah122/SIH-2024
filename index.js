@@ -235,9 +235,9 @@ app.post("/investorAuthenticate",async(req,res)=>{
           //check if password matches
           const result = req.body.password === user.password;
           if (result) {
-           
+            const user = await investorRegister.findOne({ email: req.body.email });
               console.log(user);
-              res.render("Backend/investorProfile.ejs",{user});
+              res.redirect(`http://localhost:3000/investordashboard/profile?name=${user.name}`);
           } else {
             res.render("/investorRegister");
           }

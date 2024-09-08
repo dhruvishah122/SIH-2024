@@ -18,6 +18,11 @@ import Profile from "./DashBoard/Profile.jsx";
 import Track from "./DashBoard/Track.jsx";
 import CreatePost from "./DashBoard/CreatePost.jsx";
 
+import InvestorDashBoard from "./InvestorDashBoard/InvestorDashBoard.jsx";
+import InvestorProfile from "./InvestorDashBoard/InvestorProfile.jsx";
+import InvestorTrack from "./InvestorDashBoard/InvestorTrack.jsx";
+import InvestorCreatePost from "./InvestorDashBoard/InvestorCreatePost.jsx";
+
 import StartupProfile from "../viewprofile/StartupProfile.jsx";
 
 function App() {
@@ -41,6 +46,13 @@ function App() {
           <Route path="profile" element={<Profile />}></Route>
           <Route path="track" element={<Track />}></Route>
           <Route path="createpost" element={<CreatePost />}></Route>
+        </Route>
+        <Route path="/investordashboard" element={<InvestorDashBoard />}>
+          <Route index element={<InvestorProfile />}></Route>
+          <Route path="" element={<InvestorProfile />}></Route>
+          <Route path="profile" element={<InvestorProfile />}></Route>
+          <Route path="track" element={<InvestorTrack />}></Route>
+          <Route path="createpost" element={<InvestorCreatePost />}></Route>
         </Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
         <Route path="/profile/:id" element={<StartupProfile />}></Route>
