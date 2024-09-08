@@ -1,0 +1,50 @@
+/* .container{
+    height: 145vh;
+} */
+
+.bgcolor {
+    background-color: #f9eadf;
+    color: rgb(15, 14, 13);
+}
+
+.trainingInfo {
+    color: #d2631f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 00;
+    width: 80%;
+}
+
+.trainingInfoTitle {
+    color: black;
+}
+
+.title {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    color: #d2631f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn{
+    background-color: #d2631f;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5rem;
+    height: 2em;
+    width: 8rem;
+    font-size: large;
+    box-shadow: 0 0 6px #000000;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+    border: 2px solid #d2631f;
+    box-shadow: 0px 0px 3px #d2631f;
+    color: #d2631f;
+    background-color: white;
+}

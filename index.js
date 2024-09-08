@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const path=require("path");
 const startupRegister = require("./models/startupRegister.js");
 const investorRegister = require("./models/investorRegister.js");
+const startupStatus =  require("./models/startupStatus.js");
 const posts = require("./models/posts.js");
 const methodOverride = require("method-override");
 const port = 8080;
@@ -136,6 +137,21 @@ function addInvestorDataToJson(newData) {
 app.post("/startupDataSave",upload.single("img"),(req,res)=>{
  
 let {name,email,password,technology, Industry_Focus,Startup_eligibility_criteria,Startup_Revenue_Preference,location} = req.body;
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+
+let yyyy = today.getFullYear();
+
+if (dd < 10) {
+    dd = '0' + dd;
+}
+if (mm < 10) {
+    mm = '0' + mm;
+}
+today = dd + '-' + mm + '-' + yyyy;
+
+console.log(today);
 let newStartup = new startupRegister({
     name:name,
     email:email,
@@ -145,7 +161,9 @@ let newStartup = new startupRegister({
     Startup_eligibility_criteria:Startup_eligibility_criteria,
     Startup_Revenue_Preference:Startup_Revenue_Preference,
     location:location,
-   
+    date:today,
+    status:"Registered",
+    funds_sanctioned:0
 });
 newStartup.save().then(res=>{
     console.log(res);
@@ -166,7 +184,7 @@ app.post("/startupAuthenticate",  async function(req, res){
           const result = req.body.password === user.password;
           if (result) {
             console.log(user);
-            res.render("Backend/startupProfile.ejs",{user});
+            res.redirect(`http://localhost:3000/dashboard?email=${req.body.email}`);
           } else {
             res.render("/startupRegister");
           }
@@ -217,9 +235,9 @@ app.post("/investorAuthenticate",async(req,res)=>{
           //check if password matches
           const result = req.body.password === user.password;
           if (result) {
-           
+            const user = await investorRegister.findOne({ email: req.body.email });
               console.log(user);
-              res.render("Backend/investorProfile.ejs",{user});
+              res.redirect(`http://localhost:3000/investordashboard/profile?name=${user.name}`);
           } else {
             res.render("/investorRegister");
           }
@@ -286,14 +304,137 @@ console.log(err);
 });
 addPostDataToJson(newPost);
 //   res.render("Backend/posts.ejs",{newPost});
-res.send("done");
+res.redirect("http://localhost:3000/post");
 })
  app.listen(8080, ()=>{
     console.log("server is listening on port 8080");
 
 }
 );
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+async function updateStartup(id, newStatus, newFundsSanctioned,date) {
+    // Connect to the MongoDB database
+  
+    try {
+      // Update the document
+      const result = await startupRegister.updateOne(
+        { _id: id },
+        {
+          $set: {
+            status: newStatus,
+            date:date,
+            funds_sanctioned: newFundsSanctioned,
+          },
+        }
+      );
+  
+      console.log(`Document updated: ${result.nModified} document(s) updated.`);
+    } catch(err) {
+      // Disconnect from the database
+      console.log(err);
+    }
+  }
+  async function updateStatusDb(id, newStatus, newFundsSanctioned,date) {
+    // Connect to the MongoDB database
+  
+    try {
+      // Update the document
+      const result = await startupStatus.updateOne(
+        { _id: id },
+        {
+          $set: {
+            status: newStatus,
+            date: date,
+            funds_sanctioned: newFundsSanctioned,
+          },
+        }
+      );
+  
+      console.log(`Document updated: ${result.nModified} document(s) updated.`);
+    }catch(err) {
+        // Disconnect from the database
+        console.log(err);
+      }
+  }
+app.post("/update-status", (req, res) => {
+  const { investorName,startupName, fundingDetails, date,status,funds_sanctioned,id} = req.body;
+  // const data = loadData();
+console.log(req.body);
+updateObjectById(req.body);
+updateStartupStatus(req.body.id, req.body.status, req.body.funds_sanctioned,req.body.date);
+updateStartup(req.body.id,req.body.status, req.body.funds_sanctioned,req.body.date);
+updateStatusDb(req.body._id,req.body.status, req.body.funds_sanctioned,req.body.date);
+});
 
+
+
+// Function to update the status, date, and funds_sanctioned fields
+const updateStartupStatus = (id, newStatus, newFundsSanctioned,date) => {
+  // Read the data from the JSON file
+  fs.readFile("./data.json", "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading file:", err);
+      return;
+    }
+
+    // Parse the JSON data
+    const jsonData = JSON.parse(data);
+
+    // Find the startup with the matching _id
+    const startupIndex = jsonData.items.findIndex((item) => item._id === id);
+console.log(startupIndex);
+    if (startupIndex !== -1) {
+      // Update the status, date, and funds_sanctioned fields
+      jsonData.items[startupIndex].status = newStatus;
+      jsonData.items[startupIndex].date = date;
+      jsonData.items[startupIndex].funds_sanctioned = newFundsSanctioned;
+
+      // Write the updated data back to the JSON file
+      fs.writeFile("./data.json", JSON.stringify(jsonData, null, 2), (err) => {
+        if (err) {
+          console.error("Error writing file:", err);
+          return;
+        }
+
+        console.log("Startup status updated successfully!");
+      });
+    } else {
+      console.log("Startup not found with _id:", id);
+    }
+  });
+};
+function updateObjectById(newObject) {
+  fs.readFile("Frontend/public/statusData.json", 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return;
+    }
+
+    let jsonData = JSON.parse(data);
+
+    // Find the index of the object with the matching _id
+    const objectIndex = jsonData.status.findIndex(item => item.id === newObject.id);
+
+    if (objectIndex === -1) {
+      console.log('Object with the specified _id not found');
+      return;
+    }
+
+    // Replace the old object with the new one
+    jsonData.status[objectIndex] = newObject;
+
+    // Write the updated data back to the file
+    fs.writeFile("Frontend/public/statusData.json", JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+      if (err) {
+        console.error('Error writing file:', err);
+        return;
+      }
+      console.log('Object updated successfully');
+    });
+  });
+}
 //get startupProfile Data
 app.get('/profile',cors(),(req,res)=>{
 
@@ -397,7 +538,7 @@ app.get("/startupProfile",async(req,res)=>{
       </div>
       <div class="panel">
           <div class="bio-graph-heading">
-             <b> AI Technologies: </b><a href="https://www.google.com" style="color:white">See our website</a>
+             <b> ${user?.name} </b><a href="https://www.google.com" style="color:white">See our website</a>
           </div>
           <div class="panel-body bio-graph-info">
               <!-- <h1>Startup Details</h1> -->
@@ -587,7 +728,7 @@ app.post('/iProfile', async(req, res) => {
           </footer>
       </div>
       <div class="panel">
-          <div class="bio-graph-heading" style="color:white">Amazon.com <a href=${user.website} style="color: white;">See our website</a>
+          <div class="bio-graph-heading" style="color:white">${user?.name}<a href=${user.website} style="color: white;">See our website</a>
           </div>
           <div class="panel-body bio-graph-info">
               <!-- <h1>Startup Details</h1> -->

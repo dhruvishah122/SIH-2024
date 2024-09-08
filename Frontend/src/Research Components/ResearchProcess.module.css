@@ -1,0 +1,61 @@
+/* .container{
+    height: 120vh;
+    margin-bottom: 2rem;
+} */
+
+.image{
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.processBox{
+    width: 50rem;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #d2631f;
+    background-color: #f9eadf;
+    box-shadow: 0 0 6px black;
+}
+
+.title {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #d2631f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.subHeading{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info {
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.one{
+    margin-left: 3rem;
+}
+
+.two{
+    margin-left: 10rem;
+}
+
+.three {
+    margin-left: 17rem;
+}
+
+.four {
+    margin-left: 24rem;
+}
+
+.five {
+    margin-left: 31rem;
+}

@@ -1,5 +1,6 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import logo from "../logo.jpg";
 
 function NavBar() {
   const navColor = {
@@ -19,15 +20,14 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top p-2">
       <div className="container-fluid text-warning logo ">
-        <Link to="/">
-          <a className="navbar-brand  text-success " href="#">
-            <img
-              src="logo.jpg"
-              alt="InnoHub Logo"
-              style={{ height: "60px", marginLeft: "30px" }}
-            />
-          </a>
+        <Link to="/" className="navbar-brand  text-warning">
+          <img
+            src={logo}
+            alt="InnoHub Logo"
+            style={{ height: "60px", marginLeft: "30px" }}
+          />
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -55,13 +55,13 @@ function NavBar() {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              style={{ ...navColor, ...buttonStyles }}
+              style={{ ...navColor, ...buttonStyles, width: "6rem" }}
             >
               Login As
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
               <button
-                style={{ color: "#008080" }}
+                style={{ color: "#d2631f" }}
                 className="dropdown-item"
                 type="button"
                 onClick={() =>
@@ -72,7 +72,7 @@ function NavBar() {
               </button>
 
               <button
-                style={{ color: "#008080" }}
+                style={{ color: "#d2631f" }}
                 className="dropdown-item"
                 type="button"
                 onClick={() =>
@@ -85,9 +85,19 @@ function NavBar() {
               <button
                 className="dropdown-item"
                 type="button"
-                style={{ color: "#008080" }}
+                style={{ color: "#d2631f" }}
               >
                 Researcher
+              </button>
+              <button
+                className="dropdown-item"
+                type="button"
+                style={{ color: "#d2631f" }}
+                onClick={() =>
+                  (window.location.href = "http://localhost:3000/startupStatus")
+                }
+              >
+                Government authority
               </button>
             </div>
           </div>
@@ -127,27 +137,39 @@ function List({ navColor }) {
 
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item " href= "http://localhost:8080/startupRegister" style={{ color: "#008080" }}>
+            <a
+              className="dropdown-item "
+              href="http://localhost:8080/startupRegister"
+              style={{ color: "#d2631f" }}
+            >
               Startup Registration
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Mentorship Programs
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/investors" style={{ color: "#008080" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/investors"
+              style={{ color: "#d2631f" }}
+            >
               Startup Funding
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/startups" style={{ color: "#008080" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/startups"
+              style={{ color: "#d2631f" }}
+            >
               Collaboration Opportunities
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Success Stories
             </a>
           </li>
@@ -167,18 +189,18 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Ongoing Projects
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Research Funding
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Collaboration Opportunities
             </a>
           </li>
@@ -197,18 +219,18 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Patent Filing
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Copyright Services
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#008080" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#d2631f" }}>
               Legal Consultation
             </a>
           </li>
@@ -227,17 +249,29 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/startups" style={{ color: "#008080" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/startups"
+              style={{ color: "#d2631f" }}
+            >
               Start Investing
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:3000/investors" style={{ color: "#008080" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:3000/investors"
+              style={{ color: "#d2631f" }}
+            >
               Browse Investors
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="http://localhost:8080/investorRegister" style={{ color: "#008080" }}>
+            <a
+              className="dropdown-item"
+              href="http://localhost:8080/investorRegister"
+              style={{ color: "#d2631f" }}
+            >
               Register as Invester
             </a>
           </li>

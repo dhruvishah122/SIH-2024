@@ -157,7 +157,7 @@ body {
   margin: 0px;
   background: white;
   padding: 50px 0; 
-  background-color: #008080;}
+  background-color: #d2631f;}
 
 .main {
   position: relative; }
@@ -220,7 +220,7 @@ input {
   font-size: 20px;
   font-family: 'Georgia, "Times New Roman", Times, serif'; }
   input:focus {
-    border: 1px solid #008080; }
+    border: 1px solid #d2631f; }
 
 .label-flex {
   justify-content: space-between;
@@ -280,17 +280,17 @@ input {
       }
      
       #submit {
-          background: #008080;
+          background: #d2631f;
           color: #fff;
            
       }
       #register {
-        background: #008080;
+        background: #d2631f;
         color: #fff;
         margin-right: -25px; 
     }
       #submit:hover {
-          background-color: #008080; }
+          background-color: #d2631f; }
       
       .form-input {
         position: relative; }
@@ -319,7 +319,7 @@ input {
           button{
             width: 150px;
             height: 50px;
-            background-color: #008080;
+            background-color: #d2631f;
             border: none;
             cursor: pointer;
             

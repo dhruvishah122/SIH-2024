@@ -3,7 +3,7 @@
     text-align: center;
     font-size: 43px;
     font-weight: 500;
-    color: #008080;
+    color: #d2631f;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -16,7 +16,7 @@
     width: 60%;
     padding: 1rem;
     margin: 2rem;
-    background-color: #dbf1f1;
+    background-color: #dbc1b1;
 }
 #one{
     margin-left: 6rem;
@@ -40,13 +40,13 @@
     border-radius: 50%;
 }
 .bttn{
-    background-color: #008080;
+    background-color: #d2631f;
     color: white;
     border: 1px solid white;
     float: inline-end;
 }
 .bttn:hover{
     background-color:white ;
-    color: #008080;
-    border: 1px solid #008080;
+    color: #d2631f;
+    border: 2px solid #d2631f;
 }

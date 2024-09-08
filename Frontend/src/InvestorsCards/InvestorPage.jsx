@@ -7,7 +7,7 @@ function StartupPage() {
   const [investors, setInvestors] = useState([]);
 
   useEffect(function () {
-    async function FetchCities() {
+    async function FetchInvestors() {
       try {
         const res = await fetch(`${Base_URL}items1`);
         const data = await res.json();
@@ -17,7 +17,7 @@ function StartupPage() {
         alert("There was an error loading data");
       }
     }
-    FetchCities();
+    FetchInvestors();
   }, []);
   return (
     <div>

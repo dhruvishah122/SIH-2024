@@ -1,0 +1,21 @@
+/* .container{
+    width: 100%;
+    height: 100vh;
+} */
+
+.funding-info {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-bottom: 4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title {
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #d2631f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

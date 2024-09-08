@@ -164,7 +164,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #008080; 
+  background-color: #d2631f; 
  }
  input[type="text"], input[type="email"], input[type="password"],input[type="number"] {
   font-weight: bold; /* Bold text inside input fields */
@@ -222,7 +222,7 @@ label.required:after {
 
 input {
 box-sizing: border-box;
-border: 1px solid teal;
+border: 1px solid d2631f;
 padding: 14px 20px;
 border-radius: 5px;
 -moz-border-radius: 5px;
@@ -232,7 +232,7 @@ border-radius: 5px;
 font-size: 14px;
 font-family: 'Poppins'; }
 input:focus {
-  border: 1px solid #329e5e; }
+  border: 1px solid #d2631f; }
 
 .label-flex {
 justify-content: space-between;
@@ -289,17 +289,17 @@ justify-content: space-between;
       -ms-border-radius: 5px; }
 
     #submit {
-        background: #008080;
+        background: #d2631f;
         color: #fff;
         margin-right: -25px; 
     }
     #register {
-      background: #008080;
+      background: #d2631f;
       color: #fff;
       margin-right: -25px; 
   }
     #submit:hover {
-        background-color: #008080; }
+        background-color: #d2631f; }
     
     .form-input {
       position: relative; }
@@ -328,7 +328,7 @@ justify-content: space-between;
         button{
           width: 150px;
           height: 50px;
-          background-color: #008080;
+          background-color: #d2631f;
           border: none;
           cursor: pointer;
           font-weight: bold;

@@ -1,6 +1,6 @@
 import styles from "./Investors.module.css";
 
-function investors({ investors }) {
+function Investors({ investors }) {
   return (
     <div className={styles["investor-container"]}>
       <div className={styles["sub-title"]}>Empowering Startups for Success</div>
@@ -49,7 +49,6 @@ function Investor({ investor }) {
     } catch {
       alert("error");
     }
-    
   }
   return (
     <div className={`card ${styles.cards}`}>
@@ -57,7 +56,7 @@ function Investor({ investor }) {
         <h5
           className="text-center"
           style={{
-            color: "#008080",
+            color: "#d2631f",
             fontWeight: "600",
             fontSize: "24px",
             marginBottom: "2rem",
@@ -96,4 +95,4 @@ function Investor({ investor }) {
   );
 }
 
-export default investors;
+export default Investors;

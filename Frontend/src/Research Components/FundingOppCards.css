@@ -1,0 +1,31 @@
+.borderr {
+    /* border: 2px solid #008080; */
+    border-radius: 2rem;
+    width: 18rem;
+    height: 21rem;
+    box-shadow: 0px 0px 6px black;
+    background-color: rgba(211, 211, 211, 0.074);
+}
+
+.Fbtn1 {
+    left: 4.2rem;
+}
+
+.Fbtn2 {
+    left: 3.3rem;
+}
+
+.Fbtn3 {
+    left: 2.3rem;
+}
+
+.Fbtn4 {
+    left: 3rem;
+}
+
+.btn--cards:hover {
+    border: 2px solid #d2631f;
+    box-shadow: 0px 0px 3px #d2631f;
+    color: #d2631f !important;
+    background-color: white !important;
+}
