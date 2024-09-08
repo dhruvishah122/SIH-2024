@@ -1,0 +1,59 @@
+.Table {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .Table h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .csv-btn {
+    margin-bottom: 25px;
+    /* padding: 8px 12px; */
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .status-btn {
+    padding: 8px;
+    border-radius: 9px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+  }
+  
+  .action-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .comment-box {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .action-btn {
+    background-color: #1a73e8;
+    color: white;
+    /* padding: 8px 12px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Table td, th {
+    border: none !important;
+  }
+  
+  .Table:first-child {
+    border-radius: 0.7rem !important;
+  }
+  
