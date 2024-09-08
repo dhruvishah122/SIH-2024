@@ -20,6 +20,8 @@ import CreatePost from "./DashBoard/CreatePost.jsx";
 
 import StartupProfile from "../viewprofile/StartupProfile.jsx";
 
+import Form from "./Form/Form.jsx";
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,14 +29,19 @@ function App() {
 
       <Routes>
         <Route index element={<HomePage />}></Route>
+
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/logout" element={<HomePage />}></Route>
+
         <Route path="/startup" element={<StartupHomePage />}></Route>
         <Route path="/ResearchHomePage" element={<ResearchHomePage />}></Route>
         <Route path="/iprhomepage" element={<IPRHomePage />}></Route>
+
         <Route path="/investors" element={<InvestorPage />}></Route>
         <Route path="/startups" element={<StartupPage />}></Route>
+
         <Route path="/post" element={<PostPage />}></Route>
+
         <Route path="/dashboard" element={<DashBoard />}>
           <Route index element={<Profile />}></Route>
           <Route path="" element={<Profile />}></Route>
@@ -42,9 +49,12 @@ function App() {
           <Route path="track" element={<Track />}></Route>
           <Route path="createpost" element={<CreatePost />}></Route>
         </Route>
+
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
         <Route path="/profile/:id" element={<StartupProfile />}></Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
+
+        <Route path="/form" element={<Form />}></Route>
       </Routes>
     </BrowserRouter>
   );
