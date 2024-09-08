@@ -1,7 +1,6 @@
 import { useSearchParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import NewNavBar from "../components/NewNavBar";
 import DashContainer from "./DashContainer";
-import { useEffect, useState } from "react";
 
 function DashBoard() {
   const [param, setParm] = useSearchParams();
@@ -10,7 +9,7 @@ function DashBoard() {
 
   return (
     <>
-      <NavBar />
+      <NewNavBar />
       <DashContainer email={email} />
     </>
   );
