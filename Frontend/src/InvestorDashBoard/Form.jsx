@@ -1,9 +1,21 @@
+import { useState } from "react";
 import styles from "./Form.module.css";
-
+// import {useState} from "react";
+import axios from "axios";
 export default function Form() {
+  const[investorName,setinvestorName]=useState()
+  const[startupName,setstartupName]=useState()
+  const[fundingDetails,setfundingDetails]=useState()
+  const[id,setid]=useState();
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    axios.post('http://localhost:8080/investment',{investorName,startupName,fundingDetails,id})
+    .then(alert("Successfully filed investment"))
+    .catch(err=>console.log(err));
+  }
   return (
     <div>
-      <form className={` ${styles["form-container"]}  `}>
+      <form className={` ${styles["form-container"]}  `} onSubmit={handleSubmit}>
         <label className={` ${styles["name"]} h5 `}>
           Investor Name:
           <input
@@ -11,6 +23,7 @@ export default function Form() {
             type="text"
             name="investorName"
             className={` ${styles["text"]} `}
+            onChange={(e)=>setinvestorName(e.target.value)}
           />
         </label>
 
@@ -21,6 +34,7 @@ export default function Form() {
             type="text"
             name="startupName"
             className={` ${styles["text"]} `}
+            onChange={(e)=>setstartupName(e.target.value)}
           />
         </label>
 
@@ -31,6 +45,7 @@ export default function Form() {
             type="text"
             name="fundingDetails"
             className={` ${styles["text"]} `}
+            onChange={(e)=>setfundingDetails(e.target.value)}
           />
         </label>
 
@@ -41,6 +56,7 @@ export default function Form() {
             type="text"
             name="id"
             className={` ${styles["text"]} `}
+            onChange={(e)=>setid(e.target.value)}
           />
         </label>
 

@@ -20,15 +20,13 @@ const StatusTable = () => {
 
   useEffect(() => {
     if (investorName) {
-      const storedData = localStorage.getItem("statusData");
-
-      if (storedData) {
-        const parsedData = JSON.parse(storedData).status;
-        const filteredRows = parsedData.filter(
-          (row) => row.investorName === investorName
-        );
-        setRows(filteredRows); // Set filtered rows to state
-      } else {
+      
+        // const parsedData = JSON.parse(storedData).status;
+        // const filteredRows = parsedData.filter(
+        //   (row) => row.investorName === investorName
+        // );
+        // setRows(filteredRows); // Set filtered rows to state
+    
         // If no data in localStorage, fetch from startupStatus.json
         fetch("/statusData.json")
           .then((response) => {
@@ -38,7 +36,7 @@ const StatusTable = () => {
             return response.json();
           })
           .then((data) => {
-            localStorage.setItem("statusData", JSON.stringify(data)); // Save to localStorage
+            // localStorage.setItem("statusData", JSON.stringify(data)); // Save to localStorage
             const filteredRows = data.status.filter(
               (row) => row.investorName === investorName
             );
@@ -47,7 +45,7 @@ const StatusTable = () => {
           .catch((error) => {
             console.error("Error fetching data:", error);
           });
-      }
+      
     }
   }, [investorName]); // Re-fetch when investorName changes
 

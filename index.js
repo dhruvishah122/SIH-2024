@@ -287,6 +287,21 @@ function addPostDataToJson(newData) {
         });
     });
   }
+  app.get("/authlogin",(req,res)=>{
+    res.render("Backend/governmentLogin.ejs");
+    
+});
+
+app.post("/govLogin",(req,res)=>{
+  
+ if(req.body.email == "gov0707@gmail.com" && req.body.password== "12345" ){
+  res.redirect("http://localhost:3000/startupStatus");
+ }
+ else{
+  res.send("wrong");
+ }
+  });
+
 
 app.post("/postData",(req,res)=>{
   console.log(req.body);
@@ -658,7 +673,54 @@ app.post('/iProfile', async(req, res) => {
      // console.log(lastElement);
     
     });
+   // file investment
+   app.post("/investment",(req,res)=>{
+    const now = new Date(Date.now());
 
+const day = String(now.getDate()).padStart(2, '0'); // Get day and pad with 0 if needed
+const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+const year = now.getFullYear();
+
+const formattedDate = `${day}/${month}/${year}`;
+    const db = new startupStatus({
+        investorName:req.body.investorName,
+        startupName:req.body.startupName,
+        fundingDetails:req.body.fundingDetails,
+        date:formattedDate,
+        status:"Registered",
+        funds_sanctioned:0,
+        id:req.body.id
+    })
+    db.save().then(res=>{
+        console.log(res);
+    }).catch((err)=>{
+    console.log(err);
+    });
+    //update statusData.json
+
+    fs.readFile("Frontend/public/statusData.json", 'utf8', (err, data) => {
+        if (err) {
+          console.error('Error reading the file:', err);
+          return;
+        }
+      
+        // Parse the data to a JavaScript object
+        const jsonData = JSON.parse(data);
+      
+        // Add the new entry to the status array
+        jsonData.status.push(db);
+      
+        // Write the updated data back to the JSON file
+        fs.writeFile("Frontend/public/statusData.json", JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+          if (err) {
+            console.error('Error writing the file:', err);
+            return;
+          }
+      
+          console.log('New data added successfully!');
+        });
+   });
+});
     //send profile
 
     app.get("/investorProfile",async(req,res)=>{
