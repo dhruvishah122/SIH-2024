@@ -27,6 +27,7 @@ function App() {
       <Routes>
         <Route index element={<HomePage />}></Route>
         <Route path="/" element={<HomePage />}></Route>
+        <Route path="/logout" element={<HomePage />}></Route>
         <Route path="/startup" element={<StartupHomePage />}></Route>
         <Route path="/ResearchHomePage" element={<ResearchHomePage />}></Route>
         <Route path="/iprhomepage" element={<IPRHomePage />}></Route>
