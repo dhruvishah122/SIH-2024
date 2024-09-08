@@ -1,27 +1,31 @@
-import HomePage from "./components/HomePage";
-import StartupPage from "./components/StartupPage";
-import ResearchHomePage from "./Research Components/ResearchHomePage";
-// import "./index.css";
-import IPRHomePage from "./IPR/IPRHomePage";
-import InvestorPage from "./InvestorsCards/InvestorPage";
-import StartupStatus from "./StartupStatus";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import HomePage from "./components/HomePage";
+
 import StartupHomePage from "./StartupPage/StartupHomePage";
+import ResearchHomePage from "./Research Components/ResearchHomePage";
+import IPRHomePage from "./IPR/IPRHomePage";
+import StartupStatus from "./StartupStatus";
+import InvestorPage from "./InvestorsCards/InvestorPage";
+import StartupPage from "./components/StartupPage";
 import PostPage from "./Post/PostPage";
 
 import ScrollToTop from "./ScrollToTop.jsx";
 
-// import "./index.css";
+import "./index.css";
 import DashBoard from "./DashBoard/DashBoard.jsx";
 import Profile from "./DashBoard/Profile.jsx";
 import Track from "./DashBoard/Track.jsx";
 import CreatePost from "./DashBoard/CreatePost.jsx";
+import StartupProfile from "../viewprofile/StartupProfile.jsx";
+
 function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop />
+      <ScrollToTop />
+
       <Routes>
-      <Route index element={<HomePage />}></Route>
+        <Route index element={<HomePage />}></Route>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/startup" element={<StartupHomePage />}></Route>
         <Route path="/ResearchHomePage" element={<ResearchHomePage />}></Route>
@@ -37,10 +41,11 @@ function App() {
           <Route path="createpost" element={<CreatePost />}></Route>
         </Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
+        <Route path="/profile/:id" element={<StartupProfile />}></Route>
+        <Route path="/Startupstatus" element={<StartupStatus />}></Route>
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
