@@ -36,9 +36,27 @@ const StatusTable = () => {
         .catch((error) => {
           console.error("Error fetching data:", error);
         });
-    
+        const data = localStorage.getItem("statusData");
+
+    setRows(JSON.parse(data).status); // Load data from localStorage if it exists
+
+    // If no data in localStorage, fetch from startupStatus.json
+    fetch("/statusData.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        localStorage.setItem("statusData", JSON.stringify(data)); // Save to localStorage
+        setRows(data.status); // Set the rows from the fetched data
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+
   }, []);
-  
 
   // Function to style the status based on the status value
   const makeStatusStyle = (status) => {
@@ -62,50 +80,57 @@ const StatusTable = () => {
 
   // Handle status change
   // Handle status change
-const handleStatusChange = (index) => {
-  const updatedRows = [...rows];
+  const handleStatusChange = (index) => {
+    const updatedRows = [...rows];
 
-  // Update the status and date
-  updatedRows[index].status = actionStatus === "Request Changes" ? "In Progress" : actionStatus;
-  updatedRows[index].date = new Date().toLocaleDateString("en-GB");
+    // Update the status and date
+    updatedRows[index].status =
+      actionStatus === "Request Changes" ? "In Progress" : actionStatus;
+    updatedRows[index].date = new Date().toLocaleDateString("en-GB");
 
-  // Update funds sanctioned if approved
-  if (actionStatus === "Approved") {
-    updatedRows[index].funds_sanctioned = fundsSanctioned; // Update funds sanctioned
-  }
+    // Update funds sanctioned if approved
+    if (actionStatus === "Approved") {
+      updatedRows[index].funds_sanctioned = fundsSanctioned; // Update funds sanctioned
+    }
 
-  setRows(updatedRows);
-  setSelectedRow(null); // Hide dropdown after action is applied
-  setFundsSanctioned(0); // Reset funds sanctioned input
-  setActionStatus(""); // Reset action status
+    setRows(updatedRows);
+    setSelectedRow(null); // Hide dropdown after action is applied
+    setFundsSanctioned(0); // Reset funds sanctioned input
+    setActionStatus(""); // Reset action status
 
-  // Update the data in local storage
-  localStorage.setItem("statusData", JSON.stringify({ status: updatedRows }));
+    // Update the data in local storage
+    localStorage.setItem("statusData", JSON.stringify({ status: updatedRows }));
 
-  // Send the updated object to the Node server
-  const updatedObject = updatedRows[index]; // Get the updated object
+    // Send the updated object to the Node server
+    const updatedObject = updatedRows[index]; // Get the updated object
 
-  fetch("http://localhost:8080/update-status", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updatedObject), // Send the updated object
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data); // Handle success response
+    fetch("http://localhost:8080/update-status", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedObject), // Send the updated object
     })
-    .catch((error) => {
-      console.error("Error:", error); // Handle error response
-    });
-};
-
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data); // Handle success response
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Handle error response
+      });
+  };
 
   // Function to download the table data as CSV
   const downloadCSV = () => {
     const csvContent = [
-      ["Investor Name", "Startup Name", "Funding Details", "Date", "Status", "Funds Sanctioned"],
+      [
+        "Investor Name",
+        "Startup Name",
+        "Funding Details",
+        "Date",
+        "Status",
+        "Funds Sanctioned",
+      ],
       ...rows.map((row) => [
         row.investorName,
         row.startupName,
@@ -156,22 +181,42 @@ const handleStatusChange = (index) => {
           </TableHead>
           <TableBody>
             {rows.map((row, index) => (
-              <TableRow key={row._id} style={{ backgroundColor: index % 2 === 0 ? "#f5f5f5" : "#ffffff" }}>
+              <TableRow
+                key={row._id}
+                style={{
+                  backgroundColor: index % 2 === 0 ? "#f5f5f5" : "#ffffff",
+                }}
+              >
                 <TableCell>{row.investorName}</TableCell>
                 <TableCell align="left">{row.startupName}</TableCell>
                 <TableCell align="left">
-                  <a href={row.fundingDetails} target="_blank" rel="noopener noreferrer">View Funding Details</a>
+                  <a
+                    href={row.fundingDetails}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Funding Details
+                  </a>
                 </TableCell>
                 <TableCell align="left">{row.date}</TableCell>
                 <TableCell align="left">
-                  <span className="status-btn" style={makeStatusStyle(row.status)}>
+                  <span
+                    className="status-btn"
+                    style={makeStatusStyle(row.status)}
+                  >
                     {row.status}
                   </span>
                 </TableCell>
                 <TableCell align="left">{row.funds_sanctioned}</TableCell>
                 <TableCell align="left">
                   {selectedRow === index ? (
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                      }}
+                    >
                       <select
                         className="action-dropdown"
                         value={actionStatus}
@@ -188,7 +233,9 @@ const handleStatusChange = (index) => {
                           type="number"
                           label="Funds Sanctioned"
                           value={fundsSanctioned}
-                          onChange={(e) => setFundsSanctioned(Number(e.target.value))}
+                          onChange={(e) =>
+                            setFundsSanctioned(Number(e.target.value))
+                          }
                           style={{ marginTop: "10px", width: "200px" }} // Add some margin and set width
                         />
                       )}

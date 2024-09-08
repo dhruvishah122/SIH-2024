@@ -18,18 +18,19 @@ const startup = {
   __v: 0,
 };
 
-function TrackingCard() {
+function TrackingCard({ startup }) {
   return (
     <>
-     
       <div className="card-body">
         <div className="steps d-flex flex-wrap flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
           <div
             className={`step ${
               (startup.status === "Registered" ||
+                startup.status === "In progress" ||
                 startup.status === "Accepted" ||
-                startup.status === "Funds-reqested" ||
-                startup.status === "Funds-sanctioned") &&
+                startup.status === "Rejected" ||
+                startup.status === "Changes Required" ||
+                startup.status === "Funds Transfered") &&
               "completed"
             }`}
           >
@@ -40,27 +41,14 @@ function TrackingCard() {
             </div>
             <h4 className="step-title">Registered</h4>
           </div>
+
           <div
             className={`step ${
-              (startup.status === "Accepted" ||
-                startup.status === "Funds-reqested" ||
-                startup.status === "Funds-sanctioned") &&
-              "completed"
-            }`}
-          >
-            <div className="step-icon-wrap">
-              <div className="step-icon">
-                <i className="pe-7s-config"></i>
-              </div>
-            </div>
-            <h4 className="step-title">
-              Accepted/Re-apply with requested changes
-            </h4>
-          </div>
-          <div
-            className={`step ${
-              (startup.status === "Funds-reqested" ||
-                startup.status === "Funds-sanctioned") &&
+              (startup.status === "In progress" ||
+                startup.status === "Accepted" ||
+                startup.status === "Rejected" ||
+                startup.status === "Changes Required" ||
+                startup.status === "Funds Transfered") &&
               "completed"
             }`}
           >
@@ -69,7 +57,23 @@ function TrackingCard() {
                 <i className="pe-7s-medal"></i>
               </div>
             </div>
-            <h4 className="step-title">Request For Funds</h4>
+            <h4 className="step-title">In Progress</h4>
+          </div>
+          <div
+            className={`step ${
+              (startup.status === "Accepted" ||
+                startup.status === "Rejected" ||
+                startup.status === "Changes Required" ||
+                startup.status === "Funds Transfered") &&
+              "completed"
+            }`}
+          >
+            <div className="step-icon-wrap">
+              <div className="step-icon">
+                <i className="pe-7s-config"></i>
+              </div>
+            </div>
+            <h4 className="step-title">Accepted/Rejected/Changes Required</h4>
           </div>
           <div
             className={`step ${
