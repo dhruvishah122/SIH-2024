@@ -184,7 +184,7 @@ app.post("/startupAuthenticate",  async function(req, res){
           const result = req.body.password === user.password;
           if (result) {
             console.log(user);
-            res.redirect("http://localhost:3000/startup");
+            res.redirect(`http://localhost:3000/dashboard?email=${req.body.email}`);
           } else {
             res.render("/startupRegister");
           }

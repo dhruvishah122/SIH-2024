@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Startups from "./Startups";
 import NavBar from "./NavBar";
-import { useStartups } from "../../hooks/useStartups";
+// import { useStartups } from "../../hooks/useStartups";
 
 const Base_URL = "http://localhost:900/";
 function StartupPage() {
