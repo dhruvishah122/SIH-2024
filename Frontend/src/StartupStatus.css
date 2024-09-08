@@ -10,7 +10,7 @@
   
   .csv-btn {
     margin-bottom: 25px;
-    /* padding: 8px 12px; */
+    padding: 8px 12px;
     background-color: #1a73e8;
     color: white;
     border: none;
@@ -43,7 +43,7 @@
   .action-btn {
     background-color: #1a73e8;
     color: white;
-    /* padding: 8px 12px; */
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
