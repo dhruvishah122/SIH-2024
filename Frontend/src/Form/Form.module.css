@@ -1,0 +1,42 @@
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5%;
+    background-color: #ee762c;
+    border-radius: 1rem;
+    margin-top: 7%;
+    box-shadow: 0 0 3px black;
+}
+
+.name {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    border-color: black;
+}
+
+.btn {
+    grid-column: span 2;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 15%;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: 500;
+    border-color: black;
+}
+
+.btn:hover {
+    border: 2px solid white;
+}
