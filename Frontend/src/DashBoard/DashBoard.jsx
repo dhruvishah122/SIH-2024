@@ -4,7 +4,6 @@ import DashContainer from "./DashContainer";
 function DashBoard() {
   return (
     <>
-     
       <DashContainer />
     </>
   );

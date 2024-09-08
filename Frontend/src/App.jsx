@@ -5,7 +5,7 @@ import HomePage from "./components/HomePage";
 import StartupHomePage from "./StartupPage/StartupHomePage";
 import ResearchHomePage from "./Research Components/ResearchHomePage";
 import IPRHomePage from "./IPR/IPRHomePage";
-
+import StartupStatus from "./StartupStatus";
 import InvestorPage from "./InvestorsCards/InvestorPage";
 import StartupPage from "./components/StartupPage";
 import PostPage from "./Post/PostPage";
@@ -17,6 +17,7 @@ import DashBoard from "./DashBoard/DashBoard.jsx";
 import Profile from "./DashBoard/Profile.jsx";
 import Track from "./DashBoard/Track.jsx";
 import CreatePost from "./DashBoard/CreatePost.jsx";
+import StartupProfile from "../viewprofile/StartupProfile.jsx";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
           <Route path="track" element={<Track />}></Route>
           <Route path="createpost" element={<CreatePost />}></Route>
         </Route>
+        <Route path="/Startupstatus" element={<StartupStatus />}></Route>
+        <Route path="/profile/:id" element={<StartupProfile />}></Route>
+        <Route path="/Startupstatus" element={<StartupStatus />}></Route>
       </Routes>
     </BrowserRouter>
   );
