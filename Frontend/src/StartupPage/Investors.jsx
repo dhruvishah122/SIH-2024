@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Investors.module.css";
 
 const investors = [
@@ -140,9 +141,12 @@ function Investor({ investor }) {
 
       {/* onClick={handleClick} */}
 
-      <button onClick={handleClick} className={styles.button}>
-        View Profile
-      </button>
+      <Link
+        to={`/investorprofile/${investor.id}?name=${investor.name}`}
+        className={styles.link}
+      >
+        <button className={styles.button}>View Profile</button>
+      </Link>
     </div>
   );
 }

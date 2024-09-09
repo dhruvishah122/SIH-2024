@@ -220,7 +220,7 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
     font-size: 20px;
     font-family: 'Georgia, "Times New Roman", Times, serif'; }
     input:focus {
-      border: 1px solid #008080; }
+      border: 1px solid #d2631f; }
   
   .label-flex {
     justify-content: space-between;
@@ -281,17 +281,17 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
         }
        
         #submit {
-            background: #008080;
+            background: #d2631f;
             color: #fff;
              
         }
         #register {
-          background: #008080;
+          background: #d2631f;
           color: #fff;
           margin-right: -25px; 
       }
         #submit:hover {
-            background-color: #008080; }
+            background-color: #d2631f; }
         
         .form-input {
           position: relative; }
@@ -320,7 +320,7 @@ display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {
             button{
               width: 150px;
               height: 50px;
-              background-color: #008080;
+              background-color: #d2631f;
               border: none;
               cursor: pointer;
               
