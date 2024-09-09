@@ -5,12 +5,12 @@ import SideBar from "./SideBar";
 // import Profile from "./Profile";
 import { Outlet } from "react-router-dom";
 
-function DashContainer({ email }) {
+function DashContainer({ name }) {
   return (
     <>
       <div className={styles["container"]}>
         <div className={styles["side-container"]}>
-          <SideBar email={email} />
+          <SideBar name={name} />
         </div>
         <div className={styles["main-container"]}>
           <Outlet />

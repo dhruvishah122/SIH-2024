@@ -4,13 +4,13 @@ import DashContainer from "./DashContainer";
 
 function DashBoard() {
   const [param, setParm] = useSearchParams();
-  const email = param.get("email");
-  console.log(email);
+  const name = param.get("name");
+  console.log(name);
 
   return (
     <>
       <NewNavBar />
-      <DashContainer email={email} />
+      <DashContainer name={name} />
     </>
   );
 }

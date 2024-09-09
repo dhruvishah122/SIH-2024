@@ -20,14 +20,14 @@ import { useSearchParams } from "react-router-dom";
 //   _id: "66db3e1270fc7617f926c888",
 //   __v: 0,
 // };
-const Base_URL = "http://localhost:900/";
+const Base_URL = "http://localhost:600/";
 function Track() {
   const [startups, setStartups] = useState([]);
   const [startup, setStartup] = useState([]);
 
   const [param, setParm] = useSearchParams();
-  const email = param.get("email");
-  console.log(email);
+  const name = param.get("name");
+  console.log(name);
 
   useEffect(function () {
     async function FetchStartups() {
@@ -45,7 +45,7 @@ function Track() {
 
   useEffect(
     function () {
-      const id = startups.filter((startup) => startup.email === email)[0]?.id;
+      const id = startups.filter((startup) => startup.name === name)[0]?.id;
       console.log(id);
       if (!id) return;
       async function FetchStartup() {

@@ -3,7 +3,7 @@ import Startups from "./Startups";
 import NavBar from "./NavBar";
 // import { useStartups } from "../../hooks/useStartups";
 
-const Base_URL = "http://localhost:900/";
+const Base_URL = "http://localhost:600/";
 function StartupPage() {
   const [startups, setStartups] = useState([]);
 

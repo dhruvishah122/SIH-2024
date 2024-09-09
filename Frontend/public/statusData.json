@@ -1,14 +1,14 @@
 {
   "status": [
     {
-      "investorName": "Angel investors",
+      "investorName": "FutureTech Capital",
       "startupName": "Hopscotch",
-      "fundingDetails": "https://drive.google.com/file/d/FILE_ID/view?usp=sharing",
-      "date": "08/09/2024",
+      "fundingDetails": "https://drive.google.com",
+      "date": "09/09/2024",
       "status": "In Progress",
-      "funds_sanctioned": 5000,
+      "funds_sanctioned": 0,
       "id": "66db3e1270fc7617f926c888",
-      "_id": "66db3e1270fc7617f926c888",
+      "_id": "66ddb02188e4e1c688d737cc",
       "__v": 0
     },
     {
@@ -48,22 +48,66 @@
       "investorName": "FutureTech Capital",
       "startupName": "zurutech",
       "fundingDetails": "https://drive.google.com",
-      "date": "08/09/2024",
-      "status": "In Progress",
-      "funds_sanctioned": 0,
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 500000,
       "id": "66cf522529f615f98327991d",
       "_id": "66ddb0dc88e4e1c688d737ce",
+      "__v": 0
+    },
+    {
+      "investorName": " Harvest Capital",
+      "startupName": "ISRO",
+      "fundingDetails": "https://drive.google.com",
+      "date": "09/09/2024",
+      "status": "Rejected",
+      "funds_sanctioned": 0,
+      "id": "66dd5d66d12e5c805a1fc21e",
+      "_id": "66dde26f1089cc69920f4695",
+      "__v": 0
+    },
+    {
+      "investorName": " Harvest Capital",
+      "startupName": "ISRO",
+      "fundingDetails": "https://drive.google.com",
+      "date": "08/09/2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "id": "66dd5d66d12e5c805a1fc21e",
+      "_id": "66dde26f1089cc69920f4695",
       "__v": 0
     },
     {
       "investorName": "Harvest Capital",
       "startupName": "ISRO",
       "fundingDetails": "https://drive.google.com",
-      "date": "08/09/2024",
-      "status": "Approved",
-      "funds_sanctioned": 5000000,
+      "date": "09/09/2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
       "id": "66dd5d66d12e5c805a1fc21e",
-      "_id": "66ddb86488e4e1c688d737d6",
+      "_id": "66de8d987e76731babc280f3",
+      "__v": 0
+    },
+    {
+      "investorName": "Harvest Capital",
+      "startupName": "zurutech",
+      "fundingDetails": "https://drive.google.com",
+      "date": "09/09/2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "id": "66cf522529f615f98327991d",
+      "_id": "66de8f2f7e76731babc280f7",
+      "__v": 0
+    },
+    {
+      "investorName": "Angel investors",
+      "startupName": "Amazon.com",
+      "fundingDetails": "https://drive.google.com",
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 10000000,
+      "id": "66cc30b65ba09366ee412a04",
+      "_id": "66de9b84b654ebc5cdc2645e",
       "__v": 0
     }
   ]

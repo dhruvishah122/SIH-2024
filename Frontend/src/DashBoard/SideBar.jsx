@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 import styles from "./SideBar.module.css";
 import { useState } from "react";
 
-function SideBar({ email }) {
+function SideBar({ name }) {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
     <div className={styles["container"]}>
-      <NavLink to={`profile?email=${email}`} className={styles.links}>
+      <NavLink to={`profile?name=${name}`} className={styles.links}>
         <div
           className={`${styles.menuItems} ${
             activeTab === 1 ? styles.active : ""
@@ -17,7 +17,7 @@ function SideBar({ email }) {
           Profile
         </div>
       </NavLink>
-      <NavLink to={`track?email=${email}`} className={styles.links}>
+      <NavLink to={`track?name=${name}`} className={styles.links}>
         <div
           className={`${styles.menuItems} ${
             activeTab === 2 ? styles.active : ""
@@ -27,7 +27,7 @@ function SideBar({ email }) {
           Track Status
         </div>
       </NavLink>
-      <NavLink to={`createpost?email=${email}`} className={styles.links}>
+      <NavLink to={`createpost?name=${name}`} className={styles.links}>
         <div
           className={`${styles.menuItems} ${
             activeTab === 3 ? styles.active : ""

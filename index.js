@@ -184,7 +184,7 @@ app.post("/startupAuthenticate",  async function(req, res){
           const result = req.body.password === user.password;
           if (result) {
             console.log(user);
-            res.redirect(`http://localhost:3000/dashboard?email=${req.body.email}`);
+            res.redirect(`http://localhost:3000/dashboard?name=${user.name}`);
           } else {
             res.render("/startupRegister");
           }
@@ -227,6 +227,42 @@ console.log(err);
 addInvestorDataToJson(newInvestor);
 res.redirect("/investorLogin");
 });
+app.get('/send-data', async(req, res) => {
+    const { name, message } = req.query;
+    const postObj =await investorRegister.findOne({name:name});
+    let newPost= new posts({
+        name:name,
+        id1:postObj._id,
+        content:message,
+      email:postObj.email
+    });
+    newPost.save().then(res=>{
+      console.log(res);
+    }).catch((err)=>{
+    console.log(err);
+    });
+    addPostDataToJson(newPost);
+    //   res.render("Backend/posts.ejs",{newPost});
+    res.redirect("http://localhost:3000/post");
+  });
+  app.get('/sendPosData', async(req, res) => {
+    const { email, message } = req.query;
+    const postObj =await startupRegister.findOne({email:email});
+    let newPost= new posts({
+        name:postObj.name,
+        id1:postObj._id,
+        content:message,
+      email:email
+    });
+    newPost.save().then(res=>{
+      console.log(res);
+    }).catch((err)=>{
+    console.log(err);
+    });
+    addPostDataToJson(newPost);
+    //   res.render("Backend/posts.ejs",{newPost});
+    res.redirect("http://localhost:3000/post");
+  });
 app.post("/investorAuthenticate",async(req,res)=>{
     try {
         // check if the user exists
@@ -304,7 +340,7 @@ app.post("/govLogin",(req,res)=>{
 
 
 app.post("/postData",(req,res)=>{
-  console.log(req.body);
+  console.log("postdata",req.body);
 const {content,name,id1,email}=req.body;
 let newPost= new posts({
     name:name,
@@ -374,7 +410,7 @@ async function updateStartup(id, newStatus, newFundsSanctioned,date) {
       }
   }
 app.post("/update-status", (req, res) => {
-  const { investorName,startupName, fundingDetails, date,status,funds_sanctioned,id} = req.body;
+  const {investorName,startupName, fundingDetails, date,status,funds_sanctioned,id} = req.body;
   // const data = loadData();
 console.log(req.body);
 updateObjectById(req.body);

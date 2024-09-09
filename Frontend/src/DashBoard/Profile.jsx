@@ -20,12 +20,12 @@ import { Link, useSearchParams } from "react-router-dom";
 import styles from "./Profile.module.css";
 import { useEffect, useState } from "react";
 
-const Base_URL = "http://localhost:900/";
+const Base_URL = "http://localhost:600/";
 
 function Profile({ startup }) {
   const [param, setParm] = useSearchParams();
-  const email = param.get("email");
-  console.log(email);
+  const name = param.get("name");
+  console.log(name);
 
   const [startups, setStartups] = useState([]);
   const [startuplogin, setStartupLogin] = useState([]);
@@ -46,7 +46,7 @@ function Profile({ startup }) {
 
   useEffect(
     function () {
-      const id = startups.filter((startup) => startup.email === email)[0]?.id;
+      const id = startups.filter((startup) => startup.name === name)[0]?.id;
       console.log(id);
       if (!id) return;
       async function FetchStartup() {
