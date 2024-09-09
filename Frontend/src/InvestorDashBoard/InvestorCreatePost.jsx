@@ -24,6 +24,7 @@ function InvestorCreatePost() {
   };
   return (
     <div>
+      <div className={styles.title}>Create Post</div>
        <textarea
         type="text"
           placeholder="What's new? Share here..."

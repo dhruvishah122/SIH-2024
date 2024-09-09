@@ -1,72 +1,39 @@
-// const data = {
-//   name: "Hopscotch",
-//   email: "hopscotch@gmail.com",
-//   password: "123",
-//   technology:
-//     "Artificial Intelligence (AI), Consumer Apps, Enterprise Apps, AdTech, AgriTech, EdTech, FinTech, HealthTech, RetailTech, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
-//   Industry_Focus:
-//     "Advertising,Media & EntertainmentTraining,Energy & Utilities,Healthcare & Pharmaceuticals,IT & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
-//   Startup_eligibility_criteria: "VC Funded startups",
-//   Startup_Revenue_Preference: 7000000,
-//   location: "Ahmedabad, Gujarat, IND",
-//   date: "06-09-2024",
-//   status: "Registered",
-//   funds_sanctioned: 0,
-//   _id: "66db3e1270fc7617f926c888",
-//   __v: 0,
-// };
-
 import { Link, useSearchParams } from "react-router-dom";
 import styles from "./Profile.module.css";
 import { useEffect, useState } from "react";
 
-const Base_URL = "http://localhost:600/";
+// Assuming data.json is placed in the public folder
+const DATA_URL = "/data.json";
 
 function Profile({ startup }) {
-  const [param, setParm] = useSearchParams();
+  const [param, setParam] = useSearchParams();
   const name = param.get("name");
   console.log(name);
 
-  const [startups, setStartups] = useState([]);
-  const [startuplogin, setStartupLogin] = useState([]);
+  const [startupData, setStartupData] = useState(null);
 
-  useEffect(function () {
-    async function FetchStartups() {
+  // Fetch and filter the specific startup based on the name parameter
+  useEffect(() => {
+    async function fetchStartup() {
       try {
-        const res = await fetch(`${Base_URL}items`);
+        const res = await fetch(DATA_URL);
         const data = await res.json();
-        console.log(data);
-        setStartups(data);
-      } catch {
-        alert("There was an error loading data");
+        // Filter only the startup that matches the URL name
+        const foundStartup = data.items.find((item) => item.name === name);
+        console.log(foundStartup);
+        setStartupData(foundStartup || null); // Set the specific startup data or null if not found
+      } catch (error) {
+        console.error("Error fetching startup:", error);
       }
     }
-    FetchStartups();
-  }, []);
+    fetchStartup();
+  }, [name]);
 
-  useEffect(
-    function () {
-      const id = startups.filter((startup) => startup.name === name)[0]?.id;
-      console.log(id);
-      if (!id) return;
-      async function FetchStartup() {
-        try {
-          const res = await fetch(`${Base_URL}items/${id}`);
-          const data = await res.json();
-          console.log(data);
-          setStartupLogin(data);
-        } catch {
-          alert("There was an error loading data");
-        }
-      }
-      FetchStartup();
-    },
-    [startups]
-  );
-  if (!startup) startup = startuplogin;
+  if (!startup) startup = startupData;
+
   return (
     <>
-      {startup.name && (
+      {startup && (
         <div className={styles.container}>
           <div className={styles.title}>
             <div>{startup.name}</div>

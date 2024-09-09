@@ -5,7 +5,7 @@ import Profile from "../src/DashBoard/Profile";
 import { useEffect, useState } from "react";
 import NavBar from "../src/components/NavBar";
 
-const Base_URL = "http://localhost:900/";
+const Base_URL = "http://localhost:600/";
 
 function StartupProfile() {
   const [params] = useSearchParams();
