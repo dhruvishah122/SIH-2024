@@ -65,6 +65,17 @@
       "id": "66dd5d66d12e5c805a1fc21e",
       "_id": "66ddb86488e4e1c688d737d6",
       "__v": 0
+    },
+    {
+      "investorName": " Harvest Capital",
+      "startupName": "ISRO",
+      "fundingDetails": "https://drive.google.com",
+      "date": "08/09/2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "id": "66dd5d66d12e5c805a1fc21e",
+      "_id": "66dde26f1089cc69920f4695",
+      "__v": 0
     }
   ]
 }
