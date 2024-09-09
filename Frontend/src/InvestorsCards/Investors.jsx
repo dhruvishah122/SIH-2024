@@ -73,7 +73,7 @@ function Investor({ investor }) {
         </h5>
         <p className="card-text">
           <span style={name}>Technology: </span>
-          <span style={text}>{techString}</span>
+          <span style={text}>{techString || investor.technology}</span>
         </p>
         <p className="card-text">
           <span style={name}>Investor type: </span>
