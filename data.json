@@ -195,9 +195,9 @@
       "Startup_eligibility_criteria": "gov. certified",
       "Startup_Revenue_Preference": 5000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "08/09/2024",
-      "status": "In Progress",
-      "funds_sanctioned": 0,
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 1000000,
       "_id": "66cf522529f615f98327991d",
       "__v": 0
     },
@@ -210,9 +210,9 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 7000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "08/09/2024",
-      "status": "In Progress",
-      "funds_sanctioned": 5000,
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 10000,
       "_id": "66db3e1270fc7617f926c888",
       "__v": 0
     },
@@ -229,6 +229,21 @@
       "status": "Approved",
       "funds_sanctioned": 5000000,
       "_id": "66dd5d66d12e5c805a1fc21e",
+      "__v": 0
+    },
+    {
+      "name": "silvertech",
+      "email": "silvertech@gmail.com",
+      "password": "123",
+      "technology": "Artificial Intelligence",
+      "Industry_Focus": "Machine Learnig , AI",
+      "Startup_eligibility_criteria": "gov funded",
+      "Startup_Revenue_Preference": 10000,
+      "location": "Ahmedabad",
+      "date": "09-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "_id": "66de89bb69bedf5d4a5f3031",
       "__v": 0
     }
   ]

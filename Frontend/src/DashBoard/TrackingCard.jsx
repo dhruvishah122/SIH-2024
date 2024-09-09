@@ -77,7 +77,10 @@ function TrackingCard({ startup }) {
           </div>
           <div
             className={`step ${
-              startup.status === "Funds-sanctioned" && "completed"
+              startup.status === "Approved" ||
+              startup.status === "Rejected" ||
+              startup.status === "Changes Required" ||
+              (startup.status === "Funds-sanctioned" && "completed")
             }`}
           >
             <div className="step-icon-wrap">

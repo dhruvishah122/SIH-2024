@@ -1,14 +1,14 @@
 {
   "status": [
     {
-      "investorName": "Angel investors",
+      "investorName": "FutureTech Capital",
       "startupName": "Hopscotch",
-      "fundingDetails": "https://drive.google.com/file/d/FILE_ID/view?usp=sharing",
-      "date": "08/09/2024",
-      "status": "In Progress",
-      "funds_sanctioned": 5000,
+      "fundingDetails": "https://drive.google.com",
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 10000,
       "id": "66db3e1270fc7617f926c888",
-      "_id": "66db3e1270fc7617f926c888",
+      "_id": "66ddb02188e4e1c688d737cc",
       "__v": 0
     },
     {
@@ -48,9 +48,9 @@
       "investorName": "FutureTech Capital",
       "startupName": "zurutech",
       "fundingDetails": "https://drive.google.com",
-      "date": "08/09/2024",
-      "status": "In Progress",
-      "funds_sanctioned": 0,
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 1000000,
       "id": "66cf522529f615f98327991d",
       "_id": "66ddb0dc88e4e1c688d737ce",
       "__v": 0
