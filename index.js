@@ -14,7 +14,7 @@ const cors = require('cors');
 app.use(cors());
 const multer = require('multer');
 const upload = multer({dest: './uploads'});
-const filePath = path.join(__dirname, 'data.json');
+const filePath = path.join(__dirname, 'Frontend/public/data.json');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/"));
@@ -98,7 +98,7 @@ function addDataToJson(newData) {
 }
 //investor push data
 function addInvestorDataToJson(newData) {
-  const filepath = path.join(__dirname, 'investorData.json');
+  const filepath = path.join(__dirname, 'Frontend/public/investorData.json');
   fs.readFile(filepath, 'utf8', (err, data) => {
       if (err) {
           console.error('Error reading the file:', err);
@@ -230,6 +230,7 @@ res.redirect("/investorLogin");
 app.get('/send-data', async(req, res) => {
     const { name, message } = req.query;
     const postObj =await investorRegister.findOne({name:name});
+    console.log(message);
     let newPost= new posts({
         name:name,
         id1:postObj._id,
@@ -246,13 +247,13 @@ app.get('/send-data', async(req, res) => {
     res.redirect("http://localhost:3000/post");
   });
   app.get('/sendPosData', async(req, res) => {
-    const { email, message } = req.query;
-    const postObj =await startupRegister.findOne({email:email});
+    const { name, message } = req.query;
+    const postObj =await startupRegister.findOne({name:name});
     let newPost= new posts({
-        name:postObj.name,
+        name:name,
         id1:postObj._id,
         content:message,
-      email:email
+      email:postObj.email
     });
     newPost.save().then(res=>{
       console.log(res);
@@ -287,32 +288,40 @@ app.post("/investorAuthenticate",async(req,res)=>{
 
 //posts
 function addPostDataToJson(newData) {
-    const filepath = path.join(__dirname, 'posts.json');
+    const filepath = path.join(__dirname, 'Frontend/public/posts.json');
+    
     fs.readFile(filepath, 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading the file:', err);
             return;
         }
-  
-        let jsonData = { posts: [] }; // Initialize with an items array
+
+        let jsonData = { posts: [] }; // Initialize with an empty posts array
         try {
             // Parse existing data or start with a new object if the file is empty
             jsonData = data ? JSON.parse(data) : jsonData;
-  
-            // Check if the parsed data is an object and has items as an array
+
+            // Check if the parsed data is an object and has posts as an array
             if (typeof jsonData !== 'object' || !Array.isArray(jsonData.posts)) {
-                console.error('Error: JSON data is not a valid object with items array.');
+                console.error('Error: JSON data is not a valid object with posts array.');
                 return;
             }
-  
+
+            // Optional: Check if the newData already exists to prevent duplication
+            const isDuplicate = jsonData.posts.some(post => post._id === newData._id);
+            if (isDuplicate) {
+                console.error('Error: Duplicate entry detected. Post not added.');
+                return;
+            }
+
         } catch (err) {
             console.error('Error parsing JSON data:', err);
             return;
         }
-  
-        // Add new data as a new object in the items array
-        jsonData.posts.push(newData); // Push newData to the items array
-  
+
+        // Add new data as a new object in the posts array
+        jsonData.posts.push(newData); // Push newData to the posts array
+
         // Write the updated data back to the JSON file
         fs.writeFile(filepath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
             if (err) {
@@ -322,7 +331,8 @@ function addPostDataToJson(newData) {
             console.log('Data added successfully!');
         });
     });
-  }
+}
+
   app.get("/authlogin",(req,res)=>{
     res.render("Backend/governmentLogin.ejs");
     

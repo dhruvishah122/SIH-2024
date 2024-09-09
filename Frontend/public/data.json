@@ -245,6 +245,21 @@
       "funds_sanctioned": 0,
       "_id": "66de89bb69bedf5d4a5f3031",
       "__v": 0
+    },
+    {
+      "name": "NASA",
+      "email": "nasa@gmail.com",
+      "password": "123",
+      "technology": "AgriTech, EdTech, FinTech, Space tecnology, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
+      "Industry_Focus": " EntertainmentTraining,Energy  & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
+      "Startup_eligibility_criteria": "Gov Funded startups",
+      "Startup_Revenue_Preference": 12000000,
+      "location": "Ahmedabad, Gujarat, IND",
+      "date": "09-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "_id": "66df311d89d13683f0bc3566",
+      "__v": 0
     }
   ]
 }

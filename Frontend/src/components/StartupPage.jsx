@@ -1,46 +1,45 @@
 import { useEffect, useState } from "react";
 import Startups from "./Startups";
 import NavBar from "./NavBar";
-// import { useStartups } from "../../hooks/useStartups";
 
-const Base_URL = "http://localhost:600/";
+const Base_URL = "/data.json"; // Change the base URL to the local JSON file path
+
 function StartupPage() {
   const [startups, setStartups] = useState([]);
-
-  // const { startups } = useStartups();
-  // console.log(startups);
-
   const [query, setQuery] = useState("");
   const [filteredStartups, setFilteredStartups] = useState([]);
 
   function handleSearch(e) {
-    setQuery(() => e.target.value);
-    if (query.length === 0) setFilteredStartups(() => []);
-    const filteredData = startups.filter((startup) =>
-      `${startup.name} ${startup.technology} ${startup.Industry_Focus}`
-        .toLowerCase()
-        .includes(query.toLowerCase())
-    );
-    console.log(filteredData);
-    setFilteredStartups(() => filteredData);
+    const value = e.target.value;
+    setQuery(value);
+
+    if (value.length === 0) {
+      setFilteredStartups([]); // Reset filtered startups when the query is empty
+    } else {
+      const filteredData = startups.filter((startup) =>
+        `${startup.name} ${startup.technology} ${startup.Industry_Focus}`
+          .toLowerCase()
+          .includes(value.toLowerCase())
+      );
+      setFilteredStartups(filteredData);
+    }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
   }
 
-  useEffect(function () {
-    async function FetchStartups() {
+  useEffect(() => {
+    async function fetchStartups() {
       try {
-        const res = await fetch(`${Base_URL}items`);
+        const res = await fetch(Base_URL);
         const data = await res.json();
-        console.log(data);
-        setStartups(data);
-      } catch {
-        alert("There was an error loading data");
+        setStartups(data.items); // Assuming your JSON structure has a `posts` array
+      } catch (err) {
+        alert("There was an error loading data: " + err);
       }
     }
-    FetchStartups();
+    fetchStartups();
   }, []);
 
   return (
@@ -53,7 +52,7 @@ function StartupPage() {
         num={filteredStartups.length}
         total={startups.length}
       />
-      {startups.length != 0 && (
+      {startups.length !== 0 && (
         <Startups startups={query.length ? filteredStartups : startups} />
       )}
     </div>
@@ -62,12 +61,6 @@ function StartupPage() {
 
 function SearchBox({ query, handleSearch, handleSubmit, num, total }) {
   const buttonStyles = {
-    color: "black",
-    border: "2px solid #d2631f",
-    fontWeight: "500",
-  };
-
-  const buttonStyless = {
     color: "black",
     border: "2px solid #d2631f",
     fontWeight: "500",
@@ -84,14 +77,13 @@ function SearchBox({ query, handleSearch, handleSubmit, num, total }) {
         type="search"
         placeholder="Search"
         aria-label="Search"
-        style={buttonStyless}
+        style={buttonStyles}
         value={query}
         onChange={handleSearch}
       />
       <button className="btn button" style={buttonStyles}>
         Search
       </button>
-
       <div
         style={{
           width: "7rem",

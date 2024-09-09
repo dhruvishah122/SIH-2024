@@ -3,12 +3,12 @@ import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 function CreatePost() {
   const [param] = useSearchParams();
-  const email = param.get("email");
+  const name = param.get("name");
 
   const [message, setMessage] = useState("");
 
   const sendPosData = () => {
-    const url = `http://localhost:8080/sendPosData?email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
+    const url = `http://localhost:8080/sendPosData?name=${encodeURIComponent(name)}&message=${encodeURIComponent(message)}`;
     
     // You can either:
     // Option 1: Redirect to this URL (you'll see the response in the browser)

@@ -1,55 +1,36 @@
 import styles from "./ProfileInvestor.module.css";
-
 import { useSearchParams } from "react-router-dom";
-// import styles from "./StartupProfile.module.css";
-// import { useStartups } from "../hooks/useStartups";
-import Profile from "../src/DashBoard/Profile";
 import { useEffect, useState } from "react";
 import NavBar from "../src/components/NavBar";
 import InvestorProfile from "../src/InvestorDashBoard/InvestorProfile";
 
-const Base_URL = "http://localhost:800/";
+const Base_URL = "/investorData.json"; // Change the base URL to the local JSON file path
 
 function ProfileInvestor() {
   const [params] = useSearchParams();
-  //   const { startups } = useStartups();
   const [startups, setStartups] = useState([]);
   const [startup, setStartup] = useState([]);
   const name = params.get("name");
 
-  useEffect(function () {
-    async function FetchStartups() {
+  useEffect(() => {
+    async function fetchStartups() {
       try {
-        const res = await fetch(`${Base_URL}items1`);
+        const res = await fetch(Base_URL);
         const data = await res.json();
         console.log(data);
-        setStartups(data);
+        setStartups(data.items1); // Adjust this based on the structure of your JSON
       } catch {
         alert("There was an error loading data");
       }
     }
-    FetchStartups();
+    fetchStartups();
   }, []);
 
-  useEffect(
-    function () {
-      const id = startups.filter((startup) => startup.name === name)[0]?.id;
-      console.log(id);
-      if (!id) return;
-      async function FetchStartup() {
-        try {
-          const res = await fetch(`${Base_URL}items1/${id}`);
-          const data = await res.json();
-          console.log(data);
-          setStartup(data);
-        } catch {
-          alert("There was an error loading data");
-        }
-      }
-      FetchStartup();
-    },
-    [startups]
-  );
+  useEffect(() => {
+    const selectedStartup = startups.find((startup) => startup.name === name);
+    if (!selectedStartup) return;
+    setStartup(selectedStartup);
+  }, [startups, name]);
 
   return (
     <div>
