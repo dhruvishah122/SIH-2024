@@ -22,11 +22,9 @@ import InvestorDashBoard from "./InvestorDashBoard/InvestorDashBoard.jsx";
 import InvestorProfile from "./InvestorDashBoard/InvestorProfile.jsx";
 import InvestorTrack from "./InvestorDashBoard/InvestorTrack.jsx";
 import InvestorCreatePost from "./InvestorDashBoard/InvestorCreatePost.jsx";
-
+import Form from "./InvestorDashBoard/Form.jsx";
 import StartupProfile from "../viewprofile/StartupProfile.jsx";
-
-import Form from "./Form/Form.jsx";
-
+import ProfileInvestor from "../viewprofile/ProfileInvestor.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -60,12 +58,15 @@ function App() {
           <Route path="profile" element={<InvestorProfile />}></Route>
           <Route path="track" element={<InvestorTrack />}></Route>
           <Route path="createpost" element={<InvestorCreatePost />}></Route>
+          <Route path="form" element={<Form />}></Route>
         </Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
         <Route path="/profile/:id" element={<StartupProfile />}></Route>
+        <Route
+          path="/investorprofile/:id"
+          element={<ProfileInvestor />}
+        ></Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
-
-        <Route path="/form" element={<Form />}></Route>
       </Routes>
     </BrowserRouter>
   );

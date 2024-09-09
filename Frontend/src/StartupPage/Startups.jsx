@@ -1,6 +1,24 @@
+import { Link } from "react-router-dom";
 import styles from "../components/Startups.module.css";
 
 const startups = [
+  {
+    _id: "66db3c1b09acff07fc27f88a",
+    name: "Marketing ventures",
+    email: "marketing@gmail.com",
+    password: "123",
+    technology:
+      "Artificial Intelligence (AI), Consumer Apps, Enterprise Apps, AdTech, AgriTech, EdTech, FinTech, HealthTech, RetailTech, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
+    Industry_Focus:
+      "Advertising,Media & EntertainmentTraining,Energy & Utilities,Healthcare & Pharmaceuticals,IT & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
+    Startup_eligibility_criteria: "VC Funded startups",
+    Startup_Revenue_Preference: 7000000,
+    location: "Ahmedabad, Gujarat, IND",
+    date: "08/09/2024",
+    status: "Approved",
+    funds_sanctioned: 4500000,
+    __v: 0,
+  },
   {
     name: "GreenBite Ventures",
     email: "greenbite@gmail.com",
@@ -12,6 +30,9 @@ const startups = [
     Startup_eligibility_criteria: "VC Funded startups",
     Startup_Revenue_Preference: 200000,
     location: "Ahmedabad, Gujarat, IND",
+    date: "06-09-2024",
+    status: "Registered",
+    funds_sanctioned: 0,
     _id: "66cf1be76bdad1d47b19ae26",
     __v: 0,
   },
@@ -26,6 +47,9 @@ const startups = [
     Startup_eligibility_criteria: "Gov. Funded startups",
     Startup_Revenue_Preference: 1500000,
     location: "Delhi, INDIA",
+    date: "07/09/2024",
+    status: "Approved",
+    funds_sanctioned: 600,
     _id: "66cf1fde85f4f0202ba2be34",
     __v: 0,
   },
@@ -40,23 +64,11 @@ const startups = [
     Startup_eligibility_criteria: "Kickstarter",
     Startup_Revenue_Preference: 7000000,
     location: "Bengaluru, INDIA",
+    date: "06-09-2024",
+    status: "Registered",
+    funds_sanctioned: 0,
     _id: "66cf2266846b47216990b079",
     __v: 0,
-  },
-  {
-    name: "Fin-tech",
-    email: "shreya@gmail.com",
-    password: "123",
-    technology:
-      "Artificial Intelligence (AI), Consumer Apps, Enterprise Apps, AdTech, AgriTech, EdTech, FinTech, HealthTech, RetailTech, GreenTech/CleanTech, LogisticsTech, FoodTech, D2C",
-    Industry_Focus:
-      "Advertising,Media & Entertainment,Automotive,Financial Services,Aviation & Aerospace,Agriculture,Consumer Packaged Goods,Education & Training,Energy & Utilities,Healthcare & Pharmaceuticals,IT & ITES,Manufacturing,Retail,Telecom,Transportation & Logistics,Travel & Hospitality",
-    Startup_eligibility_criteria: "gov. certified",
-    Startup_Revenue_Preference: 7000000,
-    location: "IND",
-    _id: "66cb720f7ecb54eac3776e83",
-    __v: 0,
-    id: "325d",
   },
 ];
 
@@ -95,33 +107,33 @@ function Startup({ startup }) {
     id: startup._id,
   };
 
-  async function handleClick() {
-    // Send a POST request to add a new user
-    try {
-      const res = await fetch("http://localhost:9000/ids", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      });
+  // async function handleClick() {
+  //   // Send a POST request to add a new user
+  //   try {
+  //     const res = await fetch("http://localhost:9000/ids", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(id),
+  //     });
 
-      const re = await fetch("http://localhost:8080/profile", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      });
+  //     const re = await fetch("http://localhost:8080/profile", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(id),
+  //     });
 
-      const redirectUrl = `http://localhost:8080/startupProfile?name=${encodeURIComponent(
-        startup.name
-      )}&email=${encodeURIComponent(startup.email)}`;
-      window.location.href = redirectUrl;
-    } catch {
-      alert("error");
-    }
-  }
+  //     const redirectUrl = `http://localhost:8080/startupProfile?name=${encodeURIComponent(
+  //       startup.name
+  //     )}&email=${encodeURIComponent(startup.email)}`;
+  //     window.location.href = redirectUrl;
+  //   } catch {
+  //     alert("error");
+  //   }
+  // }
 
   return (
     <div className={`card ${styles.cards}`}>
@@ -153,9 +165,12 @@ function Startup({ startup }) {
         </p>
       </div>
 
-      <button onClick={handleClick} className={styles.button}>
-        View Profile
-      </button>
+      <Link
+        to={`/profile/${startup.id}?name=${startup.name}`}
+        className={styles.link}
+      >
+        <button className={styles.buttonn}>View Profile</button>
+      </Link>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NewNavBar";
 import DashContainer from "./InvestorDashContainer";
 // import { useEffect, useState } from "react";
 
