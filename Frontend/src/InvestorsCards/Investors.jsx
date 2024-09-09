@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Investors.module.css";
 
 function Investors({ investors }) {
@@ -24,32 +25,38 @@ function Investor({ investor }) {
     id: investor._id,
   };
 
-  async function handleClick() {
-    // Send a POST request to add a new user
-    try {
-      const res = await fetch("http://localhost:9001/ids", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      });
-      const re = await fetch("http://localhost:8080/iProfile", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(id),
-      });
-
-      const redirectUrl = `http://localhost:8080/investorProfile?name=${encodeURIComponent(
-        investor.name
-      )}&email=${encodeURIComponent(investor.email)}`;
-      window.location.href = redirectUrl;
-    } catch {
-      alert("error");
-    }
+  let techString;
+  if (investor.technology.length > 60) {
+    techString = investor["technology"].slice(0, 60);
+    techString = techString.concat("...");
   }
+
+  // async function handleClick() {
+  //   // Send a POST request to add a new user
+  //   try {
+  //     const res = await fetch("http://localhost:9001/ids", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(id),
+  //     });
+  //     const re = await fetch("http://localhost:8080/iProfile", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(id),
+  //     });
+
+  //     const redirectUrl = `http://localhost:8080/investorProfile?name=${encodeURIComponent(
+  //       investor.name
+  //     )}&email=${encodeURIComponent(investor.email)}`;
+  //     window.location.href = redirectUrl;
+  //   } catch {
+  //     alert("error");
+  //   }
+  // }
   return (
     <div className={`card ${styles.cards}`}>
       <div className="card-body" style={{ position: "relative" }}>
@@ -66,7 +73,7 @@ function Investor({ investor }) {
         </h5>
         <p className="card-text">
           <span style={name}>Technology: </span>
-          <span style={text}>{investor.technology}</span>
+          <span style={text}>{techString}</span>
         </p>
         <p className="card-text">
           <span style={name}>Investor type: </span>
@@ -88,9 +95,16 @@ function Investor({ investor }) {
 
       {/* onClick={handleClick} */}
 
-      <button onClick={handleClick} className={styles.button}>
+      <Link
+        to={`/investorprofile/${investor.id}?name=${investor.name}`}
+        className={styles.link}
+      >
+        <button className={styles.buttonn}>View Profile</button>
+      </Link>
+
+      {/* <button onClick={handleClick} className={styles.button}>
         View Profile
-      </button>
+      </button> */}
     </div>
   );
 }

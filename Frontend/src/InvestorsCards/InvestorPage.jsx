@@ -14,7 +14,7 @@ function StartupPage() {
         console.log(data);
         setInvestors(data);
       } catch {
-        alert("There was an error loading data");
+        console.log("There was an error loading data");
       }
     }
     FetchInvestors();
