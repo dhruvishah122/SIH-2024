@@ -87,7 +87,7 @@
       "location": "INDIA",
       "date": "09/09/2024",
       "status": "Approved",
-      "funds_sanctioned": 49999,
+      "funds_sanctioned": 3456,
       "_id": "66cc30b65ba09366ee412a04",
       "__v": 0,
       "id": "3e16"
@@ -259,6 +259,21 @@
       "status": "Registered",
       "funds_sanctioned": 0,
       "_id": "66df311d89d13683f0bc3566",
+      "__v": 0
+    },
+    {
+      "name": "reeya",
+      "email": "reeya@gmail.com",
+      "password": "123",
+      "technology": "ai",
+      "Industry_Focus": "ai",
+      "Startup_eligibility_criteria": "gov funded",
+      "Startup_Revenue_Preference": 20000,
+      "location": "Ahmedabad",
+      "date": "09-09-2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "_id": "66df395924c2dd08c8145f50",
       "__v": 0
     }
   ]

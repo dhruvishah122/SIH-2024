@@ -63,6 +63,22 @@
       "email": "amazon@gmail.com",
       "_id": "66df23036479ba0179cda8e8",
       "__v": 0
+    },
+    {
+      "name": "Amazon.com",
+      "id1": "66cc30b65ba09366ee412a04",
+      "content": "amazon post",
+      "email": "amazon@gmail.com",
+      "_id": "66df3e1962eeb2e3df44e098",
+      "__v": 0
+    },
+    {
+      "name": "Amazon.com",
+      "id1": "66cc30b65ba09366ee412a04",
+      "content": "amazon post",
+      "email": "amazon@gmail.com",
+      "_id": "66df3e1a62eeb2e3df44e09b",
+      "__v": 0
     }
   ]
 }

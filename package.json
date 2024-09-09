@@ -10,6 +10,7 @@
     "json-server": "^1.0.0-beta.2",
     "method-override": "^3.0.0",
     "mongoose": "^8.6.1",
+    "mongosh": "^2.3.1",
     "multer": "^1.4.5-lts.1",
     "react-router-dom": "^6.26.1",
     "require": "^2.4.20",

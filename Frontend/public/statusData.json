@@ -105,7 +105,7 @@
       "fundingDetails": "https://drive.google.com",
       "date": "09/09/2024",
       "status": "Approved",
-      "funds_sanctioned": 49999,
+      "funds_sanctioned": 3456,
       "id": "66cc30b65ba09366ee412a04",
       "_id": "66dea675e32b1cb01baa6b38",
       "__v": 0
@@ -141,6 +141,17 @@
       "funds_sanctioned": 0,
       "id": "66db3c1b09acff07fc27f88a",
       "_id": "66df27366479ba0179cda8f8",
+      "__v": 0
+    },
+    {
+      "investorName": "Futuretech Capital",
+      "startupName": "reeya",
+      "fundingDetails": "2000",
+      "date": "09/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 12342,
+      "id": "66df395924c2dd08c8145f50",
+      "_id": "66df3a1524c2dd08c8145f55",
       "__v": 0
     }
   ]
