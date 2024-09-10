@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavBar from "../src/components/NavBar";
 import InvestorProfile from "../src/InvestorDashBoard/InvestorProfile";
+import InvestorNavBar from "../src/NavBars/InvestorNavBar";
 
 const Base_URL = "/investorData.json"; // Change the base URL to the local JSON file path
 
@@ -34,7 +35,7 @@ function ProfileInvestor() {
 
   return (
     <div>
-      <NavBar />
+      <InvestorNavBar />
       <div className={styles.container}>
         <InvestorProfile startup={startup} />
       </div>
