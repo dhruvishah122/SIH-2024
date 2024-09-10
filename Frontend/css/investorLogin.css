@@ -1,4 +1,3 @@
-/* @extend display-flex; */
 display-flex,
 .signup-content,
 .form-row,
@@ -250,63 +249,6 @@ textarea:focus {
   -o-box-shadow: none !important;
   -ms-box-shadow: none !important;
 }
-
-input[type="checkbox"] {
-  appearance: checkbox !important;
-  -moz-appearance: checkbox !important;
-  -webkit-appearance: checkbox !important;
-  -o-appearance: checkbox !important;
-  -ms-appearance: checkbox !important;
-}
-
-input[type="radio"] {
-  appearance: radio !important;
-  -moz-appearance: radio !important;
-  -webkit-appearance: radio !important;
-  -o-appearance: radio !important;
-  -ms-appearance: radio !important;
-}
-
-input:-webkit-autofill {
-  box-shadow: 0 0 0 30px transparent inset;
-  -moz-box-shadow: 0 0 0 30px transparent inset;
-  -webkit-box-shadow: 0 0 0 30px transparent inset;
-  -o-box-shadow: 0 0 0 30px transparent inset;
-  -ms-box-shadow: 0 0 0 30px transparent inset;
-  background-color: transparent !important;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-figure {
-  margin: 0;
-}
-
-p {
-  margin: 0px;
-  font-weight: 600;
-  color: #fff;
-}
-
-h2 {
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-  font-weight: 900;
-  color: #fff;
-  font-family: "Poppins";
-  font-size: 26px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.clear {
-  clear: both;
-}
-
 body {
   font-size: 14px;
   line-height: 1.8;
@@ -321,43 +263,29 @@ body {
 
 .main {
   position: relative;
-  align-content: center;
+}
+.register-form {
+  padding: 93px 115px 90px 80px;
+  margin-bottom: -8px;
+}
+.container {
+  width: 700px;
+  margin: 0 420px;
+  background: #fff;
+  padding: 0 0 0 0;
+  border-radius: 2px;
 }
 
-.container {
-  width: 900px;
-  margin: 0 auto;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border-radius: 3px;
+.signup-img {
+  position: relative;
+  width: 385px;
+  margin-bottom: -8px;
 }
 
 .signup-form {
   width: 900px;
   margin-top: -2px;
-  align-content: center;
-  margin-left: 10px;
   box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.signup-img-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-}
-
-.register-form {
-  padding: 93px 115px 90px 80px;
-  margin-bottom: -8px;
 }
 
 .form-row {
@@ -398,7 +326,7 @@ label.required:after {
 
 input {
   box-sizing: border-box;
-  border: 1px solid #006494;
+  border: 1px solid #ebebeb;
   padding: 14px 20px;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -406,7 +334,7 @@ input {
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   font-size: 20px;
-  font-family: ' Georgia, "Times New Roman", Times, serif;';
+  font-family: 'Georgia, "Times New Roman", Times, serif';
 }
 input:focus {
   border: 1px solid #006494;
@@ -423,266 +351,63 @@ input:focus {
   width: auto;
 }
 
-.form-link {
-  font-size: 12px;
-  color: #222;
-  text-decoration: none;
-  position: relative;
-}
-.form-link:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #d7d7d7;
-  left: 0;
-  bottom: 12px;
-}
-
-.form-radio {
-  margin-bottom: 18px;
-}
-.form-radio input {
-  width: auto;
-  display: inline-block;
-}
-
-.radio-label {
-  padding-right: 72px;
-}
-
-.form-radio-group {
-  padding-bottom: 10px;
-  padding-top: 12px;
-}
-
-.form-radio-item {
-  position: relative;
-  margin-right: 30px;
-}
-.form-radio-item label {
-  font-weight: 500;
-  padding-left: 30px;
-  position: relative;
-  z-index: 9;
-  display: block;
-  cursor: pointer;
-  text-transform: none;
-}
-
-.check {
-  display: inline-block;
-  position: absolute;
-  border: 1px solid #ebebeb;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  height: 18px;
-  width: 18px;
-  top: 2px;
-  left: 0px;
-  z-index: 5;
-  transition: border 0.25s linear;
-  -webkit-transition: border 0.25s linear;
-}
-.check:before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  top: 3px;
-  left: 3px;
-  margin: auto;
-  transition: background 0.25s linear;
-  -webkit-transition: background 0.25s linear;
-}
-
-input[type="radio"] {
-  position: absolute;
-  visibility: hidden;
-}
-input[type="radio"]:checked ~ .check {
-  border: 1px solid #006494;
-}
-input[type="radio"]:checked ~ .check::before {
-  background: #006494;
-}
-
-ul {
-  background: 0 0;
-  position: relative;
-  z-index: 9;
-  border: 1px solid #ebebeb;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-}
-
-ul li {
-  padding: 13px 20px;
-  z-index: 2;
-  color: #222;
-}
-
-ul li:not(.init) {
-  display: none;
-  background: #fff;
-  color: #222;
-  padding: 5px 10px;
-}
-
-ul li:not(.init):hover,
-ul li.selected:not(.init) {
-  background: #006494;
-  color: #fff;
-}
-
-li.init {
-  cursor: pointer;
-  position: relative;
-}
-li.init:after {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  font-size: 22px;
-  color: #222;
-  font-family: "Material-Design-Iconic-Font";
-  content: "\f2f2";
-}
-
-#slider-margin {
-  height: 5px;
-  border: none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  -o-box-shadow: none;
-  -ms-box-shadow: none;
-  background: #f8f8f8;
-  border-radius: 2.5px;
-  -moz-border-radius: 2.5px;
-  -webkit-border-radius: 2.5px;
-  -o-border-radius: 2.5px;
-  -ms-border-radius: 2.5px;
-}
-#slider-margin .noUi-connect {
-  background: #006494;
-}
-#slider-margin .noUi-handle {
-  width: 100px;
-  height: 30px;
-  top: -12px;
-  background: #006494;
-  box-shadow: 0px 3px 2.85px 0.15px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 2.85px 0.15px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 3px 2.85px 0.15px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0px 3px 2.85px 0.15px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0px 3px 2.85px 0.15px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  outline: none;
-  border: none;
-  right: -50px;
-}
-#slider-margin .noUi-handle:after,
-#slider-margin .noUi-handle:before {
-  background: transparent;
-  height: 0px;
-  width: 20px;
-  top: -2px;
-  font-size: 18px;
-  outline: none;
-}
-#slider-margin .noUi-handle:before {
-  font-family: "Material-Design-Iconic-Font";
-  color: #fff;
-  content: "\f2fa";
-  left: 10px;
-}
-#slider-margin .noUi-handle:after {
-  font-family: "Material-Design-Iconic-Font";
-  color: #fff;
-  content: "\f2fb";
-  left: auto;
-  right: -5px;
-}
-#slider-margin .noUi-handle .noUi-tooltip {
-  bottom: 2px;
-  border: none;
-  background: transparent;
-  font-weight: bold;
-  color: #fff;
-  padding: 0px;
-}
-
-.donate-us {
-  margin-bottom: 93px;
-  margin-top: 30px;
-}
-.donate-us label {
-  margin-bottom: 32px;
-}
-
-.price_slider {
-  position: relative;
-}
-
-.donate-value {
-  position: absolute;
-  top: -9px;
-  left: 50%;
-  z-index: 99;
-  transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-}
-
 .form-submit {
   text-align: right;
+  margin: -48px -35px 13px 290px;
+  height: 50px;
+  width: 150px;
 }
 
 .submit {
-  width: 200px;
+  width: 150px;
   height: 50px;
   display: inline-block;
-  font-family: ' Georgia, "Times New Roman", Times, serif;';
+  font-family: 'Georgia, "Times New Roman", Times, serif';
+  color: white;
+
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+}
+#demo {
+  color: white;
+}
+.register {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  font-family: 'Georgia, "Times New Roman", Times, serif';
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
   border: none;
   cursor: pointer;
+
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
 }
+#demo {
+  font-size: 20px;
+}
 
 #submit {
-  background-color: #006494;
+  background: #006494;
   color: #fff;
-  margin-right: 180px;
+}
+#register {
+  background: #006494;
+  color: #fff;
+  margin-right: -25px;
 }
 #submit:hover {
   background-color: #006494;
@@ -705,30 +430,31 @@ label.error:after {
   right: 20px;
   top: 37px;
   font-size: 23px;
-  color: #006494;
+  color: #112a46;
 }
-
-input.error {
-  border: 1px solid #006494;
+.form {
+  font-size: 20px;
+  font-family: "Poppins";
+  color: white;
+  text-align: center;
+  text-decoration: none;
 }
+button {
+  width: 150px;
+  height: 50px;
+  background-color: #006494;
+  border: none;
+  cursor: pointer;
 
-.select-list {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 47px;
-}
-
-.list-item {
-  position: absolute;
-  width: 100%;
-  z-index: 99;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 1024px) {
-  .form-input {
-    width: 100%;
-  }
   .container {
     width: calc(100% - 30px);
     max-width: 100%;
@@ -779,19 +505,20 @@ input.error {
   }
 }
 @media screen and (max-width: 480px) {
-  .submit {
-    width: 100%;
-  }
-  .container {
-    width: 100%;
-  }
   .form-input {
     width: 60%;
   }
-
-  #submit {
-    margin-bottom: 20px;
-    margin-right: 0px;
+  .container {
+    width: 130%;
+  }
+  .submit {
+    width: 100%;
+  }
+  .form-submit {
+    text-align: right;
+    margin: -48px -35px 13px 157px;
+    height: 50px;
+    width: 150px;
   }
 
   .form-radio-group {
