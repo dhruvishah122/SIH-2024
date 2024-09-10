@@ -1,5 +1,5 @@
 import styles from "./Posts.module.css";
-
+import { Link } from "react-router-dom";
 const images = [
   "image1.jpg",
   "image2.jpg",
@@ -23,6 +23,26 @@ function Posts({ posts }) {
 }
 
 function Post({ post, image }) {
+  // handleRequest function to send post.email in the URL
+  const handleRequest = async (e) => {
+    e.preventDefault(); // prevent default behavior of the Link
+
+    try {
+      const url = `http://localhost:8080/post-profile?email=${encodeURIComponent(post.email)}`;
+      const response = await fetch(url);
+
+      if (response.ok) {
+        console.log("Email sent successfully in the URL");
+      } else {
+        console.error("Error sending email in the URL");
+
+      }
+      window.location.href = url;
+    } catch (error) {
+      console.error("Request failed:", error);
+    }
+  };
+
   return (
     <div className={`${styles["blog-card"]}`}>
       <div className={styles.meta}>
@@ -34,8 +54,14 @@ function Post({ post, image }) {
         </ul>
       </div>
       <div className={styles["description"]}>
-        <h1>{post.name}</h1>
-        <p><b>{post.email}</b></p>
+        <h1>
+          <Link to="#" onClick={handleRequest}>
+            {post.name}
+          </Link>
+        </h1>
+        <p>
+          <b>{post.email}</b>
+        </p>
         <p className={styles.content}>{post.content}</p>
         <p className={styles["read-more"]}>Read more</p>
       </div>

@@ -383,6 +383,28 @@ app.post("/govLogin", (req, res) => {
     res.send("wrong");
   }
 });
+app.get('/post-profile', async (req, res) => {
+  const email = req.query.email;
+
+  // Use findOne to get a single document
+  const data = await startupRegister.findOne({ email: email });
+  const data1 = await investorRegister.findOne({ email: email });
+
+  console.log("Startup Data:", data);
+  console.log("Investor Data:", data1);
+  console.log("Email received:", email);
+
+  if (data) {
+    console.log("Redirecting to dashboard profile...");
+    return res.redirect(`http://localhost:3000/dashboard/profile?name=${data.name}`);
+  } else if (data1) {
+    console.log("Redirecting to investor dashboard profile...");
+    return res.redirect(`http://localhost:3000/investordashboard/profile?name=${data1.name}`);
+  } else {
+    console.log("User not found in either database.");
+    return res.status(404).send("User not found");
+  }
+});
 
 app.post("/postData", (req, res) => {
   console.log("postdata", req.body);
