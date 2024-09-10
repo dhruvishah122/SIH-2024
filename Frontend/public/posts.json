@@ -32,6 +32,38 @@
         "content": "Looking for vegan startups to invest",
         "email": "futuretech@gmail.com",
         "__v": 0
+      },
+      {
+        "_id": "66dffe5b231c64a133f9385d",
+        "name": "FutureTech Capital",
+        "id1": "66cf250d846b47216990b084",
+        "content": "Looking for vegan startups to invest",
+        "email": "futuretech@gmail.com",
+        "__v": 0
+      },
+      {
+        "_id": "66e004bf66c3c74eb02f2a52",
+        "name": "Angel investors",
+        "id1": "66dd7a0cb4fa13b2a6c42102",
+        "content": "Successfully invested in 3 startups",
+        "email": "angel@gmail.com",
+        "__v": 0
+      },
+      {
+        "_id": "66e004c066c3c74eb02f2a56",
+        "name": "Angel investors",
+        "id1": "66dd7a0cb4fa13b2a6c42102",
+        "content": "Successfully invested in 3 startups",
+        "email": "angel@gmail.com",
+        "__v": 0
+      },
+      {
+        "_id": "66e0053a66c3c74eb02f2a5a",
+        "name": "Angel investors",
+        "id1": "66dd7a0cb4fa13b2a6c42102",
+        "content": "invested",
+        "email": "angel@gmail.com",
+        "__v": 0
       }
     ]
   ]
