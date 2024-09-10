@@ -218,3 +218,7 @@
 .content::-webkit-scrollbar {
   display: none;
 }
+
+.email {
+  color: #6b86d7;
+}
