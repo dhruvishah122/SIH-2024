@@ -175,7 +175,7 @@ const StatusTable = () => {
           color="primary"
           className="csv-btn"
           onClick={downloadCSV}
-          style={{ margin: "1.5rem 0 1.5rem 0", backgroundColor: "#00b4d8" }}
+          style={{ margin: "1.5rem 0 1.5rem 0", backgroundColor: "#318CE7" }}
         >
           Download Report
         </Button>

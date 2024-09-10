@@ -12,10 +12,10 @@ function InvestorProfile({ startup }) {
   useEffect(function () {
     async function FetchInvestors() {
       try {
-        const res = await fetch('/investorData.json');
+        const res = await fetch("/investorData.json");
         const data = await res.json();
         console.log(data);
-        setInvestors(data.items1);  // Assuming the JSON structure is similar to the one you shared.
+        setInvestors(data.items1); // Assuming the JSON structure is similar to the one you shared.
       } catch {
         alert("There was an error loading data");
       }
@@ -25,7 +25,9 @@ function InvestorProfile({ startup }) {
 
   useEffect(
     function () {
-      const selectedInvestor = investors.find((investor) => investor.name === name);
+      const selectedInvestor = investors.find(
+        (investor) => investor.name === name
+      );
       if (!selectedInvestor) return;
       setInvestorLogin(selectedInvestor);
     },
@@ -39,9 +41,9 @@ function InvestorProfile({ startup }) {
       {startup.name && (
         <div className={styles.container}>
           <div className={styles.title}>
-            <div>{startup.name}</div>
+            {/* <div></div> */}
             <Link className={styles.title}>
-              <div className={styles.website}>View Our Website</div>
+              <div className={styles.website}>{startup.name}</div>
             </Link>
           </div>
           <div className={styles.info}>

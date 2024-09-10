@@ -105,13 +105,13 @@ function List({ navColor }) {
             <a
               className="dropdown-item "
               href="http://localhost:8080/startupRegister"
-              style={{ color: "#00b4d8" }}
+              style={{ color: "#318ce7" }}
             >
               Startup Registration
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Mentorship Programs
             </a>
           </li>
@@ -119,7 +119,7 @@ function List({ navColor }) {
             <a
               className="dropdown-item"
               href="http://localhost:3000/investors"
-              style={{ color: "#00b4d8" }}
+              style={{ color: "#318ce7" }}
             >
               Startup Funding
             </a>
@@ -128,13 +128,13 @@ function List({ navColor }) {
             <a
               className="dropdown-item"
               href="http://localhost:3000/startups"
-              style={{ color: "#00b4d8" }}
+              style={{ color: "#318ce7" }}
             >
               Collaboration Opportunities
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Success Stories
             </a>
           </li>
@@ -154,18 +154,18 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Ongoing Projects
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Research Funding
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Collaboration Opportunities
             </a>
           </li>
@@ -184,18 +184,18 @@ function List({ navColor }) {
         </a>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Patent Filing
             </a>
           </li>
 
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Copyright Services
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#" style={{ color: "#00b4d8" }}>
+            <a className="dropdown-item" href="#" style={{ color: "#318ce7" }}>
               Legal Consultation
             </a>
           </li>
@@ -217,7 +217,7 @@ function List({ navColor }) {
             <a
               className="dropdown-item"
               href="http://localhost:3000/startups"
-              style={{ color: "#00b4d8" }}
+              style={{ color: "#318ce7" }}
             >
               Start Investing
             </a>
@@ -226,7 +226,7 @@ function List({ navColor }) {
             <a
               className="dropdown-item"
               href="http://localhost:3000/investors"
-              style={{ color: "#00b4d8" }}
+              style={{ color: "#318ce7" }}
             >
               Browse Investors
             </a>
@@ -235,7 +235,7 @@ function List({ navColor }) {
             <a
               className="dropdown-item"
               href="http://localhost:8080/investorRegister"
-              style={{ color: "#00b4d8" }}
+              style={{ color: "#318ce7" }}
             >
               Register as Invester
             </a>

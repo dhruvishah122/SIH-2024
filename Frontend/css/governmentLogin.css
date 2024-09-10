@@ -258,7 +258,7 @@ body {
   margin: 0px;
   background: white;
   padding: 50px 0;
-  background-color: #00b4d8;
+  background-color: #318ce7;
 }
 
 .main {
@@ -321,7 +321,7 @@ label.required {
 label.required:after {
   content: "*";
   margin-left: 2px;
-  color: #00b4d8;
+  color: #318ce7;
 }
 
 input {
@@ -337,7 +337,7 @@ input {
   font-family: 'Georgia, "Times New Roman", Times, serif';
 }
 input:focus {
-  border: 1px solid #00b4d8;
+  border: 1px solid#318ce7;
 }
 
 .label-flex {
@@ -402,16 +402,16 @@ input:focus {
 }
 
 #submit {
-  background: #00b4d8;
+  background: #318ce7;
   color: #fff;
 }
 #register {
-  background: #00b4d8;
+  background: #318ce7;
   color: #fff;
   margin-right: -25px;
 }
 #submit:hover {
-  background-color: #00b4d8;
+  background-color: #318ce7;
 }
 
 .form-input {
@@ -431,7 +431,7 @@ label.error:after {
   right: 20px;
   top: 37px;
   font-size: 23px;
-  color: #00b4d8;
+  color: #318ce7;
 }
 .form {
   font-size: 20px;
@@ -443,7 +443,7 @@ label.error:after {
 button {
   width: 150px;
   height: 50px;
-  background-color: #00b4d8;
+  background-color: #318ce7;
   border: none;
   cursor: pointer;
 
