@@ -323,34 +323,24 @@ app.post("/investorAuthenticate", async (req, res) => {
 });
 
 //posts
-function addPostDataToJson(newData) {
-  const filepath = path.join(__dirname, "Frontend/public/posts.json");
 
-  fs.readFile(filepath, "utf8", (err, data) => {
+function addPostDataToJson(newData) {
+  const filePath = path.join(__dirname, "Frontend/public/posts.json"); // Ensure correct path
+
+  fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
       console.error("Error reading the file:", err);
       return;
     }
 
-    let jsonData = { posts: [] }; // Initialize with an empty posts array
+    let jsonData = { posts: [] }; // Initialize with a posts array
     try {
       // Parse existing data or start with a new object if the file is empty
       jsonData = data ? JSON.parse(data) : jsonData;
 
       // Check if the parsed data is an object and has posts as an array
       if (typeof jsonData !== "object" || !Array.isArray(jsonData.posts)) {
-        console.error(
-          "Error: JSON data is not a valid object with posts array."
-        );
-        return;
-      }
-
-      // Optional: Check if the newData already exists to prevent duplication
-      const isDuplicate = jsonData.posts.some(
-        (post) => post._id === newData._id
-      );
-      if (isDuplicate) {
-        console.error("Error: Duplicate entry detected. Post not added.");
+        console.error("Error: JSON data is not a valid object with posts array.");
         return;
       }
     } catch (err) {
@@ -358,11 +348,17 @@ function addPostDataToJson(newData) {
       return;
     }
 
+    // Log existing posts before adding
+    console.log("Existing posts before adding:", jsonData.posts);
+
     // Add new data as a new object in the posts array
     jsonData.posts.push(newData); // Push newData to the posts array
 
+    // Log updated JSON data before writing
+    console.log("Updated JSON data:", JSON.stringify(jsonData, null, 2));
+
     // Write the updated data back to the JSON file
-    fs.writeFile(filepath, JSON.stringify(jsonData, null, 2), "utf8", (err) => {
+    fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), "utf8", (err) => {
       if (err) {
         console.error("Error writing to the file:", err);
         return;
@@ -371,7 +367,6 @@ function addPostDataToJson(newData) {
     });
   });
 }
-
 app.get("/authlogin", (req, res) => {
   res.render("Backend/governmentLogin.ejs");
 });
