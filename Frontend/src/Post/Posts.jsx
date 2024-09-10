@@ -35,6 +35,7 @@ function Post({ post, image }) {
       </div>
       <div className={styles["description"]}>
         <h1>{post.name}</h1>
+        <p><b>{post.email}</b></p>
         <p className={styles.content}>{post.content}</p>
         <p className={styles["read-more"]}>Read more</p>
       </div>
