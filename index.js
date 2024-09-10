@@ -273,7 +273,10 @@ app.get("/send-data", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-  addPostDataToJson(newPost);
+    const allObjs = await posts.find();
+    console.log(allObjs);
+    console.log("pull");
+  addPostDataToJson(allObjs);
   //   res.render("Backend/posts.ejs",{newPost});
   res.redirect("http://localhost:3000/post");
 });
@@ -294,7 +297,10 @@ app.get("/sendPosData", async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-  addPostDataToJson(newPost);
+    const allObjs = await posts.find();
+    console.log(allObjs);
+    console.log("pull");
+  addPostDataToJson(allObjs);
   //   res.render("Backend/posts.ejs",{newPost});
   res.redirect("http://localhost:3000/post");
 });
@@ -334,22 +340,7 @@ function addPostDataToJson(newData) {
     }
 
     let jsonData = { posts: [] }; // Initialize with a posts array
-    try {
-      // Parse existing data or start with a new object if the file is empty
-      jsonData = data ? JSON.parse(data) : jsonData;
-
-      // Check if the parsed data is an object and has posts as an array
-      if (typeof jsonData !== "object" || !Array.isArray(jsonData.posts)) {
-        console.error("Error: JSON data is not a valid object with posts array.");
-        return;
-      }
-    } catch (err) {
-      console.error("Error parsing JSON data:", err);
-      return;
-    }
-
-    // Log existing posts before adding
-    console.log("Existing posts before adding:", jsonData.posts);
+  
 
     // Add new data as a new object in the posts array
     jsonData.posts.push(newData); // Push newData to the posts array
@@ -401,27 +392,30 @@ app.get('/post-profile', async (req, res) => {
   }
 });
 
-app.post("/postData", (req, res) => {
-  console.log("postdata", req.body);
-  const { content, name, id1, email } = req.body;
-  let newPost = new posts({
-    name: name,
-    id1: id1,
-    content: content,
-    email: email,
-  });
-  newPost
-    .save()
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  addPostDataToJson(newPost);
-  //   res.render("Backend/posts.ejs",{newPost});
-  res.redirect("http://localhost:3000/post");
-});
+// app.post("/postData", async(req, res) => {
+//   console.log("postdata", req.body);
+//   const { content, name, id1, email } = req.body;
+//   let newPost = new posts({
+//     name: name,
+//     id1: id1,
+//     content: content,
+//     email: email,
+//   });
+//   newPost
+//     .save()
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+//     const allObjs = await posts.find();
+//     console.log(allObjs);
+//     console.log("pull");
+//   addPostDataToJson(allObjs);
+//   //   res.render("Backend/posts.ejs",{newPost});
+//   res.redirect("http://localhost:3000/post");
+// });
 app.listen(8080, () => {
   console.log("server is listening on port 8080");
 });

@@ -11,10 +11,13 @@ function PostPage() {
     async function fetchPosts() {
       try {
         const res = await fetch(Base_URL);
+        if (!res.ok) throw new Error("Network response was not ok");
         const data = await res.json();
         console.log(data);
-        setPosts(data.posts); // Adjust this based on the structure of your JSON
-      } catch {
+        // Access the first element of the posts array
+        setPosts(data.posts[0]); // Flatten the structure
+      } catch (error) {
+        console.error("Fetch error:", error);
         alert("There was an error loading data");
       }
     }
@@ -24,7 +27,7 @@ function PostPage() {
   return (
     <div>
       <NavBar />
-      {posts.length !== 0 && <Posts posts={posts} />}
+      {posts.length !== 0 ? <Posts posts={posts} /> : <p>Loading posts...</p>}
     </div>
   );
 }
