@@ -164,7 +164,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d2631f; 
+  background-color: #006494; 
  }
  input[type="text"], input[type="email"], input[type="password"],input[type="number"] {
   font-weight: bold; /* Bold text inside input fields */
@@ -232,7 +232,7 @@ border-radius: 5px;
 font-size: 14px;
 font-family: 'Poppins'; }
 input:focus {
-  border: 1px solid #d2631f; }
+  border: 1px solid #006494; }
 
 .label-flex {
 justify-content: space-between;
@@ -289,17 +289,17 @@ justify-content: space-between;
       -ms-border-radius: 5px; }
 
     #submit {
-        background: #d2631f;
+        background: #006494;
         color: #fff;
         margin-right: -25px; 
     }
     #register {
-      background: #d2631f;
+      background: #006494;
       color: #fff;
       margin-right: -25px; 
   }
     #submit:hover {
-        background-color: #d2631f; }
+        background-color: #006494; }
     
     .form-input {
       position: relative; }
@@ -328,7 +328,7 @@ justify-content: space-between;
         button{
           width: 150px;
           height: 50px;
-          background-color: #d2631f;
+          background-color: #006494;
           border: none;
           cursor: pointer;
           font-weight: bold;
