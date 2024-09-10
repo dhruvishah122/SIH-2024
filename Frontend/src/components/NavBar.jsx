@@ -130,7 +130,7 @@ function List({ navColor }) {
     <>
       <li className="dropdown">
         <a
-          className="navItem nav-link dropdown-toggle "
+          className={`${styles.navItem} nav-link dropdown-toggle`}
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -183,7 +183,7 @@ function List({ navColor }) {
 
       <li className="nav-item dropdown">
         <a
-          className="navItem nav-link dropdown-toggle"
+          className={`${styles.navItem} nav-link dropdown-toggle`}
           style={navColor}
           href="#"
           role="button"
@@ -213,7 +213,7 @@ function List({ navColor }) {
       </li>
       <li className="nav-item dropdown">
         <a
-          className="navItem nav-link dropdown-toggle"
+          className={`${styles.navItem} nav-link dropdown-toggle`}
           style={navColor}
           href="#"
           role="button"
@@ -243,7 +243,7 @@ function List({ navColor }) {
       </li>
       <li className="nav-item dropdown">
         <a
-          className="navItem nav-link dropdown-toggle"
+          className={`${styles.navItem} nav-link dropdown-toggle`}
           style={navColor}
           href="#"
           role="button"
