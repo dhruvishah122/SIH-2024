@@ -1,4 +1,5 @@
-import "./NavBar.css";
+// import "./NavBar.css";
+import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 import logo from "../logo.jpg";
 
@@ -18,7 +19,7 @@ function NavBar() {
     fontWeight: "500",
   };
   return (
-    <nav className="navbar navbar-expand-lg fixed-top p-2">
+    <nav className={`${styles.navbar} navbar navbar-expand-lg fixed-top p-2`}>
       <div className="container-fluid text-warning logo ">
         <Link to="/" className="navbar-brand  text-warning">
           <img
@@ -41,7 +42,7 @@ function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse nav-container"
+          className={`collapse navbar-collapse ${styles["nav-container"]}`}
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
@@ -49,7 +50,7 @@ function NavBar() {
           </ul>
           <div className="dropdown">
             <button
-              className="btn dropdown-toggle button"
+              className={`btn dropdown-toggle button ${styles.button}`}
               type="button"
               id="dropdownMenu2"
               data-toggle="dropdown"
@@ -110,7 +111,11 @@ function NavBar() {
               aria-label="Search"
               style={buttonStyless}
             />
-            <button className="btn button" type="submit" style={buttonStyles}>
+            <button
+              className={`btn button ${styles.button}`}
+              type="submit"
+              style={buttonStyles}
+            >
               Search
             </button>
           </form>

@@ -3,23 +3,23 @@
     height: 100vh;
 } */
 
-.title{
-    margin-top: 9.5rem;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 600;
-    color: #d2631f;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.title {
+  margin-top: 9.5rem;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #3c005a;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.sub-title{
-    color: #d2631f;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.sub-title {
+  color: #3c005a;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.researchPara{
-    margin-left: 8rem;
-    margin-right: 8rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.researchPara {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

@@ -9,7 +9,7 @@
 
 .title {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #ee762c !important;
+  color: #112a46 !important;
   display: flex;
   padding: 0 5rem 0 5rem;
   justify-content: space-between;
@@ -44,7 +44,7 @@
 
 .website:hover::after {
   width: 100%;
-  background-color: #ee762c;
+  background-color: #112a46;
 }
 
 .info div:nth-child(odd) {

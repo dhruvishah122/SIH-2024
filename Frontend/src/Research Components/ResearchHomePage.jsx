@@ -6,18 +6,20 @@ import ResearchAnalytics from "./ResearchAnalytics";
 import ResearchTraining from "./ResearchTraining";
 import ResearchPolicy from "./ResearchPolicy";
 import Footer from "../components/Footer";
+import ResearchNavbar from "../NavBars/ResearchNavbar";
+import ResearchFooter from "../Footers/ResearchFooter";
 
 function ResearchHomePage() {
   return (
     <>
-      <NavBar />
+      <ResearchNavbar />
       <ResearchInfo />
       <ResearchFundingOpp />
       <ResearchProcess />
       <ResearchAnalytics />
       <ResearchTraining />
       <ResearchPolicy />
-      <Footer />
+      <ResearchFooter />
     </>
   );
 }

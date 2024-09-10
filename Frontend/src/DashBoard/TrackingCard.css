@@ -70,12 +70,12 @@ body {
 
 .steps .step.completed .step-icon-wrap::before,
 .steps .step.completed .step-icon-wrap::after {
-  background-color: #ee762c;
+  background-color: #112a46;
 }
 
 .steps .step.completed .step-icon {
-  border-color: #ee762c;
-  background-color: #ee762c;
+  border-color: #112a46;
+  background-color: #112a46;
   color: #fff;
 }
 
@@ -111,4 +111,3 @@ body {
 .bg-secondary {
   background-color: #f5f5f5 !important;
 }
-

@@ -10,6 +10,7 @@ import TextField from "@mui/material/TextField"; // Import TextField
 import Button from "@mui/material/Button"; // Import Button
 import "./StartupStatus.css";
 import NewNavBar from "./components/NewNavBar";
+import GovNewNavbar from "./NavBars/GovNewNavbar";
 
 const StatusTable = () => {
   const [rows, setRows] = useState([]);
@@ -152,7 +153,7 @@ const StatusTable = () => {
 
   return (
     <>
-      <NewNavBar />
+      <GovNewNavbar />
       <div className="Table">
         <h3
           style={{
@@ -174,7 +175,7 @@ const StatusTable = () => {
           color="primary"
           className="csv-btn"
           onClick={downloadCSV}
-          style={{ margin: "1.5rem 0 1.5rem 0" }}
+          style={{ margin: "1.5rem 0 1.5rem 0", backgroundColor: "#00b4d8" }}
         >
           Download Report
         </Button>

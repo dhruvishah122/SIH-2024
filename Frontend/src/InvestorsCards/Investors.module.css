@@ -9,13 +9,13 @@
   justify-content: center;
   font-size: 36px;
   font-weight: 500;
-  color: #d2631f;
+  color: #006494;
   margin: 30px;
 }
 
 .button {
   height: 2rem;
-  background-color: #d2631f;
+  background-color: #006494;
   border: none;
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
@@ -24,8 +24,8 @@
 }
 
 .button:hover {
-  box-shadow: 0px 0px 3px #d2631f;
-  color: #d2631f !important;
+  box-shadow: 0px 0px 3px #006494;
+  color: #006494 !important;
   background-color: white !important;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .buttonn {
-  background-color: #d2631f;
+  background-color: #006494;
   border: none;
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
@@ -50,7 +50,7 @@
 }
 
 .buttonn:hover {
-  box-shadow: 0px 0px 3px #d2631f;
-  color: #d2631f !important;
+  box-shadow: 0px 0px 3px #006494;
+  color: #006494 !important;
   background-color: white !important;
 }

@@ -1,47 +1,46 @@
-.bgcolorr{
-    background-color: #8fa2a221;
-    color: rgb(15, 14, 13);
-
+.bgcolorr {
+  background-color: #8fa2a221;
+  color: rgb(15, 14, 13);
 }
-.imggg{
-        /* box-shadow: 4px 4px 3px black; */
-            height: 10rem;
-            width: 15rem;
-            margin-top: 4rem;
-            margin-right: 1rem;
+.imggg {
+  /* box-shadow: 4px 4px 3px black; */
+  height: 10rem;
+  width: 15rem;
+  margin-top: 4rem;
+  margin-right: 1rem;
 }
 
 .investmentInfoo {
-    color: #d2631f;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight:00;
+  color: #800080;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 00;
 }
 
-.investmentInfoTitlee{
-    color: black;
+.investmentInfoTitlee {
+  color: black;
 }
 
 .titlee {
-    padding-top: 6rem;
-    text-align: center;
-    font-size: 43px;
-    font-weight: 500;
-    color: #d2631f;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 6rem;
+  text-align: center;
+  font-size: 43px;
+  font-weight: 500;
+  color: #800080;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.shadow{
-    box-shadow: 3px 3px black;
-    padding: 2rem;
-    border-radius: 2rem;
+.shadow {
+  box-shadow: 3px 3px black;
+  padding: 2rem;
+  border-radius: 2rem;
 }
-.btnn{
-    background-color: #d2631f;
-    color: white;
-    border: 1px solid white;
-    float: inline-end;
+.btnn {
+  background-color: #800080;
+  color: white;
+  border: 1px solid white;
+  float: inline-end;
 }
-.btnn:hover{
-    background-color:white ;
-    color: #d2631f;
-    border: 1px solid #d2631f;
+.btnn:hover {
+  background-color: white;
+  color: #800080;
+  border: 1px solid #800080;
 }

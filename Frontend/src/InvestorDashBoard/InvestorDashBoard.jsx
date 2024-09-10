@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import NavBar from "../components/NewNavBar";
 import DashContainer from "./InvestorDashContainer";
+import InvestorNavBar from "../NavBars/InvestorNavBar";
 // import { useEffect, useState } from "react";
 
 function InvestorDashBoard() {
@@ -10,7 +11,7 @@ function InvestorDashBoard() {
 
   return (
     <>
-      <NavBar />
+      <InvestorNavBar />
       <DashContainer name={name} />
     </>
   );

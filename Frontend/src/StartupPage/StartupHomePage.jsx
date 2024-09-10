@@ -5,16 +5,18 @@ import IntroSection from "./IntroSection";
 import StartupProcess from "./StartupProcess";
 
 import Collaboration from "./Collaboration";
+import StartupFooter from "../Footers/StartupFooter";
+import StartupNavbar from "../NavBars/StartupNavbar";
 
 function StartupHomePage() {
   return (
     <div>
-      <NavBar />
+      <StartupNavbar />
       <IntroSection />
       <FeaturedStartup />
       <StartupProcess />
       <Collaboration />
-      <Footer />
+      <StartupFooter />
     </div>
   );
 }

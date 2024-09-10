@@ -12,7 +12,7 @@
   font-size: 24px;
   align-self: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #ee762c !important;
+  color: #006494 !important;
 }
 .label {
   font-size: 24px;
@@ -38,7 +38,7 @@ td {
 }
 
 input {
-  border: 2px solid #ee762c;
+  border: 2px solid #006494;
   border-radius: 4px;
   background-color: white;
   margin-right: 1rem;
@@ -49,7 +49,7 @@ input {
 .button {
   text-decoration: none;
   color: white;
-  background-color: #ee762c;
+  background-color: #006494;
   height: 3rem;
   width: 5rem;
   border-radius: 10px;
@@ -57,7 +57,7 @@ input {
   transition: all 0.5s;
 }
 .button:hover {
-  color: #ee762c;
+  color: #006494;
   background-color: white;
-  box-shadow: 0 0 3px #ee762c;
+  box-shadow: 0 0 3px #006494;
 }

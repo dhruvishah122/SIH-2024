@@ -14,15 +14,15 @@
   padding: 1rem;
   margin: 2rem;
   border-radius: 1rem;
-  border: 1px solid #d2631f;
-  background-color: #d7b6a2;
+  border: 1px solid #112a46;
+  background-color: #caf0f8;
   box-shadow: 0 0 6px black;
 }
 
 .title {
   font-size: 34px;
   font-weight: 500;
-  color: #d2631f;
+  color: #112a46;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   margin-top: 3rem;

@@ -1,15 +1,19 @@
-import "./Footer.css";
+// import "./Footer.css";
+import styles from "./Footer.module.css";
 export default function Footer() {
   return (
     <>
-      <div className="bac text-center text-lg-start ">
+      <div className={`${styles.bac} text-center text-lg-start`}>
         <div className="container p-4">
           <div className="row d-flex justify-content-evenly gap-3">
             <div
               className="col-lg-3 col-md-6 mb-md-0 text-center "
               style={{ marginRight: "3rem" }}
             >
-              <img src="./logo.jpeg" className=" m-2 footerLogo"></img>
+              <img
+                src="./logo.jpeg"
+                className={`m-2 ${styles.footerLogo}`}
+              ></img>
 
               <ul className="list-unstyled mb-0 d-flex flex-column gap-3 p-1 ">
                 <li>
@@ -74,7 +78,7 @@ export default function Footer() {
         <hr />
         <div className=" d-flex justify-content-around align-items-center flex-wrap">
           <div className="text-center p-3 d-flex align-items-center gap-1">
-            <img src="./satymev.jfif" className=" roundd"></img>
+            <img src="./satymev.jfif" className={styles.roundd}></img>
             <div className=" d-flex flex-column">
               <h6>Ministry of commerce and industry</h6>
               <h6>Government of Gujarat</h6>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Startups from "./Startups";
 import NavBar from "./NavBar";
+import StartupNavbar from "../NavBars/StartupNavbar";
 
 const Base_URL = "/data.json"; // Change the base URL to the local JSON file path
 
@@ -44,7 +45,7 @@ function StartupPage() {
 
   return (
     <div>
-      <NavBar />
+      <StartupNavbar />
       <SearchBox
         query={query}
         handleSearch={handleSearch}
@@ -62,7 +63,7 @@ function StartupPage() {
 function SearchBox({ query, handleSearch, handleSubmit, num, total }) {
   const buttonStyles = {
     color: "black",
-    border: "2px solid #d2631f",
+    border: "2px solid #112A46",
     fontWeight: "500",
   };
 

@@ -1,0 +1,15 @@
+.roundd {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.footerLogo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.bac {
+  background-color: #800080;
+  color: white;
+}

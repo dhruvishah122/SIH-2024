@@ -3,15 +3,17 @@ import NavBar from "../components/NavBar";
 import IPRservices from "./IPRservices";
 import IPRAppProcess from "./IPRAppProcess";
 import Footer from "../components/Footer";
+import IPRNavbar from "../NavBars/IPRNavbar";
+import IPRFooter from "../Footers/IPRFooter";
 
 export default function IPRHomePage() {
   return (
     <div>
-      <NavBar />
+      <IPRNavbar />
       <IPRHead />
       <IPRservices />
       <IPRAppProcess />
-      <Footer />
+      <IPRFooter />
     </div>
   );
 }

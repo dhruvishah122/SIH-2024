@@ -70,7 +70,7 @@ function Startup({ startup }) {
         <h5
           className="card-title text-center"
           style={{
-            color: "#d2631f",
+            color: "#112A46",
             fontWeight: "600",
             fontSize: "24px",
             marginBottom: "2rem",

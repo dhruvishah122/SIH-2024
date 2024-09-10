@@ -3,48 +3,47 @@
 } */
 
 .title {
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 600;
-    color: #d2631f;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #3c005a;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.para{
-    font-weight: 500;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 50%;
-    margin-left: 8rem;
+.para {
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 50%;
+  margin-left: 8rem;
 }
 
-image{
-    height: 22rem;
-    margin-right: 8rem;
-    margin-left: 3rem;
+image {
+  height: 22rem;
+  margin-right: 8rem;
+  margin-left: 3rem;
 }
 
-.research-button{
-    background-color: #d2631f;
-    text-decoration: none;
-    color: white;
-    border-radius: 0.5rem;
-    height: 2em;
-    width: 8rem;
-    font-size: large;
-    box-shadow: 0 0 6px #d2631f;
-    margin-left: 8rem;
-    /* margin-top: -3.5rem; */
-    text-align: center;
-    padding: 0.2rem;
-    
+.research-button {
+  background-color: #3c005a;
+  text-decoration: none;
+  color: white;
+  border-radius: 0.5rem;
+  height: 2em;
+  width: 8rem;
+  font-size: large;
+  box-shadow: 0 0 6px #3c005a;
+  margin-left: 8rem;
+  /* margin-top: -3.5rem; */
+  text-align: center;
+  padding: 0.2rem;
 }
 
-.research-button:hover{
-    cursor: pointer;
-    border: 2px solid #d2631f;
-    box-shadow: 0px 0px 3px #d2631f;
-    color: #d2631f;
-    background-color: white;
+.research-button:hover {
+  cursor: pointer;
+  border: 2px solid #3c005a;
+  box-shadow: 0px 0px 3px #3c005a;
+  color: #3c005a;
+  background-color: white;
 }
