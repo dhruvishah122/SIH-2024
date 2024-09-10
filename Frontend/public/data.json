@@ -210,8 +210,8 @@
       "Startup_eligibility_criteria": "VC Funded startups",
       "Startup_Revenue_Preference": 7000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "09/09/2024",
-      "status": "Rejected",
+      "date": "10/09/2024",
+      "status": "In Progress",
       "funds_sanctioned": 0,
       "_id": "66db3e1270fc7617f926c888",
       "__v": 0
@@ -225,9 +225,9 @@
       "Startup_eligibility_criteria": "Gov Funded startups",
       "Startup_Revenue_Preference": 12000000,
       "location": "Ahmedabad, Gujarat, IND",
-      "date": "09/09/2024",
-      "status": "Rejected",
-      "funds_sanctioned": 0,
+      "date": "10/09/2024",
+      "status": "Approved",
+      "funds_sanctioned": 1000000,
       "_id": "66dd5d66d12e5c805a1fc21e",
       "__v": 0
     },

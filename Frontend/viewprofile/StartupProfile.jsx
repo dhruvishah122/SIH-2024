@@ -3,6 +3,7 @@ import styles from "./StartupProfile.module.css";
 import Profile from "../src/DashBoard/Profile";
 import { useEffect, useState } from "react";
 import NavBar from "../src/components/NavBar";
+import StartupNavbar from "../src/NavBars/StartupNavbar";
 
 const Base_URL = "/data.json"; // Change the base URL to the local JSON file path
 
@@ -34,7 +35,7 @@ function StartupProfile() {
 
   return (
     <div>
-      <NavBar />
+      <StartupNavbar />
       <div className={styles.container}>
         <Profile startup={startup} />
       </div>
