@@ -22,9 +22,17 @@ import InvestorDashBoard from "./InvestorDashBoard/InvestorDashBoard.jsx";
 import InvestorProfile from "./InvestorDashBoard/InvestorProfile.jsx";
 import InvestorTrack from "./InvestorDashBoard/InvestorTrack.jsx";
 import InvestorCreatePost from "./InvestorDashBoard/InvestorCreatePost.jsx";
+
+import ResearchDashBoard from "./ResearchDashBoard/ResearchDashboard.jsx";
+import ResearchCreatePost from "./ResearchDashBoard/CreatePost";
+import ResearchProfile from "./ResearchDashBoard/ResearchProfile";
+import ResearchTrack from "./ResearchDashBoard/ResearchTrack";
+
 import Form from "./DashBoard/Form.jsx";
+
 import StartupProfile from "../viewprofile/StartupProfile.jsx";
 import ProfileInvestor from "../viewprofile/ProfileInvestor.jsx";
+
 function App() {
   return (
     <BrowserRouter>
@@ -59,7 +67,13 @@ function App() {
           <Route path="profile" element={<InvestorProfile />}></Route>
           <Route path="track" element={<InvestorTrack />}></Route>
           <Route path="createpost" element={<InvestorCreatePost />}></Route>
-         
+        </Route>
+        <Route path="/researchdashboard" element={<ResearchDashBoard />}>
+          <Route index element={<ResearchProfile />}></Route>
+          <Route path="" element={<ResearchProfile />}></Route>
+          <Route path="profile" element={<ResearchProfile />}></Route>
+          <Route path="track" element={<ResearchTrack />}></Route>
+          <Route path="createpost" element={<ResearchCreatePost />}></Route>
         </Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
         <Route path="/profile/:id" element={<StartupProfile />}></Route>
