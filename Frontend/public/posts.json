@@ -10,14 +10,6 @@
         "__v": 0
       },
       {
-        "_id": "66cf201185f4f0202ba2be37",
-        "name": "FinPath",
-        "id1": "66cf1fde85f4f0202ba2be34",
-        "content": "\"Empowering financial freedom with FinPath Solutions! We're redefining personal finance through cutting-edge technology and user-centric tools that make managing money simple and effective. With a strong market demand and a scalable model, we're poised for rapid growth. We're seeking investors to join us in revolutionizing how people achieve financial security. Let's build a brighter financial future together!\"",
-        "email": "finpath@gmail.com",
-        "__v": 0
-      },
-      {
         "_id": "66cf2422846b47216990b082",
         "name": "Harvest",
         "id1": "66cf23ba846b47216990b07f",
@@ -26,11 +18,43 @@
         "__v": 0
       },
       {
+        "_id": "66cf201185f4f0202ba2be37",
+        "name": "FinPath",
+        "id1": "66cf1fde85f4f0202ba2be34",
+        "content": "\"Empowering financial freedom with FinPath Solutions! We're redefining personal finance through cutting-edge technology and user-centric tools that make managing money simple and effective. With a strong market demand and a scalable model, we're poised for rapid growth. We're seeking investors to join us in revolutionizing how people achieve financial security. Let's build a brighter financial future together!\"",
+        "email": "finpath@gmail.com",
+        "__v": 0
+      },
+      {
         "_id": "66dffe5b231c64a133f93859",
         "name": "FutureTech Capital",
         "id1": "66cf250d846b47216990b084",
         "content": "Looking for vegan startups to invest",
         "email": "futuretech@gmail.com",
+        "__v": 0
+      },
+      {
+        "_id": "66e0107003798f5a1713bd09",
+        "name": "zurutech",
+        "id1": "66cf522529f615f98327991d",
+        "content": "hii",
+        "email": "zurutech@gmail.com",
+        "__v": 0
+      },
+      {
+        "_id": "66e0107103798f5a1713bd0d",
+        "name": "zurutech",
+        "id1": "66cf522529f615f98327991d",
+        "content": "hii",
+        "email": "zurutech@gmail.com",
+        "__v": 0
+      },
+      {
+        "_id": "66e0a04b06d893fa3034c775",
+        "name": "zurutech",
+        "id1": "66cf522529f615f98327991d",
+        "content": "hi\n",
+        "email": "zurutech@gmail.com",
         "__v": 0
       }
     ]
