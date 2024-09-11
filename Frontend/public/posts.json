@@ -10,19 +10,19 @@
         "__v": 0
       },
       {
+        "_id": "66cf201185f4f0202ba2be37",
+        "name": "FinPath",
+        "id1": "66cf1fde85f4f0202ba2be34",
+        "content": "\"Empowering financial freedom with FinPath Solutions! We're redefining personal finance through cutting-edge technology and user-centric tools that make managing money simple and effective. With a strong market demand and a scalable model, we're poised for rapid growth. We're seeking investors to join us in revolutionizing how people achieve financial security. Let's build a brighter financial future together!\"",
+        "email": "finpath@gmail.com",
+        "__v": 0
+      },
+      {
         "_id": "66cf2422846b47216990b082",
         "name": "Harvest",
         "id1": "66cf23ba846b47216990b07f",
         "content": "We are looking to invest in innovative food startups focused on sustainability, health, and technology. If you have a unique product or solution with growth potential, we want to hear from you! Please share your pitch deck and let’s explore a partnership!",
         "email": "harvestcapital@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66cf201185f4f0202ba2be37",
-        "name": "FinPath",
-        "id1": "66cf1fde85f4f0202ba2be34",
-        "content": "\"Empowering financial freedom with FinPath Solutions! We're redefining personal finance through cutting-edge technology and user-centric tools that make managing money simple and effective. With a strong market demand and a scalable model, we're poised for rapid growth. We're seeking investors to join us in revolutionizing how people achieve financial security. Let's build a brighter financial future together!\"",
-        "email": "finpath@gmail.com",
         "__v": 0
       },
       {
@@ -34,59 +34,11 @@
         "__v": 0
       },
       {
-        "_id": "66e0107003798f5a1713bd09",
-        "name": "zurutech",
-        "id1": "66cf522529f615f98327991d",
-        "content": "hii",
-        "email": "zurutech@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66e0107103798f5a1713bd0d",
-        "name": "zurutech",
-        "id1": "66cf522529f615f98327991d",
-        "content": "hii",
-        "email": "zurutech@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66e0a04b06d893fa3034c775",
-        "name": "zurutech",
-        "id1": "66cf522529f615f98327991d",
-        "content": "hi\n",
-        "email": "zurutech@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66e0053a66c3c74eb02f2a5e",
-        "name": "Angel investors",
-        "id1": "66dd7a0cb4fa13b2a6c42102",
-        "content": "invested",
-        "email": "angel@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66e0320eecde43e97b63d6a1",
-        "name": "FutureTech Capital",
-        "id1": "66cf250d846b47216990b084",
-        "content": "hello",
-        "email": "futuretech@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66e0320eecde43e97b63d6a5",
-        "name": "FutureTech Capital",
-        "id1": "66cf250d846b47216990b084",
-        "content": "hello",
-        "email": "futuretech@gmail.com",
-        "__v": 0
-      },
-      {
-        "_id": "66e1376249e3fdf1ade81538",
-        "name": "Flipkart.com",
-        "id1": "66cc40c7ae53a3297bda13f6",
-        "content": "amazon is my competitor",
-        "email": "f@gmail.com",
+        "_id": "66e188777dc54e64e8833eb2",
+        "name": "Amazon.com",
+        "id1": "66cc30b65ba09366ee412a04",
+        "content": "Flipkart is my competitor",
+        "email": "amazon@gmail.com",
         "__v": 0
       }
     ]

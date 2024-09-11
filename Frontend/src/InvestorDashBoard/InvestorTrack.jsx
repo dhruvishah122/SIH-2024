@@ -8,11 +8,16 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField"; // Import TextField for funds sanctioned input
+import CheckCircleIcon from "@mui/icons-material/CheckCircle"; // For green tick icon
 import "../StartupStatus.css";
 
 const StatusTable = () => {
   const location = useLocation(); // Get the current location
   const [rows, setRows] = useState([]);
+  const [selectedRow, setSelectedRow] = useState(null);
+  const [actionStatus, setActionStatus] = useState("");
+  const [fundsSanctioned, setFundsSanctioned] = useState(0); // State to hold funds sanctioned
 
   // Extract the query parameter from the URL
   const queryParams = new URLSearchParams(location.search);
@@ -20,32 +25,23 @@ const StatusTable = () => {
 
   useEffect(() => {
     if (investorName) {
-      
-        // const parsedData = JSON.parse(storedData).status;
-        // const filteredRows = parsedData.filter(
-        //   (row) => row.investorName === investorName
-        // );
-        // setRows(filteredRows); // Set filtered rows to state
-    
-        // If no data in localStorage, fetch from startupStatus.json
-        fetch("/statusData.json")
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            // localStorage.setItem("statusData", JSON.stringify(data)); // Save to localStorage
-            const filteredRows = data.status.filter(
-              (row) => row.investorName === investorName
-            );
-            setRows(filteredRows); // Set filtered rows to state
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-      
+      // Fetch from startupStatus.json
+      fetch("/statusData.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const filteredRows = data.status.filter(
+            (row) => row.investorName === investorName
+          );
+          setRows(filteredRows); // Set filtered rows to state
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
     }
   }, [investorName]); // Re-fetch when investorName changes
 
@@ -99,6 +95,55 @@ const StatusTable = () => {
     link.click();
   };
 
+  // Function to handle the status change
+  const handleStatusChange = (index) => {
+    const currentStatus = rows[index].status;
+
+    // Check if the status is already approved or rejected
+    if (currentStatus === "Approved" || currentStatus === "Rejected") {
+      alert(`Application is already ${currentStatus} and cannot be changed.`);
+      return; // Prevent further actions
+    }
+
+    const updatedRows = [...rows];
+
+    // Update the status and date
+    updatedRows[index].status =
+      actionStatus === "Request Changes" ? "In Progress" : actionStatus;
+    updatedRows[index].date = new Date().toLocaleDateString("en-GB");
+
+    // Update funds sanctioned if approved
+    if (actionStatus === "Approved") {
+      updatedRows[index].funds_sanctioned = fundsSanctioned; // Update funds sanctioned
+    }
+
+    setRows(updatedRows);
+    setSelectedRow(null); // Hide dropdown after action is applied
+    setFundsSanctioned(0); // Reset funds sanctioned input
+    setActionStatus(""); // Reset action status
+
+    // Update the data in local storage
+    localStorage.setItem("statusData", JSON.stringify({ status: updatedRows }));
+
+    // Send the updated object to the Node server
+    const updatedObject = updatedRows[index]; // Get the updated object
+
+    fetch("http://localhost:8080/update-status", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedObject), // Send the updated object
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data); // Handle success response
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Handle error response
+      });
+  };
+
   return (
     <div className="Table">
       <h3
@@ -114,7 +159,7 @@ const StatusTable = () => {
           alt="Logo"
           style={{ width: "70px", height: "70px", marginRight: "10px" }}
         />
-       Investments Status of {investorName}
+        Investments Status of {investorName}
       </h3>
       <Button
         variant="contained"
@@ -151,6 +196,9 @@ const StatusTable = () => {
               <TableCell align="left">
                 <b>Funds Sanctioned</b>
               </TableCell>
+              <TableCell align="left">
+                <b>Actions</b>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -169,7 +217,7 @@ const StatusTable = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Funding Details
+                    <div className="colChange"> View Funding Details</div>
                   </a>
                 </TableCell>
                 <TableCell align="left">{row.date}</TableCell>
@@ -182,6 +230,58 @@ const StatusTable = () => {
                   </span>
                 </TableCell>
                 <TableCell align="left">{row.funds_sanctioned}</TableCell>
+                <TableCell align="left">
+                  {row.status === "Approved" || row.status === "Rejected" ? (
+                    <CheckCircleIcon
+                      style={{ color: "green", fontSize: "2rem" }} // Show green tick
+                    />
+                  ) : selectedRow === index ? (
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      <select
+                        className="action-dropdown"
+                        value={actionStatus}
+                        onChange={(e) => setActionStatus(e.target.value)}
+                      >
+                        <option value="">Select Action</option>
+                        <option value="Approved">Approve</option>
+                        <option value="Rejected">Reject</option>
+                        <option value="Request Changes">Request Changes</option>
+                      </select>
+                      {actionStatus === "Approved" && (
+                        <TextField
+                          variant="outlined"
+                          type="number"
+                          label="Funds Sanctioned"
+                          value={fundsSanctioned}
+                          onChange={(e) => setFundsSanctioned(e.target.value)}
+                          style={{ marginTop: "10px" }}
+                        />
+                      )}
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => handleStatusChange(index)}
+                        style={{ marginTop: "10px" }}
+                      >
+                        Submit
+                      </Button>
+                    </div>
+                  ) : (
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => setSelectedRow(index)}
+                    >
+                      Change Status
+                    </Button>
+                  )}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

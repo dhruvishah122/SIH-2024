@@ -169,7 +169,7 @@ const StatusTable = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Funding Details
+                    <div className="colChange"> View Funding Details</div>
                   </a>
                 </TableCell>
                 <TableCell align="left">{row.date}</TableCell>

@@ -205,9 +205,9 @@ const StatusTable = () => {
                 <TableCell align="left">
                   <b>Funds Sanctioned</b>
                 </TableCell>
-                <TableCell align="left">
+                {/* <TableCell align="left">
                   <b>Actions</b>
-                </TableCell>
+                </TableCell> */}
               </TableRow>
             </TableHead>
             <TableBody>
@@ -221,12 +221,14 @@ const StatusTable = () => {
                   <TableCell>{row.investorName}</TableCell>
                   <TableCell align="left">{row.startupName}</TableCell>
                   <TableCell align="left">
+                    
                     <a
                       href={row.fundingDetails}
+                      
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Funding Details
+                     <div className="colChange"> View Funding Details</div>
                     </a>
                   </TableCell>
                   <TableCell align="left">{row.date}</TableCell>
@@ -239,60 +241,7 @@ const StatusTable = () => {
                     </span>
                   </TableCell>
                   <TableCell align="left">{row.funds_sanctioned}</TableCell>
-                  <TableCell align="left">
-                    {selectedRow === index ? (
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "flex-start",
-                        }}
-                      >
-                        <select
-                          className="action-dropdown"
-                          value={actionStatus}
-                          onChange={(e) => setActionStatus(e.target.value)}
-                        >
-                          <option value="">Select Action</option>
-                          <option value="Approved">Approve</option>
-                          <option value="Rejected">Reject</option>
-                          <option value="Request Changes">
-                            Request Changes
-                          </option>
-                        </select>
-                        {actionStatus === "Approved" && (
-                          <TextField
-                            variant="outlined"
-                            type="number"
-                            label="Funds Sanctioned"
-                            value={fundsSanctioned}
-                            onChange={(e) =>
-                              setFundsSanctioned(Number(e.target.value))
-                            }
-                            style={{ marginTop: "10px", width: "200px" }} // Add some margin and set width
-                          />
-                        )}
-                        <Button
-                          variant="contained"
-                          color="primary"
-                          className="action-btn"
-                          onClick={() => handleStatusChange(index)}
-                          style={{ marginTop: "10px" }} // Add margin for spacing
-                        >
-                          Confirm
-                        </Button>
-                      </div>
-                    ) : (
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        className="action-btn"
-                        onClick={() => setSelectedRow(index)}
-                      >
-                        Change Status
-                      </Button>
-                    )}
-                  </TableCell>
+
                 </TableRow>
               ))}
             </TableBody>
