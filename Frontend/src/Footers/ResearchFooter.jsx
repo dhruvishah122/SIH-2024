@@ -1,7 +1,9 @@
 import styles from "./ResearchFooter.module.css";
+import logo from "../logo.jpg";
 
 // import "./Footer.css";
 // import styles from "./Footer.module.css";
+
 export default function ResearchFooter() {
   return (
     <>
@@ -12,10 +14,7 @@ export default function ResearchFooter() {
               className="col-lg-3 col-md-6 mb-md-0 text-center "
               style={{ marginRight: "3rem" }}
             >
-              <img
-                src="./logo.jpeg"
-                className={`m-2 ${styles.footerLogo}`}
-              ></img>
+              <img src={logo} className={`m-2 ${styles.footerLogo}`}></img>
 
               <ul className="list-unstyled mb-0 d-flex flex-column gap-3 p-1 ">
                 <li>

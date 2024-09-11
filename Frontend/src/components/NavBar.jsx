@@ -24,7 +24,7 @@ function NavBar() {
         <Link to="/" className="navbar-brand  text-warning">
           <img
             src={logo}
-            alt="InnoHub Logo"
+            alt="Udhamitra Logo"
             style={{ height: "60px", marginLeft: "30px" }}
           />
         </Link>
