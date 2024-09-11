@@ -1,5 +1,7 @@
 // import "./Footer.css";
 import styles from "./Footer.module.css";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <>
@@ -17,14 +19,14 @@ export default function Footer() {
 
               <ul className="list-unstyled mb-0 d-flex flex-column gap-3 p-1 ">
                 <li>
-                  <a href="#" className=" text-decoration-none text-white">
+                  <div className=" text-decoration-none text-white">
                     Toll Free Number: 1234 2345 2345
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="#" className=" text-decoration-none text-white">
+                  <div className=" text-decoration-none text-white">
                     Working Hrs: 10:00 am - 5:30 pm
-                  </a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -32,24 +34,36 @@ export default function Footer() {
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0  text-center ">
               <ul className="list-unstyled d-flex flex-column gap-3">
                 <li>
-                  <a href="#" className=" text-decoration-none text-white">
+                  <Link
+                    to="/startup"
+                    className=" text-decoration-none text-white"
+                  >
                     Startups
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className=" text-decoration-none text-white">
+                  <Link
+                    to="/ResearchHomePage"
+                    className=" text-decoration-none text-white"
+                  >
                     Research
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className=" text-decoration-none text-white">
+                  <Link
+                    to="/iprhomepage"
+                    className=" text-decoration-none text-white"
+                  >
                     IPR
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className=" text-decoration-none text-white">
-                    Investment
-                  </a>
+                  <Link
+                    to="/investors"
+                    className=" text-decoration-none text-white"
+                  >
+                    Funding Agency
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -1,0 +1,29 @@
+.mainContainer{
+    margin-top: 11.3rem;
+    margin-bottom: 4rem;
+}
+
+.box{
+    background-color: #008080;
+    height: 24.5rem;
+    width: 20.5rem;
+    box-shadow: 0 0 2px black;
+    /* border-radius: 1rem;
+    padding: 2rem;
+    margin: 0 3rem; */
+}
+
+.box ul{
+    line-height: 3.3rem;
+    font-size: 1.25rem;
+}
+
+.headingg{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+

@@ -8,7 +8,7 @@
 }
 
 .investmentInfo {
-  color: #d2631f;
+  color: #008080;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 00;
 }
@@ -33,7 +33,7 @@
 
 .btn--investors:link,
 .btn--investors:visited {
-  color: #d2631f;
+  color: #008080;
   text-decoration: none;
   font-size: 25px;
 }
@@ -52,5 +52,5 @@
 }
 
 .btn--investors:hover::after {
-  background: #d2631f;
+  background: #008080;
 }

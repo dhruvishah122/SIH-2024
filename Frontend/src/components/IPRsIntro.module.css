@@ -14,7 +14,7 @@
   margin-top: 5rem;
   font-size: 40px;
   font-weight: 600;
-  color: #d2631f;
+  color: #008080;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -30,7 +30,7 @@
 
 .button:link,
 .button:visited {
-  color: #d2631f;
+  color: #008080;
   text-decoration: none;
   font-size: 25px;
 }
@@ -50,5 +50,5 @@
 }
 
 .button:hover::after {
-  background: #d2631f;
+  background: #008080;
 }

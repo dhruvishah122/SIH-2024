@@ -48,7 +48,7 @@
 }
 
 .box {
-  background-color: #d2631f;
+  background-color: #008080;
   color: white;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -68,7 +68,7 @@
 .view-button {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.5rem;
-  color: #d2631f;
+  color: #008080;
   text-decoration: none;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .view-button:hover::after {
-  background: #d2631f;
+  background: #008080;
 }
 
 .post {
@@ -97,8 +97,8 @@
 .post:hover {
   scale: 1.02;
   cursor: pointer;
-  color: #d2631f;
+  color: #008080;
   background-color: white;
-  border: #d2631f;
-  box-shadow: 0 0 2px #d2631f;
+  border: #008080;
+  box-shadow: 0 0 2px #008080;
 }

@@ -5,13 +5,16 @@ import IPRsIntro from "./IPRsIntro";
 import HomePageInformation from "./Investement";
 import Research from "./Research";
 import Footer from "./Footer";
-import Header from "./Header";
+
+// import Header from "./Header";
+import NewHeader from "./NewHeader.jsx";
 
 function HomePage() {
   return (
     <>
       <NavBar />
-      <Header />
+      <NewHeader />
+      {/* <Header /> */}
       {/* <Advertisement /> */}
       <StartupIntro />
       <Research />

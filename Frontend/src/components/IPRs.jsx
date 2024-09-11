@@ -50,13 +50,13 @@ function IPRs() {
 
 function IPR({ title, para, button, image, id }) {
   const cardsColor = {
-    color: "#d2631f",
+    color: "#008080",
   };
 
   const buttonStyling = {
-    backgroundColor: "#d2631f",
+    backgroundColor: "#008080",
     color: "white",
-    border: "2px solid #d2631f",
+    border: "2px solid #008080",
   };
 
   return (

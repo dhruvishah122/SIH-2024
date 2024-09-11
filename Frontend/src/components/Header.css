@@ -5,7 +5,7 @@
     text-align: center;
     font-size: 38px;
     font-weight: 600;
-    color: #d2631f;
+    color: #008080;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -16,7 +16,7 @@
     align-items: center;
     height: 10rem;
     width: 15rem;
-    background-color: #d2631f;
+    background-color: #008080;
     color: white;
     padding: 1.5rem;
     border-radius: 1rem;
@@ -33,8 +33,8 @@
 .card-info:hover {
     scale: 1.02;
     cursor: pointer;
-    color: #d2631f;
+    color: #008080;
     background-color: white;
-    border: 1.5px solid #d2631f;
-    box-shadow: 0 0 6px #d2631f;
+    border: 1.5px solid #008080;
+    box-shadow: 0 0 6px #008080;
 }

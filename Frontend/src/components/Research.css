@@ -1,6 +1,6 @@
 .bgcolor {
-    background-color: #f9eadf;
-    color: rgb(15, 14, 13);
+    background-color: #66f3f321;
+    color: 008080(15, 14, 13);
 }
 
 .imgg {
@@ -9,7 +9,7 @@
 }
 
 .researchInfo{
-    color: #d2631f;
+    color: #008080;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 00;
 }
@@ -23,6 +23,6 @@
     text-align: center;
     font-size: 43px;
         font-weight: 600;
-        color: #d2631f;
+        color: #008080;
         font-family: Georgia, 'Times New Roman', Times, serif;
 }
