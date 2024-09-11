@@ -13,16 +13,16 @@ export default function NewHeader() {
           <h1 className={`${styles.headingg} text-center pb-4`}>Startup</h1>
           <ul>
             <li>
-              <Link to="/startups">Browse Registered Startups</Link>
+              <Link to="/startups">Registered Startups</Link>
             </li>
             <li>
-              <Link to="/investors">Explore Funding Agency</Link>
+              <Link to="/investors">Funding Agency</Link>
             </li>
             <li>
-              <Link to="/post">Collaborate with Investors</Link>
+              <Link to="/post">Connect with Community</Link>
             </li>
             <li>
-              <Link to="/startup">Know More</Link>
+              <Link to="/startup">About</Link>
             </li>
           </ul>
         </div>
@@ -33,13 +33,13 @@ export default function NewHeader() {
           <h1 className={`${styles.headingg} text-center pb-4`}>Research</h1>
           <ul>
             <li>
-              <Link to="/ResearchHomePage">Browse Registered Research</Link>
+              <Link to="/ResearchHomePage">Registered Research</Link>
             </li>
             <li>
-              <Link to="/post">Collaborate with Investors</Link>
+              <Link to="/post">Connect with Community</Link>
             </li>
             <li>
-              <Link to="/ResearchHomePage">Know More</Link>
+              <Link to="/ResearchHomePage">About</Link>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@ export default function NewHeader() {
               <Link to="/iprhomepage">Explore IPR Resources</Link>
             </li>
             <li>
-              <Link to="/iprhomepage">Know More</Link>
+              <Link to="/iprhomepage">About</Link>
             </li>
           </ul>
         </div>

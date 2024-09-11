@@ -250,7 +250,7 @@ function List({ navColor }) {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Investment
+          Funding Agency
         </a>
         <ul className="dropdown-menu">
           <li>
