@@ -1,6 +1,6 @@
 import styles from "./FeaturedStartup.module.css";
 import Startups from "./Startups";
-import StartupButton from "../components/StartupButton";
+import StartupButton from "../StartupPage/StartupButton";
 
 function FeaturedStartup() {
   return (

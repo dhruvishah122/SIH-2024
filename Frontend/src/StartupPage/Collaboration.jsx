@@ -1,6 +1,7 @@
 import styles from "./Collaboration.module.css";
 import Investors from "./Investors";
 import { Link } from "react-router-dom";
+import StartupButton from "./StartupButton";
 
 function Collaboration() {
   return (
@@ -19,9 +20,11 @@ function Collaboration() {
           startup can thrive and make a significant impact.
         </h4>
         <Investors />
-        <Link to="/investors" className="btn--investors">
+        {/* <Link to="/investors" className={styles["btn--investors"]}>
           <div>Connect with Investors</div>
-        </Link>
+        </Link> */}
+
+        <StartupButton path={"/investors"}>View All Startups</StartupButton>
       </div>
       <hr></hr>
     </>
