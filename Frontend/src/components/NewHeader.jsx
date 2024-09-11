@@ -16,7 +16,7 @@ export default function NewHeader() {
               <Link to="/startups">Registered Startups</Link>
             </li>
             <li>
-              <Link to="/investors">Funding Agency</Link>
+              <Link to="/investors">Funding Agencies</Link>
             </li>
             <li>
               <Link to="/post">Connect with Community</Link>
