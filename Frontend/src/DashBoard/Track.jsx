@@ -116,15 +116,7 @@ const StatusTable = () => {
         />
        Funding Status of {investorName}
       </h3>
-      <Button
-        variant="contained"
-        color="primary"
-        className="csv-btn"
-        onClick={downloadCSV}
-        style={{ marginTop: "10px" }}
-      >
-        Download Report
-      </Button>
+      
       <br></br>
       <TableContainer
         component={Paper}

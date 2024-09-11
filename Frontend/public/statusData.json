@@ -164,6 +164,17 @@
       "id": "66cf1fde85f4f0202ba2be34",
       "_id": "66e19307ce39a49122f864c8",
       "__v": 0
+    },
+    {
+      "investorName": "Harvest Capital",
+      "startupName": "Flipkart.com",
+      "fundingDetails": "https://drive.google.com",
+      "date": "11/09/2024",
+      "status": "Rejected",
+      "funds_sanctioned": 0,
+      "id": "66cc40c7ae53a3297bda13f6",
+      "_id": "66e194f5ca5ad5250cba06df",
+      "__v": 0
     }
   ]
 }
