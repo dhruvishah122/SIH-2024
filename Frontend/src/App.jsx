@@ -22,12 +22,9 @@ import InvestorDashBoard from "./InvestorDashBoard/InvestorDashBoard.jsx";
 import InvestorProfile from "./InvestorDashBoard/InvestorProfile.jsx";
 import InvestorTrack from "./InvestorDashBoard/InvestorTrack.jsx";
 import InvestorCreatePost from "./InvestorDashBoard/InvestorCreatePost.jsx";
-import Form from "./InvestorDashBoard/Form.jsx";
+import Form from "./DashBoard/Form.jsx";
 import StartupProfile from "../viewprofile/StartupProfile.jsx";
 import ProfileInvestor from "../viewprofile/ProfileInvestor.jsx";
-import ResearchDashboard from "./ResearchDashBoard/ResearchDashboard.jsx";
-import ResearchProfile from "./ResearchDashBoard/ResearchProfile.jsx";
-import ResearchTrack from "./ResearchDashBoard/ResearchTrack.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -54,6 +51,7 @@ function App() {
           <Route path="profile" element={<Profile />}></Route>
           <Route path="track" element={<Track />}></Route>
           <Route path="createpost" element={<CreatePost />}></Route>
+          <Route path="form" element={<Form />}></Route>
         </Route>
         <Route path="/investordashboard" element={<InvestorDashBoard />}>
           <Route index element={<InvestorProfile />}></Route>
@@ -61,15 +59,7 @@ function App() {
           <Route path="profile" element={<InvestorProfile />}></Route>
           <Route path="track" element={<InvestorTrack />}></Route>
           <Route path="createpost" element={<InvestorCreatePost />}></Route>
-          <Route path="form" element={<Form />}></Route>
-        </Route>
-        <Route path="/researchdashboard" element={<ResearchDashboard />}>
-          <Route index element={<ResearchProfile />}></Route>
-          <Route path="" element={<ResearchProfile />}></Route>
-          <Route path="profile" element={<ResearchProfile />}></Route>
-          <Route path="track" element={<ResearchTrack />}></Route>
-          <Route path="createpost" element={<CreatePost />}></Route>
-          {/* <Route path="form" element={<Form />}></Route> */}
+         
         </Route>
         <Route path="/Startupstatus" element={<StartupStatus />}></Route>
         <Route path="/profile/:id" element={<StartupProfile />}></Route>

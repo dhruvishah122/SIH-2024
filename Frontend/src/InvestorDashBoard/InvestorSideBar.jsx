@@ -37,16 +37,7 @@ function InvestorSideBar({ name }) {
           Create Post
         </div>
       </NavLink>
-      <NavLink to={`form?name=${name}`} className={styles.links}>
-        <div
-          className={`${styles.menuItems} ${
-            activeTab === 4 ? styles.active : ""
-          }`}
-          onClick={() => setActiveTab(4)}
-        >
-          File Investment
-        </div>
-      </NavLink>
+   
     </div>
   );
 }

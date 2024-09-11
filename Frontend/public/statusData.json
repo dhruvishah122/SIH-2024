@@ -23,14 +23,14 @@
       "__v": 0
     },
     {
-      "investorName": "Angel investors",
+      "investorName": "Harvest Capital",
       "startupName": "FinPath solutions",
-      "fundingDetails": "https://drive.google.com/file/d/FILE_ID/view?usp=sharing",
-      "date": "07/09/2024",
+      "fundingDetails": "https://drive.google.com",
+      "date": "11/09/2024",
       "status": "Approved",
-      "funds_sanctioned": 600,
+      "funds_sanctioned": "05000000",
       "id": "66cf1fde85f4f0202ba2be34",
-      "_id": "66cf1fde85f4f0202ba2be34",
+      "_id": "66e19307ce39a49122f864c8",
       "__v": 0
     },
     {
@@ -152,6 +152,17 @@
       "funds_sanctioned": 12342,
       "id": "66df395924c2dd08c8145f50",
       "_id": "66df3a1524c2dd08c8145f55",
+      "__v": 0
+    },
+    {
+      "investorName": "Harvest Capital",
+      "startupName": "FinPath solutions",
+      "fundingDetails": "https://drive.google.com",
+      "date": "11/09/2024",
+      "status": "Registered",
+      "funds_sanctioned": 0,
+      "id": "66cf1fde85f4f0202ba2be34",
+      "_id": "66e19307ce39a49122f864c8",
       "__v": 0
     }
   ]
