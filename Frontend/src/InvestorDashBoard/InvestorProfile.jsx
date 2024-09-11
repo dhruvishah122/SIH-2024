@@ -55,7 +55,7 @@ function InvestorProfile({ startup }) {
             <div> 2005 </div>
             <div>Employee count :</div>
             <div> {startup.Employee_count}</div>
-            <div>headquarters :</div>
+            <div>Headquarters :</div>
             <div> {startup.headquaters}</div>
           </div>
         </div>
