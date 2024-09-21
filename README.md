@@ -23,7 +23,7 @@ Enhancing Monitoring and Management of Research, IPR, Innovation, and Start-ups 
 - Access all platform data for monitoring and maintenance.
 - View all investor and startup activities, including status tracking and unified data.
 ## Gov Status Dashboard:
-![Use Case Diagram](./gov.png)
+![Use Case Diagram](./gov-s.png)
 ### Researchers & IPR:
 - File patents and track the status.
 - The IPR team conducts reviews and updates the application status.
@@ -35,6 +35,7 @@ Enhancing Monitoring and Management of Research, IPR, Innovation, and Start-ups 
 
 ## Use Case Diagram:
 ![Use Case Diagram](./use.png)
+![](./oouse.png)
 ![Use Case Diagram](./ruse.png)
 ## Analysis:
 - **Analytics and Reporting Tools:** Provide data-driven insights for policymakers and funding agencies to make informed decisions.
